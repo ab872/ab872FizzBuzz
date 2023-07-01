@@ -197,6 +197,7 @@ echo '<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 echo '</center>';
 ?>
 
+<center>
 <span id="containsPHPmsg" style="color:Maroon;font-size:14px;"><b>This product includes PHP software, freely available from
 
 <a href="http://www.php.net/software/" target="_blank">http://www.php.net/software/</a>.
@@ -221,6 +222,8 @@ The PHP logo is located at <a href="https://www.php.net/images/logos/new-php-log
 The PHP logo is used according to terms described in the<br>
  <b><i>"Creative Commons Attribution-Share Alike 4.0 International"</b></i> license.</center>
 </span>
+</center>
+
 <center> 
 <span style="color:Black;font-size:12px;">
 Located at <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><span style="font-size:12px;"><b><i>https://creativecommons.org/licenses/by-sa/4.0/</i></b></span></a>
