@@ -9,9 +9,10 @@
 <span id="pageTitle" style="color:Navy;font-size:58px;"><b>FizzBuzz demo</b></span>
 </center><br>
 
-<center>
+
 <?php
 echo "<br><br>"; 
+echo '<center>';
 echo '<span style="color:Maroon;font-size:22px;">';
 echo '<b>';
 echo '&nbsp;&nbsp;&nbsp;';
@@ -26,9 +27,10 @@ echo "&nbsp;&nbsp;&nbsp;";
 echo date("h:i:sa");
 echo '</b>';
 echo '</span>';
+echo '</center>';
 echo "<br><br>"; 
 ?>
-</center>
+
 
 
 
