@@ -9,6 +9,14 @@
 <span id="pageTitle" style="color:Navy;font-size:58px;"><b>FizzBuzz demo</b></span>
 </center><br>
 
+<?php
+//
+//
+//     03 july 2023   test to make sure everything works in new configuration
+//  
+//  
+?>
+
 
 <?php
 echo "<br><br>"; 
