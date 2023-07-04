@@ -777,7 +777,7 @@ tags/ref_httpmessages.asp. [Accessed: 03-Feb-2023].</span><br>
 
 
 
-<span style="color:Black;font-size:18px;">[24]&nbsp;&nbsp;&nbsp;&nbsp;"Creative Commons — Attribution-ShareAlike 4.0 International — CC BY-SA 4.0." <i>creativecommons.org</i>. [Online]. Available: https://creativecommons.org/licenses/by-sa/4.0/. [Accessed: 02-Jul-2023].</span><br>
+<span style="color:Black;font-size:18px;">[24]&nbsp;&nbsp;&nbsp;&nbsp;"Creative Commons &#8211; Attribution-ShareAlike 4.0 International &#8211; CC BY-SA 4.0." <i>creativecommons.org</i>. [Online]. Available: https://creativecommons.org/licenses/by-sa/4.0/. [Accessed: 02-Jul-2023].</span><br>
 <svg id="windowPlusIcon" xmlns="http://www.w3.org/2000/svg" width="128" height="128" fill="currentColor" class="bi bi-window-plus" viewBox="0 0 16 16" role="graphics-document" aria-labelledby="iconTitle" aria-describedby="iconDesc"> 
     <title> id="iconTitle">Window Plus icon</title>
     <desc  id="iconDesc">this icon represents opening a new window</desc> <path opacity="1" fill="lightgrey" stroke="lightgrey" stroke-width="0.08" fill-rule="evenodd" d="M0 4a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v4a.5.5 0 0 1-1 0V7H1v5a1 1 0 0 0 1 1h5.5a.5.5 0 0 1 0 1H2a2 2 0 0 1-2-2V4Zm1 2h13V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2Zm1.5-1Z"/> <path opacity="1" fill="lightsteelblue" stroke="navy" stroke-width="0.07" fill-rule="evenodd" d="M4 5Zm2-.5Zm10 8a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-3.5-2a.5.5 0 0 1 .5.5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 .5-.5Z"/> </svg>
