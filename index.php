@@ -755,7 +755,7 @@ tags/ref_httpmessages.asp. [Accessed: 03-Feb-2023].</span><br>
 
 
 
-<span style="color:Black;font-size:18px;">[22]&nbsp;&nbsp;&nbsp;&nbsp;“PHP: PHP Software.” <i>www.php.net</i>. 
+<span style="color:Black;font-size:18px;">[22]&nbsp;&nbsp;&nbsp;&nbsp;"PHP: PHP Software." <i>www.php.net</i>. 
 [Online]. Available: https://www.php.net/software.php. [Accessed: 02-Jul-2023].</span><br>
 <svg id="windowPlusIcon" xmlns="http://www.w3.org/2000/svg" width="128" height="128" fill="currentColor" class="bi bi-window-plus" viewBox="0 0 16 16" role="graphics-document" aria-labelledby="iconTitle" aria-describedby="iconDesc"> 
     <title> id="iconTitle">Window Plus icon</title>
@@ -767,7 +767,7 @@ tags/ref_httpmessages.asp. [Accessed: 03-Feb-2023].</span><br>
 
 
 
-<span style="color:Black;font-size:18px;">[23]&nbsp;&nbsp;&nbsp;&nbsp;“PHP: Download Logos.” <i>www.php.net</i>. [Online]. Available: https://www.php.net/download-logos.php. [Accessed: 02-Jul-2023].</span><br>
+<span style="color:Black;font-size:18px;">[23]&nbsp;&nbsp;&nbsp;&nbsp;"PHP: Download Logos." <i>www.php.net</i>. [Online]. Available: https://www.php.net/download-logos.php. [Accessed: 02-Jul-2023].</span><br>
 <svg id="windowPlusIcon" xmlns="http://www.w3.org/2000/svg" width="128" height="128" fill="currentColor" class="bi bi-window-plus" viewBox="0 0 16 16" role="graphics-document" aria-labelledby="iconTitle" aria-describedby="iconDesc"> 
     <title> id="iconTitle">Window Plus icon</title>
     <desc  id="iconDesc">this icon represents opening a new window</desc> <path opacity="1" fill="lightgrey" stroke="lightgrey" stroke-width="0.08" fill-rule="evenodd" d="M0 4a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v4a.5.5 0 0 1-1 0V7H1v5a1 1 0 0 0 1 1h5.5a.5.5 0 0 1 0 1H2a2 2 0 0 1-2-2V4Zm1 2h13V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2Zm1.5-1Z"/> <path opacity="1" fill="lightsteelblue" stroke="navy" stroke-width="0.07" fill-rule="evenodd" d="M4 5Zm2-.5Zm10 8a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-3.5-2a.5.5 0 0 1 .5.5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 .5-.5Z"/> </svg>
@@ -777,7 +777,7 @@ tags/ref_httpmessages.asp. [Accessed: 03-Feb-2023].</span><br>
 
 
 
-<span style="color:Black;font-size:18px;">[24]&nbsp;&nbsp;&nbsp;&nbsp;“Creative Commons — Attribution-ShareAlike 4.0 International — CC BY-SA 4.0.” <i>creativecommons.org</i>. [Online]. Available: https://creativecommons.org/licenses/by-sa/4.0/. [Accessed: 02-Jul-2023].</span><br>
+<span style="color:Black;font-size:18px;">[24]&nbsp;&nbsp;&nbsp;&nbsp;"Creative Commons — Attribution-ShareAlike 4.0 International — CC BY-SA 4.0." <i>creativecommons.org</i>. [Online]. Available: https://creativecommons.org/licenses/by-sa/4.0/. [Accessed: 02-Jul-2023].</span><br>
 <svg id="windowPlusIcon" xmlns="http://www.w3.org/2000/svg" width="128" height="128" fill="currentColor" class="bi bi-window-plus" viewBox="0 0 16 16" role="graphics-document" aria-labelledby="iconTitle" aria-describedby="iconDesc"> 
     <title> id="iconTitle">Window Plus icon</title>
     <desc  id="iconDesc">this icon represents opening a new window</desc> <path opacity="1" fill="lightgrey" stroke="lightgrey" stroke-width="0.08" fill-rule="evenodd" d="M0 4a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v4a.5.5 0 0 1-1 0V7H1v5a1 1 0 0 0 1 1h5.5a.5.5 0 0 1 0 1H2a2 2 0 0 1-2-2V4Zm1 2h13V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2Zm1.5-1Z"/> <path opacity="1" fill="lightsteelblue" stroke="navy" stroke-width="0.07" fill-rule="evenodd" d="M4 5Zm2-.5Zm10 8a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-3.5-2a.5.5 0 0 1 .5.5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 .5-.5Z"/> </svg>
@@ -787,7 +787,7 @@ tags/ref_httpmessages.asp. [Accessed: 03-Feb-2023].</span><br>
 
 
 
-<span style="color:Black;font-size:18px;">[25]&nbsp;&nbsp;&nbsp;&nbsp;“PHP Exercises, Practice, Solution,” <i>w3resource</i>, 19-Aug-2022. 
+<span style="color:Black;font-size:18px;">[25]&nbsp;&nbsp;&nbsp;&nbsp;"PHP Exercises, Practice, Solution," <i>w3resource</i>, 19-Aug-2022. 
 [Online]. Available: https://www.w3resource.com/php-exercises/index.php. [Accessed: 02-Jul-2023].</span><br>
 <svg id="windowPlusIcon" xmlns="http://www.w3.org/2000/svg" width="128" height="128" fill="currentColor" class="bi bi-window-plus" viewBox="0 0 16 16" role="graphics-document" aria-labelledby="iconTitle" aria-describedby="iconDesc"> 
     <title> id="iconTitle">Window Plus icon</title>
@@ -797,7 +797,7 @@ tags/ref_httpmessages.asp. [Accessed: 03-Feb-2023].</span><br>
 <a href="https://www.w3resource.com/php-exercises/index.php" target="_blank"><span style="font-size:18px;"><b><i>PHP Exercises, Practice, Solution,</i></b></span></a><br><br>
 
 
-<span style="color:Black;font-size:18px;">[26]&nbsp;&nbsp;&nbsp;&nbsp;“PHP Exercise: Get the information about the operating system PHP is running on,” <i>w3resource</i>, 19-Aug-2022. 
+<span style="color:Black;font-size:18px;">[26]&nbsp;&nbsp;&nbsp;&nbsp;"PHP Exercise: Get the information about the operating system PHP is running on," <i>w3resource</i>, 19-Aug-2022. 
 [Online]. Available: https://www.w3resource.com/php-exercises/php-basic-exercise-26.php. [Accessed: 02-Jul-2023].</span><br>
 <svg id="windowPlusIcon" xmlns="http://www.w3.org/2000/svg" width="128" height="128" fill="currentColor" class="bi bi-window-plus" viewBox="0 0 16 16" role="graphics-document" aria-labelledby="iconTitle" aria-describedby="iconDesc"> 
     <title> id="iconTitle">Window Plus icon</title>
@@ -809,7 +809,7 @@ tags/ref_httpmessages.asp. [Accessed: 03-Feb-2023].</span><br>
 
 
 
-<span style="color:Black;font-size:18px;">[27]&nbsp;&nbsp;&nbsp;&nbsp;“PHP Tutorial.” <i>W3schools</i>. 
+<span style="color:Black;font-size:18px;">[27]&nbsp;&nbsp;&nbsp;&nbsp;"PHP Tutorial." <i>W3schools</i>. 
 [Online]. Available: https://www.w3schools.com/php/. [Accessed: 02-Jul-2023].</span><br>
 <svg id="windowPlusIcon" xmlns="http://www.w3.org/2000/svg" width="128" height="128" fill="currentColor" class="bi bi-window-plus" viewBox="0 0 16 16" role="graphics-document" aria-labelledby="iconTitle" aria-describedby="iconDesc"> 
     <title> id="iconTitle">Window Plus icon</title>
@@ -823,7 +823,7 @@ tags/ref_httpmessages.asp. [Accessed: 03-Feb-2023].</span><br>
 
 
 
-<span style="color:Black;font-size:18px;">[28]&nbsp;&nbsp;&nbsp;&nbsp;“Learn PHP Tutorial - javatpoint,” 
+<span style="color:Black;font-size:18px;">[28]&nbsp;&nbsp;&nbsp;&nbsp;"Learn PHP Tutorial - javatpoint," 
 <i>Javatpoint</i>.  [Online]. Available: https://www.javatpoint.com/php-tutorial. [Accessed: 02-Jul-2023].</span><br>
 <svg id="windowPlusIcon" xmlns="http://www.w3.org/2000/svg" width="128" height="128" fill="currentColor" class="bi bi-window-plus" viewBox="0 0 16 16" role="graphics-document" aria-labelledby="iconTitle" aria-describedby="iconDesc"> 
     <title> id="iconTitle">Window Plus icon</title>
@@ -837,7 +837,7 @@ tags/ref_httpmessages.asp. [Accessed: 03-Feb-2023].</span><br>
 
 
 
-<span style="color:Black;font-size:18px;">[29]&nbsp;&nbsp;&nbsp;&nbsp;“PHP Tutorial.” <i>Tutorials Point</i>. 
+<span style="color:Black;font-size:18px;">[29]&nbsp;&nbsp;&nbsp;&nbsp;"PHP Tutorial." <i>Tutorials Point</i>. 
 [Online]. Available: https://www.tutorialspoint.com/php/index.htm. [Accessed: 02-Jul-2023].</span><br>
 <svg id="windowPlusIcon" xmlns="http://www.w3.org/2000/svg" width="128" height="128" fill="currentColor" class="bi bi-window-plus" viewBox="0 0 16 16" role="graphics-document" aria-labelledby="iconTitle" aria-describedby="iconDesc"> 
     <title> id="iconTitle">Window Plus icon</title>
@@ -853,7 +853,7 @@ tags/ref_httpmessages.asp. [Accessed: 03-Feb-2023].</span><br>
 
 
 
-<span style="color:Black;font-size:18px;">[30]&nbsp;&nbsp;&nbsp;&nbsp;“PHP Tutorial,” <i>PHP Tutorial</i>. 
+<span style="color:Black;font-size:18px;">[30]&nbsp;&nbsp;&nbsp;&nbsp;"PHP Tutorial," <i>PHP Tutorial</i>. 
 [Online]. Available: https://www.phptutorial.net/. [Accessed: 02-Jul-2023].</span><br>
 <svg id="windowPlusIcon" xmlns="http://www.w3.org/2000/svg" width="128" height="128" fill="currentColor" class="bi bi-window-plus" viewBox="0 0 16 16" role="graphics-document" aria-labelledby="iconTitle" aria-describedby="iconDesc"> 
     <title> id="iconTitle">Window Plus icon</title>
@@ -864,7 +864,7 @@ tags/ref_httpmessages.asp. [Accessed: 03-Feb-2023].</span><br>
 
 
 
-<span style="color:Black;font-size:18px;">[31]&nbsp;&nbsp;&nbsp;&nbsp;“Learn PHP,” <i>Codecademy</i>. 
+<span style="color:Black;font-size:18px;">[31]&nbsp;&nbsp;&nbsp;&nbsp;"Learn PHP," <i>Codecademy</i>. 
 [Online]. Available: https://www.codecademy.com/learn/paths/php-skill. [Accessed: 02-Jul-2023].</span><br>
 <svg id="windowPlusIcon" xmlns="http://www.w3.org/2000/svg" width="128" height="128" fill="currentColor" class="bi bi-window-plus" viewBox="0 0 16 16" role="graphics-document" aria-labelledby="iconTitle" aria-describedby="iconDesc"> 
     <title> id="iconTitle">Window Plus icon</title>
@@ -876,7 +876,7 @@ tags/ref_httpmessages.asp. [Accessed: 03-Feb-2023].</span><br>
 
 
 
-<span style="color:Black;font-size:18px;">[32]&nbsp;&nbsp;&nbsp;&nbsp;“PHP Tutorial - Learn PHP,” <i>GeeksforGeeks</i>. [Online]. Available: https://www.geeksforgeeks.org/php-tutorial/. [Accessed: 02-Jul-2023].</span><br>
+<span style="color:Black;font-size:18px;">[32]&nbsp;&nbsp;&nbsp;&nbsp;"PHP Tutorial - Learn PHP," <i>GeeksforGeeks</i>. [Online]. Available: https://www.geeksforgeeks.org/php-tutorial/. [Accessed: 02-Jul-2023].</span><br>
 <svg id="windowPlusIcon" xmlns="http://www.w3.org/2000/svg" width="128" height="128" fill="currentColor" class="bi bi-window-plus" viewBox="0 0 16 16" role="graphics-document" aria-labelledby="iconTitle" aria-describedby="iconDesc"> 
     <title> id="iconTitle">Window Plus icon</title>
     <desc  id="iconDesc">this icon represents opening a new window</desc> <path opacity="1" fill="lightgrey" stroke="lightgrey" stroke-width="0.08" fill-rule="evenodd" d="M0 4a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v4a.5.5 0 0 1-1 0V7H1v5a1 1 0 0 0 1 1h5.5a.5.5 0 0 1 0 1H2a2 2 0 0 1-2-2V4Zm1 2h13V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2Zm1.5-1Z"/> <path opacity="1" fill="lightsteelblue" stroke="navy" stroke-width="0.07" fill-rule="evenodd" d="M4 5Zm2-.5Zm10 8a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-3.5-2a.5.5 0 0 1 .5.5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 .5-.5Z"/> </svg>
@@ -886,7 +886,7 @@ tags/ref_httpmessages.asp. [Accessed: 03-Feb-2023].</span><br>
 
 
 
-<span style="color:Black;font-size:18px;">[33]&nbsp;&nbsp;&nbsp;&nbsp;“PHP: phpinfo - Manual.” <i>www.php.net</i>. [Online]. Available: https://www.php.net/manual/en/function.phpinfo.php. [Accessed: 02-Jul-2023].</span><br>
+<span style="color:Black;font-size:18px;">[33]&nbsp;&nbsp;&nbsp;&nbsp;"PHP: phpinfo - Manual." <i>www.php.net</i>. [Online]. Available: https://www.php.net/manual/en/function.phpinfo.php. [Accessed: 02-Jul-2023].</span><br>
 <svg id="windowPlusIcon" xmlns="http://www.w3.org/2000/svg" width="128" height="128" fill="currentColor" class="bi bi-window-plus" viewBox="0 0 16 16" role="graphics-document" aria-labelledby="iconTitle" aria-describedby="iconDesc"> 
     <title> id="iconTitle">Window Plus icon</title>
     <desc  id="iconDesc">this icon represents opening a new window</desc> <path opacity="1" fill="lightgrey" stroke="lightgrey" stroke-width="0.08" fill-rule="evenodd" d="M0 4a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v4a.5.5 0 0 1-1 0V7H1v5a1 1 0 0 0 1 1h5.5a.5.5 0 0 1 0 1H2a2 2 0 0 1-2-2V4Zm1 2h13V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2Zm1.5-1Z"/> <path opacity="1" fill="lightsteelblue" stroke="navy" stroke-width="0.07" fill-rule="evenodd" d="M4 5Zm2-.5Zm10 8a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-3.5-2a.5.5 0 0 1 .5.5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 .5-.5Z"/> </svg>
@@ -896,7 +896,7 @@ tags/ref_httpmessages.asp. [Accessed: 03-Feb-2023].</span><br>
 
 
 
-<span style="color:Black;font-size:18px;">[34]&nbsp;&nbsp;&nbsp;&nbsp;“How to Easily Create and Use a phpinfo Page (In 3 Steps),” <i>Kinsta&#174;</i>, 14-Dec-2022. [Online]. Available: https://kinsta.com/knowledgebase/phpinfo/. [Accessed: 02-Jul-2023].</span><br>
+<span style="color:Black;font-size:18px;">[34]&nbsp;&nbsp;&nbsp;&nbsp;"How to Easily Create and Use a phpinfo Page (In 3 Steps)," <i>Kinsta&#174;</i>, 14-Dec-2022. [Online]. Available: https://kinsta.com/knowledgebase/phpinfo/. [Accessed: 02-Jul-2023].</span><br>
 <svg id="windowPlusIcon" xmlns="http://www.w3.org/2000/svg" width="128" height="128" fill="currentColor" class="bi bi-window-plus" viewBox="0 0 16 16" role="graphics-document" aria-labelledby="iconTitle" aria-describedby="iconDesc"> 
     <title> id="iconTitle">Window Plus icon</title>
     <desc  id="iconDesc">this icon represents opening a new window</desc> <path opacity="1" fill="lightgrey" stroke="lightgrey" stroke-width="0.08" fill-rule="evenodd" d="M0 4a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v4a.5.5 0 0 1-1 0V7H1v5a1 1 0 0 0 1 1h5.5a.5.5 0 0 1 0 1H2a2 2 0 0 1-2-2V4Zm1 2h13V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2Zm1.5-1Z"/> <path opacity="1" fill="lightsteelblue" stroke="navy" stroke-width="0.07" fill-rule="evenodd" d="M4 5Zm2-.5Zm10 8a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-3.5-2a.5.5 0 0 1 .5.5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 .5-.5Z"/> </svg>
@@ -908,7 +908,7 @@ tags/ref_httpmessages.asp. [Accessed: 03-Feb-2023].</span><br>
 
 
 
-<span style="color:Black;font-size:18px;">[35]&nbsp;&nbsp;&nbsp;&nbsp;“PHP Date and Time.” <i>W3schools</i>. 
+<span style="color:Black;font-size:18px;">[35]&nbsp;&nbsp;&nbsp;&nbsp;"PHP Date and Time." <i>W3schools</i>. 
 [Online]. Available: https://www.w3schools.com/php/php_date.asp. [Accessed: 02-Jul-2023].</span><br>
 <svg id="windowPlusIcon" xmlns="http://www.w3.org/2000/svg" width="128" height="128" fill="currentColor" class="bi bi-window-plus" viewBox="0 0 16 16" role="graphics-document" aria-labelledby="iconTitle" aria-describedby="iconDesc"> 
     <title> id="iconTitle">Window Plus icon</title>
@@ -919,7 +919,7 @@ tags/ref_httpmessages.asp. [Accessed: 03-Feb-2023].</span><br>
 
 
 
-<span style="color:Black;font-size:18px;">[36]&nbsp;&nbsp;&nbsp;&nbsp;admin, “PHP program to check prime number,” <i>W3schools</i>, 21-Aug-2018. [Online]. Available: https://www.w3schools.blog/php-program-to-check-prime-number. [Accessed: 02-Jul-2023].</span><br>
+<span style="color:Black;font-size:18px;">[36]&nbsp;&nbsp;&nbsp;&nbsp;admin, "PHP program to check prime number," <i>W3schools</i>, 21-Aug-2018. [Online]. Available: https://www.w3schools.blog/php-program-to-check-prime-number. [Accessed: 02-Jul-2023].</span><br>
 <svg id="windowPlusIcon" xmlns="http://www.w3.org/2000/svg" width="128" height="128" fill="currentColor" class="bi bi-window-plus" viewBox="0 0 16 16" role="graphics-document" aria-labelledby="iconTitle" aria-describedby="iconDesc"> 
     <title> id="iconTitle">Window Plus icon</title>
     <desc  id="iconDesc">this icon represents opening a new window</desc> <path opacity="1" fill="lightgrey" stroke="lightgrey" stroke-width="0.08" fill-rule="evenodd" d="M0 4a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v4a.5.5 0 0 1-1 0V7H1v5a1 1 0 0 0 1 1h5.5a.5.5 0 0 1 0 1H2a2 2 0 0 1-2-2V4Zm1 2h13V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2Zm1.5-1Z"/> <path opacity="1" fill="lightsteelblue" stroke="navy" stroke-width="0.07" fill-rule="evenodd" d="M4 5Zm2-.5Zm10 8a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-3.5-2a.5.5 0 0 1 .5.5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 .5-.5Z"/> </svg>
@@ -929,7 +929,7 @@ tags/ref_httpmessages.asp. [Accessed: 03-Feb-2023].</span><br>
 
 
 
-<span style="color:Black;font-size:18px;">[37]&nbsp;&nbsp;&nbsp;&nbsp;“https://leetcode.com/problems/fizz-buzz/description,” <i>LeetCode</i>. 
+<span style="color:Black;font-size:18px;">[37]&nbsp;&nbsp;&nbsp;&nbsp;"https://leetcode.com/problems/fizz-buzz/description," <i>LeetCode</i>. 
 [Online]. Available: https://leetcode.com/problems/fizz-buzz/description. [Accessed: 02-Jul-2023].</span><br>
 <svg id="windowPlusIcon" xmlns="http://www.w3.org/2000/svg" width="128" height="128" fill="currentColor" class="bi bi-window-plus" viewBox="0 0 16 16" role="graphics-document" aria-labelledby="iconTitle" aria-describedby="iconDesc"> 
     <title> id="iconTitle">Window Plus icon</title>
@@ -940,7 +940,7 @@ tags/ref_httpmessages.asp. [Accessed: 03-Feb-2023].</span><br>
 
 
 
-<span style="color:Black;font-size:18px;">[38]&nbsp;&nbsp;&nbsp;&nbsp;“Fizz Buzz Implementation,” <i>GeeksforGeeks</i>, 23-May-2017. 
+<span style="color:Black;font-size:18px;">[38]&nbsp;&nbsp;&nbsp;&nbsp;"Fizz Buzz Implementation," <i>GeeksforGeeks</i>, 23-May-2017. 
 [Online]. Available: https://www.geeksforgeeks.org/fizz-buzz-implementation/. [Accessed: 02-Jul-2023].</span><br>
 <svg id="windowPlusIcon" xmlns="http://www.w3.org/2000/svg" width="128" height="128" fill="currentColor" class="bi bi-window-plus" viewBox="0 0 16 16" role="graphics-document" aria-labelledby="iconTitle" aria-describedby="iconDesc"> 
     <title> id="iconTitle">Window Plus icon</title>
@@ -952,7 +952,7 @@ tags/ref_httpmessages.asp. [Accessed: 03-Feb-2023].</span><br>
 
 
 
-<span style="color:Black;font-size:18px;">[39]&nbsp;&nbsp;&nbsp;&nbsp;msangapu-msft, “Quickstart: Create a PHP web app - Azure App Service,” <i>Microsoft Learn</i>, 09-Mar-2023. 
+<span style="color:Black;font-size:18px;">[39]&nbsp;&nbsp;&nbsp;&nbsp;msangapu-msft, "Quickstart: Create a PHP web app - Azure App Service," <i>Microsoft Learn</i>, 09-Mar-2023. 
 [Online]. Available: https://learn.microsoft.com/en-us/azure/app-service/quickstart-php. [Accessed: 02-Jul-2023].</span><br>
 <svg id="windowPlusIcon" xmlns="http://www.w3.org/2000/svg" width="128" height="128" fill="currentColor" class="bi bi-window-plus" viewBox="0 0 16 16" role="graphics-document" aria-labelledby="iconTitle" aria-describedby="iconDesc"> 
     <title> id="iconTitle">Window Plus icon</title>
