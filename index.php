@@ -346,6 +346,7 @@ echo '<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 echo '</center>';
 ?>
 
+<center>
 <span id="containsPHPmsg" style="color:Maroon;font-size:14px;"><b>This product includes PHP software, freely available from
 
 <a href="http://www.php.net/software/" target="_blank">http://www.php.net/software/</a>.
