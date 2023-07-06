@@ -1,5 +1,11 @@
 <!--  index_fizz_html  -->
 
+<!--  
+
+07jul2023 test if everything is working after configuration change 
+
+-->
+
 
 <!DOCTYPE html>
 <html>
