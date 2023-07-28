@@ -80,6 +80,29 @@
 
 
 
+.grid-containerCode1 {
+     border: 3px solid rgb(211, 211, 211, 1.0);      
+     display: grid;
+     grid-gap: 1em;
+     grid-template-columns: 0.5fr 4fr 4fr 0.5fr;
+     grid-template-rows: 0.5vh 70vh 0.5vh; 
+}
+
+
+.grid-itemCode {
+
+}
+
+.grid-itemTopBottomCode {
+
+}
+
+.grid-itemMarginCode {
+
+}
+
+
+
 
 
 
@@ -175,6 +198,121 @@ Output the numbers from 1 to 100.
 </center>
 
 <br><br>
+
+
+
+
+<div class="grid-containerCode1">
+
+     <div class="grid-itemMarginCode">
+     </div>
+
+     <div class="grid-itemTopBottomCode">
+     </div>
+     <div class="grid-itemTopBottomCode">
+     </div>
+
+     <div class="grid-itemMarginCode">
+     </div>
+
+
+
+
+
+     <div class="grid-itemMarginCode">
+     </div>
+
+     <div class="grid-itemCode">
+<span id="codeText" style="color:Black;font-size:10px;">
+for ($counter = 1; $counter <= 100; $counter++) {
+<br><br>
+&nbsp;&nbsp;&nbsp;
+ echo "The count is $counter";
+<br><br>
+if ( (($counter%3) ==0) && (($counter%5) ==0) ) {
+<br>
+&nbsp;&nbsp;&nbsp;
+echo "FIZZBUZZ";
+<br>
+}
+<br>
+elseif ( ($counter%3) ==0 ) {
+<br>
+&nbsp;&nbsp;&nbsp;
+echo "FIZZ";
+<br>
+}
+<br>
+elseif ( ($counter%5) ==0 ) {
+<br>
+&nbsp;&nbsp;&nbsp;
+echo "BUZZ";
+<br>
+}
+<br>
+&nbsp;&nbsp;&nbsp;
+//   end for loop
+<br>
+}
+</span>
+<br><br>
+     </div>
+
+     <div class="grid-itemCode">
+<span id="codeComments" style="color:Maroon;font-size:10px;">
+<b>Set up the loop</b>
+<br>
+<br>
+<br>
+<b>Display the count</b>
+<br>
+<br>
+<br>
+<b>Is the count divisible by BOTH 3 and 5?</b>
+<br>
+<br>
+<br>
+<b>Is the count divisible by 3?</b>
+<br>
+<br>
+<br>
+<b>Is the count divisible by 5?</b>
+</span>
+<br><br>
+     </div>
+
+     <div class="grid-itemMarginCode">
+     </div>
+
+
+
+
+
+
+     <div class="grid-itemMarginCode">
+     </div>
+
+     <div class="grid-itemTopBottomCode">
+     </div>
+     <div class="grid-itemTopBottomCode">
+     </div>
+
+     <div class="grid-itemMarginCode">
+     </div>
+
+
+
+
+
+     <!--  end of grid container Code 1 -->
+</div> 
+<br>
+
+
+
+
+<br><br>
+
 
 <?php
 for ($counter = 1; $counter <= 100; $counter++) {
