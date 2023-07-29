@@ -1201,6 +1201,19 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   -->
 
 
+<script src="browserId.js">
+</script>
+
+<script src="debug.js">
+</script>
+
+<script src="fizzbuzz.js">
+</script>
+
+
+
+
+
 <NOSCRIPT><span style="color:Navy;font-size:16px;"><b>JavaScript is not available. JavaScript is required in order to provide the full functionality of this page.</b></span></NOSCRIPT><br><br>
 
 
