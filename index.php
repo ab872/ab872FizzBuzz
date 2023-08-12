@@ -50,7 +50,7 @@
      display: grid;
      grid-gap: 1em;
      grid-template-columns: 0.5fr 4fr 0.5fr;
-     grid-template-rows: 03vh 170vh 03vh; 
+     grid-template-rows: 03vh 120vh 03vh; 
 }
 
 
@@ -85,7 +85,7 @@
      display: grid;
      grid-gap: 1em;
      grid-template-columns: 0.5fr 4fr 4fr 0.5fr;
-     grid-template-rows: 0.5vh 70vh 0.5vh; 
+     grid-template-rows: 0.5vh 80vh 0.5vh; 
 }
 
 
@@ -199,6 +199,7 @@ Output the numbers from 1 to 100.
 
 <br><br>
 
+<span style="color:Navy;font-size:46px;"><b>CODE</b></span><br><br>
 
 
 
@@ -229,26 +230,37 @@ for ($counter = 1; $counter <= 100; $counter++) {
 &nbsp;&nbsp;&nbsp;
  echo "The count is $counter";
 <br><br>
+&nbsp;&nbsp;&nbsp;
 if ( (($counter%3) ==0) && (($counter%5) ==0) ) {
 <br>
 &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
 echo "FIZZBUZZ";
 <br>
+&nbsp;&nbsp;&nbsp;
 }
 <br>
+&nbsp;&nbsp;&nbsp;
 elseif ( ($counter%3) ==0 ) {
 <br>
 &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
 echo "FIZZ";
 <br>
+&nbsp;&nbsp;&nbsp;
 }
 <br>
+&nbsp;&nbsp;&nbsp;
 elseif ( ($counter%5) ==0 ) {
 <br>
 &nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;
 echo "BUZZ";
 <br>
+&nbsp;&nbsp;&nbsp;
 }
+<br>
+&nbsp;&nbsp;&nbsp;
 <br>
 &nbsp;&nbsp;&nbsp;
 //   end for loop
@@ -312,6 +324,8 @@ echo "BUZZ";
 
 
 <br><br>
+
+<span style="color:Navy;font-size:46px;"><b>OUTPUT</b></span><br><br>
 
 
 <?php

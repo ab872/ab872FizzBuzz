@@ -95,6 +95,18 @@ if (isFirefox) {
 			document.getElementById("BootstrapIcon").style.height="64px";
 
 
+			//  id  =  "codeText"
+			//  10px
+			document.getElementById('codeText').style.fontSize="24px";
+
+			//  id  =  "codeComments"
+			//  10px
+			document.getElementById('codeComments').style.fontSize="24px";
+
+
+
+
+
            //   end        Firefox under Win10
         }
 
@@ -176,7 +188,7 @@ if (isChrome) {
 	//  ***   doesnt seem to be working
 	//  id     grid-containerReference
      	//  grid template rows     03vh 1630vh 03vh
-	//      document.getElementById('grid-containerReference').style.gridTemplateRows = "03vh 500vh 03vh";
+	document.getElementById('grid-containerReference').style.gridTemplateRows = "03vh 400vh 03vh";
 
 		//	alert("using the Chrome browser -  others   Reference adjust template rows   finished");
 
