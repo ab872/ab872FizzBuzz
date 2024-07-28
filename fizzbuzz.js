@@ -188,7 +188,7 @@ if (isChrome) {
 	//  ***   doesnt seem to be working
 	//  id     grid-containerReference
      	//  grid template rows     03vh 1630vh 03vh
-	document.getElementById('grid-containerReference').style.gridTemplateRows = "03vh 400vh 03vh";
+	document.getElementById('grid-containerReference').style.gridTemplateRows = "03vh 1060vh 03vh";
 
 		//	alert("using the Chrome browser -  others   Reference adjust template rows   finished");
 
