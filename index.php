@@ -131,7 +131,7 @@ echo "<br>";
 <span id="aboutTitle" style="color:Navy;font-size:38px;"><b>About this demo</b></span>
 </center><br>
 <span id="textIntroduction2" style="color:Black;font-size:23px;">
-This website is a  
+This is a  
 <span id="textIntroductionEmphasized1" style="color:Navy;font-size:25px;">
 <b>PHP web app</b>
 </span>
@@ -147,18 +147,15 @@ This website is a
 <br>
 
 <a href="fizzbuzz.php" target="_blank">
-	<span style="font-size:28px;"><b><i>Demo for the game FizzBuzz written in PHP.</i></b></span></a>
+	<span style="font-size:28px;"><b><i>Demo with PHP source code for the game FizzBuzz.</i></b></span></a>
 <br><br>
 
 
 <a href="testmysql.php" target="_blank">
-	<span style="font-size:28px;"><b><i>Test if MySQL is available. (should fail)</i></b></span></a>
-<br><br>
-
-
-<a href="testmysql2.php" target="_blank">
 	<span style="font-size:28px;"><b><i>Test if MySQL is available.</i></b></span></a>
 <br><br>
+
+
 
 </center>
 
