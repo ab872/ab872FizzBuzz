@@ -6,8 +6,464 @@
 
       <title>ab872 - PHP Demo</title> 
 
+<script>
+
+function setCookies() {
+    //  alert ("set cookies");
+
+    document.cookie = "screen_width=" + screen.width;
+    document.cookie = "screen_height=" + screen.height;
+
+    //  reload the page after saving the cookies
+    window.location.reload();
+
+   //  end function
+}
+
+</script>
 
 
+
+<?php
+
+$userAgent = $_SERVER['HTTP_USER_AGENT'];
+
+if (strpos($userAgent, 'Firefox') !== false) {
+   $isFirefox = true;
+} else {
+   $isFirefox = false;
+}
+
+if (strpos($userAgent, 'Chrome') !== false) {
+   $isChrome = true;
+} else {
+   $isChrome = false;
+}
+
+if (strpos($userAgent, 'Safari') !== false) {
+   $isSafari = true;
+} else {
+   $isSafari = false;
+}
+
+//    //  Safari with LINE extensions???
+if (strpos($userAgent, 'Safari Line') !== false) {
+   $isSafariLine = true;
+} else {
+   $isSafariLine = false;
+}
+
+if (strpos($userAgent, 'iPad') !== false) {
+   $isiPad = true;
+} else {
+   $isiPad = false;
+}
+
+if (strpos($userAgent, 'iPhone') !== false) {
+   $isiPhone = true;
+} else {
+   $isiPhone = false;
+}
+
+if (strpos($userAgent, 'Macintosh') !== false) {
+   $isMac = true;
+} else {
+   $isMac = false;
+}
+
+//  old Edge on Win10
+if (strpos($userAgent, 'Edge') !== false) {
+   $isEdge = true;
+} else {
+   $isEdge = false;
+}
+
+//  new Edge on Win10
+if (strpos($userAgent, 'Edg/') !== false) {
+   $isNewEdge = true;
+} else {
+   $isNewEdge = false;
+}
+
+//  Edge on Android
+if (strpos($userAgent, 'EdgA/') !== false) {
+   $isAndroidEdge = true;
+} else {
+   $isAndroidEdge = false;
+}
+
+if (strpos($userAgent, 'Windows NT 10.0') !== false) {
+   $isWin10 = true;
+} else {
+   $isWin10 = false;
+}
+
+if (strpos($userAgent, 'Android') !== false) {
+   $isAndroid = true;
+} else {
+   $isAndroid = false;
+}
+
+if (strpos($userAgent, 'Android 4') !== false) {
+   $isAndroid4 = true;
+} else {
+   $isAndroid4 = false;
+}
+
+if (strpos($userAgent, 'Android 5') !== false) {
+   $isAndroid5 = true;
+} else {
+   $isAndroid5 = false;
+}
+
+if (strpos($userAgent, 'Android 6') !== false) {
+   $isAndroid6 = true;
+} else {
+   $isAndroid6 = false;
+}
+
+if (strpos($userAgent, 'Android 8') !== false) {
+   $isAndroid8 = true;
+} else {
+   $isAndroid8 = false;
+}
+
+if (strpos($userAgent, 'Android 9') !== false) {
+   $isAndroid9 = true;
+} else {
+   $isAndroid9 = false;
+}
+
+if (strpos($userAgent, 'Android 10') !== false) {
+   $isAndroid10 = true;
+} else {
+   $isAndroid10 = false;
+}
+
+if (strpos($userAgent, 'Android 11') !== false) {
+   $isAndroid11 = true;
+} else {
+   $isAndroid11 = false;
+}
+
+if (strpos($userAgent, 'Android 12') !== false) {
+   $isAndroid12 = true;
+} else {
+   $isAndroid12 = false;
+}
+
+
+   //  there are some cases where there are duplicate matches
+   //  these overrides correct the situation
+
+    if ($isChrome) { 
+           $isSafari = false;
+    }
+
+
+    if ($isEdge) { 
+           $isChrome = false; 
+    } 
+
+    if ($isNewEdge) { 
+           $isChrome = false; 
+    } 
+
+    if ($isAndroidEdge) { 
+           $isChrome = false; 
+    } 
+
+    if ($isSafariLine) { 
+           $isSafari = false; 
+    } 
+    
+
+
+
+
+if (isset($_COOKIE['screen_width'])) {
+   //  echo "try to get the screen width<br>";
+   $screenWidth = $_COOKIE['screen_width'];
+   //  echo "get the screen width was successful<br>";
+   //  echo "screen width = $screenWidth<br>";
+
+} else {
+   //  echo ' <script> alert("An error was encountered getting the screen width.\nReload the page manually if it does not reload automatically."); </script>';
+   echo "<script> setCookies(); </script>";
+}
+
+if (isset($_COOKIE['screen_height'])) {
+   //  echo "try to get the screen height<br>";
+   $screenHeight = $_COOKIE['screen_height'];
+   //  echo "get the screen height was successful<br>";
+   //  echo "screen height = $screenHeight<br>";
+
+} else {
+   //  echo ' <script> alert("An error was encountered getting the screen height.\nReload the page manually if it does not reload automatically."); </script>';
+   echo "<script> setCookies(); </script>";
+}
+
+?>
+
+
+<?php
+  //  echo ' <script> alert("adjust screen based on screen width of " + screen.width + "<br>"); </script>';
+?>
+
+
+<?php
+
+        //  values for the default screen width
+
+	$pageTitleSize = "58px";
+	$textSystemInfoSize = "22px";
+	$aboutTitleSize = "38px";
+	$textIntroduction2Size = "23px";
+	$textIntroductionEmphasized1Size = "25px";
+	$textIntroductionEmphasized2Size = "25px";
+	$textDemoSize = "28px";
+	$textTestMySQLSize = "28px";
+
+        $containerIntroRows = "80vh";
+        $containerV3LicenseRows = "120vh";
+        $containerReferenceRows = "1040vh";
+        $copyRightMsgSize = "36px";
+        $chromeBestMsgSize = "28px";
+        $bootstrapIconWidth = "96";
+        $bootstrapIconHeight = "96";
+        $iconsProvidedMsgSize = "28px";
+        $mitLicenseMsgSize = "28px";
+        $iconsModifiedMsgSize = "28px";
+
+        $containsPHPMsgSize = "18px";
+        $phpLicenseMsgSize = "18px";
+        $phpLogoMsgSize = "18px";
+        $phpLogoModifiedMsgSize = "18px";
+        $phpLogoTermsMsgSize = "18px";
+        $phpTermsLocationMsgSize = "18px";
+        $phpV3LicenseMsgSize = "16px";
+
+
+
+
+
+switch($screenWidth) {
+      case 360:      //  Android 
+      //   echo ' <script> alert("using screen width = 360" + "<br>"); </script>';
+
+         if($isChrome) {
+            $containerIntroRows = "100vh";
+            $containerV3LicenseRows = "420vh";
+	 }
+
+         if($isFirefox) {
+            $containerIntroRows = "70vh";
+            $containerV3LicenseRows = "230vh";
+	 }
+
+         if($isAndroidEdge) {
+            $containerIntroRows = "100vh";
+            $containerV3LicenseRows = "410vh";
+         }
+
+         break;
+      case 375:      //  Safari iPad, Safari iPhone
+      //   echo ' <script> alert("using screen width = 375" + "<br>"); </script>';
+
+         break;
+      case 390:      //  Safari iPad, Safari iPhone
+      //   echo ' <script> alert("using screen width = 390" + "<br>"); </script>';
+
+         break;
+      case 414:      //  Safari iPad, Safari iPhone
+      //   echo ' <script> alert("using screen width = 414" + "<br>"); </script>';
+
+        break;
+      case 768:      //  Safari iPad
+      //   echo ' <script> alert("using screen width = 768" + "<br>"); </script>';
+
+         break;
+      case 820:      //  Safari iPad
+      //   echo ' <script> alert("using screen width = 820" + "<br>"); </script>';
+
+         break;
+      case 1133:     //  Android
+      //   echo ' <script> alert("using screen width = 1133" + "<br>"); </script>';
+
+         if($isChrome) {
+            //  echo ' <script> alert("Chrome using screen width = 1133" + "<br>"); </script>';
+            $containerIntroRows = "100vh";
+            $containerV3LicenseRows = "240vh";
+            $containerReferenceRows = "1250vh";
+         } 
+
+         if($isFirefox) {
+            //  echo ' <script> alert("Firefox using screen width = 1133" + "<br>"); </script>';
+            $containerIntroRows = "100vh";
+            $containerV3LicenseRows = "220vh";
+            $containerReferenceRows = "1040vh";
+         } 
+
+         if($isNewEdge) {
+            //  echo ' <script> alert("Microsoft Edge (new) using screen width = 1133" + "<br>"); </script>';
+            $containerIntroRows = "100vh";
+            $containerV3LicenseRows = "180vh";
+            $containerReferenceRows = "1040vh";
+         } 
+
+         if($isEdge) {
+            //  echo ' <script> alert("Microsoft Edge (old) using screen width = 1133" + "<br>"); </script>';
+            $containerIntroRows = "100vh";
+            $containerV3LicenseRows = "180vh";
+            $containerReferenceRows = "1040vh";
+         } 
+
+
+         break;
+      case 1143:     //  Chrome Android
+      //   echo ' <script> alert("using screen width = 1143" + "<br>"); </script>';
+
+         if($isChrome) {
+            //  echo ' <script> alert("Chrome using screen width = 1143" + "<br>"); </script>';
+            $containerIntroRows = "100vh";
+            $containerV3LicenseRows = "240vh";
+            $containerReferenceRows = "1250vh";
+         } 
+
+         if($isFirefox) {
+            //  echo ' <script> alert("Firefox using screen width = 1143" + "<br>"); </script>';
+            $containerIntroRows = "80vh";
+            $containerV3LicenseRows = "120vh";
+            $containerReferenceRows = "1040vh";
+         } 
+
+         if($isAndroidEdge) {
+            //  echo ' <script> alert("Microsoft Edge (Android) using screen width = 1143" + "<br>"); </script>';
+            $containerIntroRows = "100vh";
+            $containerV3LicenseRows = "=240vh";
+            $containerReferenceRows = "1040vh";
+         } 
+
+         if($isNewEdge) {
+            //  echo ' <script> alert("Microsoft Edge (new) using screen width = 1143" + "<br>"); </script>';
+            $containerIntroRows = "100vh";
+            $containerV3LicenseRows = "180vh";
+            $containerReferenceRows = "1040vh";
+         } 
+
+         if($isEdge) {
+            //  echo ' <script> alert("Microsoft Edge (old) using screen width = 1143" + "<br>"); </script>';
+            $containerIntroRows = "100vh";
+            $containerV3LicenseRows = "180vh";
+            $containerReferenceRows = "1040vh";
+         } 
+
+         break;
+      case 1366:     //  Win10
+      //   echo ' <script> alert("using screen width = 1366" + "<br>"); </script>';
+
+         if($isChrome) {
+            //  echo ' <script> alert("Chrome using screen width = 1366" + "<br>"); </script>';
+            $containerIntroRows = "80vh";
+            $containerV3LicenseRows = "140vh";
+            $containerReferenceRows = "1040vh";
+         } 
+
+         if($isFirefox) {
+            //  echo ' <script> alert("Firefox using screen width = 1366" + "<br>"); </script>';
+            $containerIntroRows = "80vh";
+            $containerV3LicenseRows = "120vh";
+            $containerReferenceRows = "1040vh";
+         } 
+
+         if($isNewEdge) {
+            //  echo ' <script> alert("Microsoft Edge (new) using screen width = 1366" + "<br>"); </script>';
+            $containerIntroRows = "100vh";
+            $containerV3LicenseRows = "180vh";
+            $containerReferenceRows = "1040vh";
+         } 
+
+         if($isEdge) {
+            //  echo ' <script> alert("Microsoft Edge (old) using screen width = 1366" + "<br>"); </script>';
+            $containerIntroRows = "100vh";
+            $containerV3LicenseRows = "180vh";
+            $containerReferenceRows = "1040vh";
+         } 
+
+
+         break;
+      case 1536:     //  Win10
+      //   echo ' <script> alert("using screen width = 1536" + "<br>"); </script>';
+
+         if($isChrome) {
+            //  echo ' <script> alert("Chrome using screen width = 1536" + "<br>"); </script>';
+            $containerIntroRows = "80vh";
+            $containerV3LicenseRows = "140vh";
+            $containerReferenceRows = "1040vh";
+         } 
+
+         if($isFirefox) {
+            //  echo ' <script> alert("Firefox using screen width = 1536" + "<br>"); </script>';
+            $containerIntroRows = "80vh";
+            $containerV3LicenseRows = "120vh";
+            $containerReferenceRows = "1040vh";
+         } 
+
+         if($isNewEdge) {
+            //  echo ' <script> alert("Microsoft Edge (new) using screen width = 1536" + "<br>"); </script>';
+            $containerIntroRows = "100vh";
+            $containerV3LicenseRows = "180vh";
+            $containerReferenceRows = "1040vh";
+         } 
+
+         if($isEdge) {
+            //  echo ' <script> alert("Microsoft Edge (old) using screen width = 1536" + "<br>"); </script>';
+            $containerIntroRows = "100vh";
+            $containerV3LicenseRows = "180vh";
+            $containerReferenceRows = "1040vh";
+         } 
+
+
+         break;
+      case 1707:     //  Win10
+      //   echo ' <script> alert("using screen width = 1707" + "<br>"); </script>';
+
+         if($isChrome) {
+            //  echo ' <script> alert("Chrome using screen width = 1707" + "<br>"); </script>';
+            $containerIntroRows = "80vh";
+            $containerV3LicenseRows = "140vh";
+            $containerReferenceRows = "1040vh";
+         } 
+
+         if($isFirefox) {
+            //  echo ' <script> alert("Firefox using screen width = 1707" + "<br>"); </script>';
+            $containerIntroRows = "80vh";
+            $containerV3LicenseRows = "120vh";
+            $containerReferenceRows = "1040vh";
+         } 
+
+         if($isNewEdge) {
+            //  echo ' <script> alert("Microsoft Edge (new) using screen width = 1707" + "<br>"); </script>';
+            $containerIntroRows = "100vh";
+            $containerV3LicenseRows = "180vh";
+            $containerReferenceRows = "1040vh";
+         } 
+
+         if($isEdge) {
+            //  echo ' <script> alert("Microsoft Edge (old) using screen width = 1707" + "<br>"); </script>';
+            $containerIntroRows = "100vh";
+            $containerV3LicenseRows = "180vh";
+            $containerReferenceRows = "1040vh";
+         } 
+
+
+         break;
+      default:
+   
+   //  end switch
+}
+   //  echo "containerIntroRows = $containerIntroRows";
+?>
 <style>
 
 .grid-container {
@@ -15,7 +471,7 @@
      display: grid;
      grid-gap: 1em;
      grid-template-columns: 0.5fr 4fr 4fr 0.5fr;
-     grid-template-rows: 03vh 40vh 03vh; 
+     grid-template-rows: 03vh <?php echo $containerRows; ?> 03vh; 
 }
 
 
@@ -41,10 +497,17 @@
      display: grid;
      grid-gap: 1em;
      grid-template-columns: 0.5fr 4fr 0.5fr;
-     grid-template-rows: 03vh 80vh 03vh; 
+     grid-template-rows: 03vh <?php echo $containerIntroRows; ?> 03vh; 
 }
 
 
+.grid-containerV3License {
+     border: 3px solid rgb(211, 211, 211, 1.0);      
+     display: grid;
+     grid-gap: 1em;
+     grid-template-columns: 0.5fr 4fr 0.5fr;
+     grid-template-rows: 03vh <?php echo $containerV3LicenseRows; ?> 03vh; 
+}
 
 
 
@@ -53,7 +516,7 @@
      display: grid;
      grid-gap: 1em;
      grid-template-columns: 0.5fr 4fr 0.5fr;
-     grid-template-rows: 03vh 1040vh 03vh; 
+     grid-template-rows: 03vh <?php echo $containerReferenceRows; ?> 03vh; 
 }
 
 
@@ -82,10 +545,13 @@
 
 
 
+
    </head>
 
 
 <body>
+
+
 
 <center>
 <div class="grid-containerIntro">
@@ -105,12 +571,15 @@
 
      <div class="grid-item"><br>
 <center> 
-<span id="pageTitle" style="color:Navy;font-size:58px;"><b>Welcome to the PHP demo.</b></span>
+<span id="pageTitle" style="color:Navy;font-size:<?php echo $pageTitleSize; ?>;"><b>Welcome to the PHP demo.</b></span>
 </center><br>
+
+
+
 
 <?php
 echo "<br>"; 
-echo '<span style="color:Maroon;font-size:22px;">';
+echo '<span id="textSystemInfo" style="color:Maroon;font-size:<?php echo $textSystemInfoSize; ?>;">';
 echo '<b>';
 echo '&nbsp;&nbsp;&nbsp;';
 echo PHP_OS."   ";
@@ -119,7 +588,77 @@ echo PHP_VERSION."<br>";
 echo '&nbsp;&nbsp;&nbsp;';
 echo date("Y/m/d");
 echo "&nbsp;&nbsp;&nbsp;";
-echo date("h:i:sa");
+echo date("h:i:sa")."<br>";
+echo $_SERVER['HTTP_USER_AGENT']."<br>";
+
+
+
+// Display device type.
+if (strpos($userAgent, 'Windows') !== false) {
+   echo "Windows Desktop   ";
+} elseif (strpos($userAgent, 'Windows Phone') !== false) {
+   echo "Windows Phone   ";
+} elseif (strpos($userAgent, 'iPad') !== false) {
+   echo "iPad   ";
+} elseif (strpos($userAgent, 'iPhone') !== false) {
+   echo "iPhone   ";
+} elseif ($isMac) {
+   echo "Macintosh Desktop   ";
+} elseif ($isiPhone) {
+   echo "iPhone   ";
+} elseif ($isiPad) {
+   echo "iPad   ";
+} else {
+   echo "Mobile    ";
+}
+
+
+
+
+//  Display Browser
+if ($isEdge) { 
+       echo " - Microsoft Edge (old)   ";    
+} elseif ($isNewEdge) { 
+       echo " - Microsoft Edge (new)   ";    
+} elseif ($isAndroidEdge) { 
+       echo " - Microsoft Edge    ";    
+} elseif ($isSafariLine) { 
+       echo " - Safari Line   ";    
+} elseif ($isFirefox) {
+   echo " - Firefox   ";    
+} elseif ($isChrome) {
+   echo " - Chrome   ";
+} elseif ($isSafari) {
+   echo " - Safari   ";
+} 
+
+
+
+else {
+   echo " - Unknown Browser   ";    
+}
+
+
+//  display OS
+if ($isWin10) {
+   echo " - Win10<br>";
+} elseif ($isAndroid) {
+   echo " - Android<br>";
+}  elseif ($isiPad) {
+   echo " - iOS<br>";
+}  elseif ($isiPhone) {
+   echo " - iOS<br>";
+} else {
+   echo " - Unknown OS<br>";
+}
+
+
+
+echo "Screen width = $screenWidth<br>"; 
+echo "Screen height = $screenHeight";
+
+
+
 echo '</b>';
 echo '</span>';
 echo "<br>"; 
@@ -128,34 +667,34 @@ echo "<br>";
 
 <br>
 <center> 
-<span id="aboutTitle" style="color:Navy;font-size:38px;"><b>About this demo</b></span>
+<span id="aboutTitle" style="color:Navy;font-size:<?php echo $aboutTitleSize; ?>;"><b>About this demo</b></span>
 </center><br>
-<span id="textIntroduction2" style="color:Black;font-size:23px;">
+<span id="textIntroduction2" style="color:Black;font-size:<?php echo $textIntroduction2Size; ?>;">
 This is a  
-<span id="textIntroductionEmphasized1" style="color:Navy;font-size:25px;">
+<span id="textIntroductionEmphasized1" style="color:Navy;font-size:<?php echo $textIntroductionEmphasized1Size; ?>;">
 <b>PHP web app</b>
 </span>
  and runs as an 
-<span id="textIntroductionEmphasized2" style="color:Navy;font-size:25px;">
-<b>Azure App Service</b>.
-</span>
-<br><br>
-
-
+<span id="textIntroductionEmphasized2" style="color:Navy;font-size:<?php echo $textIntroductionEmphasized2Size; ?>;">
+<b>Azure App Service</b>
+</span>.
+<br>
 
 </span>
 <br>
 
+
+
+
 <a href="fizzbuzz.php" target="_blank">
-	<span style="font-size:28px;"><b><i>Demo with PHP source code for the game FizzBuzz.</i></b></span></a>
+	<span id="textDemo" style="font-size:<?php echo $textDemoSize; ?>;">
+                  <b>Demo with PHP source code for the game FizzBuzz.</b></span></a>
 <br><br>
 
 
 <a href="testmysql.php" target="_blank">
-	<span style="font-size:28px;"><b><i>Test if MySQL is available.</i></b></span></a>
-<br><br>
-
-
+	<span id="textTestMySQL" style="font-size:<?php echo $textTestMySQLSize; ?>;">
+                 <b>Test if MySQL is available.</b></span></a>
 
 </center>
 
@@ -177,10 +716,7 @@ This is a
 
      <!--  end of grid container Intro  -->
 </div>
-</center><br><br>
-
-
-
+</center>
 
 
 <?php
@@ -285,26 +821,28 @@ echo '<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 echo '</center>';
 ?>
 
+
+
 <center>
-<span id="containsPHPmsg" style="color:Maroon;font-size:14px;"><b>This product includes PHP software, freely available from
+<span id="containsPHPmsg" style="color:Maroon;font-size:<?php echo $containsPHPMsgSize; ?>;"><b>This product includes PHP software, freely available from
 
 <a href="http://www.php.net/software/" target="_blank">http://www.php.net/software/</a>.
 </b>
 </span><br>
-<span id="angularJSmitLicenseMsg" style="color:Navy;font-size:18px;"><b>&nbsp;&nbsp;&nbsp;
-PHP is licensed under the <a href="https://www.php.net/license/3_01.txt" target="_blank">PHP License, version 3.01</a>.</b></span>
+<span id="phpLicenseMsg" style="color:Navy;font-size:<?php echo $phpLicenseMsgSize; ?>;"><b>&nbsp;&nbsp;&nbsp;
+PHP is licensed under the <a href="https://www.php.net/license/3_01.txt" target="_blank">PHP License  version 3.01</a>.</b></span>
 <br>
-<span id="angularJSlogoMsg" style="color:Navy;font-size:18px;"><b>&nbsp;&nbsp;&nbsp;
+<span id="phpLogoMsg" style="color:Navy;font-size:<?php echo $phpLogoMsgSize; ?>;"><b>&nbsp;&nbsp;&nbsp;
 The PHP logo is located at <a href="https://www.php.net/images/logos/new-php-logo.svg" target="_blank">https://www.php.net/images/logos/new-php-logo.svg</a>.</b></span>
 <br>
-<span id="iconsModifiedMsg" style="color:Navy;font-size:18px;"><b>&nbsp;&nbsp;&nbsp;The PHP logo has been modified.</b></span>
+<span id="phpLogoModifiedMsg" style="color:Navy;font-size:<?php echo $phpLogoModifiedMsgSize; ?>;"><b>&nbsp;&nbsp;&nbsp;The PHP logo has been modified.</b></span>
 <br>
-<span style="color:Black;font-size:12px;">
+<span id="phpLogoTermsMsg" style="color:Black;font-size:<?php echo $phpLogoTermsMsgSize; ?>;">
 The PHP logo is used according to terms described in the<br>
- <b><i>"Creative Commons Attribution-Share Alike 4.0 International"</b></i> license.
+ <b><i>"Creative Commons Attribution-Share Alike 4.0 International"</b></i> license<br>
 </span>
-<span style="color:Black;font-size:12px;">
-Located at <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><span style="font-size:12px;"><b><i>https://creativecommons.org/licenses/by-sa/4.0/</i></b></span></a>
+<span id="phpTermsLocationMsg" style="color:Black;font-size:<?php echo $phpTermsLocationMsgSize; ?>;">
+which is located at <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><span style="font-size:<?php echo $phpTermsLocationMsgSize; ?>;"><b>https://creativecommons.org/licenses/by-sa/4.0/</b></span></a>
 </span>
 </center>
 
@@ -313,7 +851,27 @@ Located at <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_bl
 <br><br>
 
 
-<span style="color:Black;font-size:18px;">
+
+
+
+<div class="grid-containerV3License">
+
+     <div class="grid-itemMargin">
+     </div>
+     <div class="grid-itemTopBottom">
+     </div>
+     <div class="grid-itemMargin">
+     </div>
+
+
+
+
+     <div class="grid-itemMargin">
+     </div>
+
+     <div class="grid-item"><br>
+
+<span id="phpV3LicenseMsg" style="color:Black;font-size:<?php echo $phpV3LicenseMsgSize; ?>;">
 --------------------------------------------------------------------<br>
                   The PHP License, version 3.01<br>
 Copyright (c) 1999 - 2019 The PHP Group. All rights reserved.<br>
@@ -388,6 +946,26 @@ PHP includes the Zend Engine, freely available at
 <br><br><br><br>
 
 
+     </div>
+
+
+     <div class="grid-itemMargin">
+     </div>
+
+
+
+     <div class="grid-itemMargin">
+     </div>
+     <div class="grid-itemTopBottom">
+     </div>
+     <div class="grid-itemMargin">
+     </div>
+
+     <!--  end of grid container V3License  -->
+</div>
+
+
+
 
 
 
@@ -422,17 +1000,22 @@ the references section overlaps the introduction.
 <br><br>
 
 <center> 
-<span id="copyRightMsg" style="color:Navy;font-size:24px;">
-	<b>&nbsp;&nbsp;&nbsp;Copyright &#169; 2023-2024. All rights reserved.</b></span>
+<span id="copyRightMsg" style="color:Navy;font-size:<?php echo $copyRightMsgSize; ?>;">
+	<b>&nbsp;&nbsp;&nbsp;Copyright &#169; 2023-2024. All rights reserved.</b>
+</span>
 </center> 
 <br>
 
+
+
 <center> 
-<span id="chromeBestMsg" style="color:Navy;font-size:24px;">
+<span id="chromeBestMsg" style="color:Navy;font-size:<?php echo $chromeBestMsgSize; ?>;">
 	<b>&nbsp;&nbsp;&nbsp;Best results when using the Chrome browser.</b></span><br><br>
 
+
+
 <svg id="BootstrapIcon" 
-xmlns="http://www.w3.org/2000/svg" width="128" height="128" fill="Navy" class="bi bi-bootstrap" viewBox="0 0 16 16" 
+xmlns="http://www.w3.org/2000/svg" width="<?php echo $bootstrapIconWidth; ?>" height="<?php echo $bootstrapIconHeight; ?>" fill="Navy" class="bi bi-bootstrap" viewBox="0 0 16 16" 
 role="graphics-document" aria-labelledby="iconTitle" aria-describedby="iconDesc">
     <title> id="iconTitle">Bootstrap icon</title>
     <desc  id="iconDesc">this icon represents Bootstrap</desc> 
@@ -441,15 +1024,17 @@ role="graphics-document" aria-labelledby="iconTitle" aria-describedby="iconDesc"
 </svg><br>
 
 
-<span id="iconsProvidedMsg" style="color:Navy;font-size:24px;">
+
+<span id="iconsProvidedMsg" style="color:Navy;font-size:<?php echo $iconsProvidedMsgSize; ?>;">
 	<b>&nbsp;&nbsp;&nbsp; Some icons provided via the 
-<a href="https://icons.getbootstrap.com/" target="_blank">Bootstrap Icons</a> collection.</b></span><br>
+<a href="https://icons.getbootstrap.com/" target="_blank">Bootstrap Icons</a> collection.</b>
+</span><br>
 
 
-<span id="mitLicenseMsg" style="color:Navy;font-size:24px;">
+<span id="mitLicenseMsg" style="color:Navy;font-size:<?php echo $mitLicenseMsgSize; ?>;">
 	<b>&nbsp;&nbsp;&nbsp; Bootstrap Icons are under the <a href="https://github.com/twbs/icons/blob/main/LICENSE.md" target="_blank">MIT</a> license.</b></span><br>
 
-<span id="iconsModifiedMsg" style="color:Navy;font-size:24px;">
+<span id="iconsModifiedMsg" style="color:Navy;font-size:<?php echo $iconsModifiedMsgSize; ?>;">
 	<b>&nbsp;&nbsp;&nbsp;Some icons in this collection have been modified.</b></span><br><br>
 </center> 
 
@@ -500,7 +1085,8 @@ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
 
-</body>
+<body>
+
 
 </html>
 
