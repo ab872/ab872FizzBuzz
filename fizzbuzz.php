@@ -409,6 +409,7 @@ switch($screenWidth) {
          		if($isChrome) {
             			//  echo ' <script> alert("Chrome using screen width = 1280" + "<br>"); </script>';
 				$containerIntroRows = "100vh";
+				$containerCodePHPRows = "80vh";
          		} 
                         
          		if($isFirefox) {
