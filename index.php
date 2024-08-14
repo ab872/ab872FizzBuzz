@@ -396,7 +396,7 @@ switch($screenWidth) {
                             
          		if($isChrome) {
             			//  echo ' <script> alert("Chrome using screen width = 1280" + "<br>"); </script>';
-				$containerV3LicenseRows = "140vh";
+				$containerV3LicenseRows = "150vh";
 
          		} 
                         
