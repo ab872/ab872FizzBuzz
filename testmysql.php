@@ -228,6 +228,13 @@ if (isset($_COOKIE['screen_height'])) {
 	$textIntroductionEmphasized1Size = "25px";
 	$textIntroductionEmphasized2Size = "25px";
 	$textIntroductionEmphasized3Size = "25px";
+
+	$hostNameSize = "105";
+	$userIDSize = "105";
+	$userPasswordSize = "105";
+	$dbNameSize = "105";
+	$sslNameSize = "105";
+
 	$attemptingToConnectMsgSize = "28px";
 	$nothingAppearsMsgSize = "18px";
 	$nothingAppearsMsg2Size = "18px";
@@ -242,6 +249,13 @@ if (isset($_COOKIE['screen_height'])) {
 	switch($screenWidth) {
       		case 360:      //  Android 
 	         //	echo ' <script> alert("using screen width = 360" + "<br>"); </script>';
+	
+			// screen is too small for the size of the inputs to be the default value of 105
+			$hostNameSize = "55";
+			$userIDSize = "55";
+			$userPasswordSize = "55";
+			$dbNameSize = "55";
+			$sslNameSize = "55";
 
 		        if($isChrome) {
 
@@ -259,21 +273,102 @@ if (isset($_COOKIE['screen_height'])) {
 		case 375:      //  iPad, iPhone
          	//	echo ' <script> alert("using screen width = 375" + "<br>"); </script>';
 
+			// screen is too small for the size of the inputs to be the default value of 105
+			$hostNameSize = "55";
+			$userIDSize = "55";
+			$userPasswordSize = "55";
+			$dbNameSize = "55";
+			$sslNameSize = "55";
+
          	break;
       		case 390:      //  iPad, iPhone
          	//	echo ' <script> alert("using screen width = 390" + "<br>"); </script>';
 
+			// screen is too small for the size of the inputs to be the default value of 105
+			$hostNameSize = "55";
+			$userIDSize = "55";
+			$userPasswordSize = "55";
+			$dbNameSize = "55";
+			$sslNameSize = "55";
+
          	break;
+      		case 408:      
+         	//	echo ' <script> alert("using screen width = 408" + "<br>"); </script>';
+
+			// screen is too small for the size of the inputs to be the default value of 105
+			$hostNameSize = "55";
+			$userIDSize = "55";
+			$userPasswordSize = "55";
+			$dbNameSize = "55";
+			$sslNameSize = "55";
+
+			switch($screenHeight) {
+				case 929:      
+         			//	echo ' <script> alert("using screen height = 929" + "<br>"); </script>';
+                                        
+	         		break;
+      				default:
+   
+				//  end switch
+			}
+                           
+         	break;
+      		case 412:      //  Android
+         	//	echo ' <script> alert("using screen width = 412" + "<br>"); </script>';
+
+			// screen is too small for the size of the inputs to be the default value of 105
+			$hostNameSize = "55";
+			$userIDSize = "55";
+			$userPasswordSize = "55";
+			$dbNameSize = "55";
+			$sslNameSize = "55";
+
+			switch($screenHeight) {
+				case 922:      
+         			//	echo ' <script> alert("using screen height = 922" + "<br>"); </script>';
+
+	         		break;
+      				case 938:      
+         			//	echo ' <script> alert("using screen height = 390" + "<br>"); </script>';
+
+	         		break;
+      				default:
+   
+				//  end switch
+			}
+
+        	break;
       		case 414:      //  iPad, iPhone
          	//	echo ' <script> alert("using screen width = 414" + "<br>"); </script>';
+	
+			// screen is too small for the size of the inputs to be the default value of 105
+			$hostNameSize = "55";
+			$userIDSize = "55";
+			$userPasswordSize = "55";
+			$dbNameSize = "55";
+			$sslNameSize = "55";
 
         	break;
       		case 768:      //  iPad
          	//	echo ' <script> alert("using screen width = 768" + "<br>"); </script>';
+	
+			// screen might be too small for the size of the inputs to be the default value of 105
+			$hostNameSize = "55";
+			$userIDSize = "55";
+			$userPasswordSize = "55";
+			$dbNameSize = "55";
+			$sslNameSize = "55";
 
          	break;
       		case 820:      //  iPad
          	//	echo ' <script> alert("using screen width = 820" + "<br>"); </script>';
+	
+			// screen might be too small for the size of the inputs to be the default value of 105
+			$hostNameSize = "55";
+			$userIDSize = "55";
+			$userPasswordSize = "55";
+			$dbNameSize = "55";
+			$sslNameSize = "55";
 
          	break;
       		case 1133:     //  Android
@@ -297,7 +392,7 @@ if (isset($_COOKIE['screen_height'])) {
                         
                            
          	break;
-      		case 1143:     //  Chrome Android
+      		case 1143:     //  Android
          	//	echo ' <script> alert("using screen width = 1143" + "<br>"); </script>';
                          
          		if($isChrome) {
@@ -320,6 +415,26 @@ if (isset($_COOKIE['screen_height'])) {
             			//  echo ' <script> alert("Microsoft Edge (old) using screen width = 1143" + "<br>"); </script>';
         	 	} 
                        
+         	break;
+       		case 1280:     //  Win10
+         	//	echo ' <script> alert("using screen width = 1280" + "<br>"); </script>';
+                            
+         		if($isChrome) {
+            			//  echo ' <script> alert("Chrome using screen width = 1280" + "<br>"); </script>';
+         		} 
+                        
+         		if($isFirefox) {
+            			//  echo ' <script> alert("Firefox using screen width = 1280" + "<br>"); </script>';
+         		} 
+                           
+         		if($isNewEdge) {
+            			//  echo ' <script> alert("Microsoft Edge (new) using screen width = 1280" + "<br>"); </script>';
+         		} 
+                     
+         		if($isEdge) {
+            			//  echo ' <script> alert("Microsoft Edge (old) using screen width = 1280" + "<br>"); </script>';
+         		} 
+                   
          	break;
        		case 1366:     //  Win10
          	//	echo ' <script> alert("using screen width = 1366" + "<br>"); </script>';
@@ -560,8 +675,8 @@ if ($isWin10) {
 }
 
 
-
-echo "Screen width = $screenWidth<br>"; 
+echo "Screen width = $screenWidth";
+echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"; 
 echo "Screen height = $screenHeight";
 
 
@@ -704,15 +819,15 @@ $sslCert = "?";
 ?>
 
 <form action="" method="post">
-  <input type="text" name="hostName" id="hostName" alt="enter the host name here" size="105" maxlength="100" value=<?php echo $host?>>
+  <input type="text" name="hostName" id="hostName" alt="enter the host name here" size="<?php echo $hostNameSize; ?>" maxlength="100" value=<?php echo $host?>>
   <button type="submit" name="hostNameButton">Set Host Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button><br>
-  <input type="text" name="userID" id="userID" alt="enter the user name here" size="105" maxlength="100" value=<?php echo $userName?>>
+  <input type="text" name="userID" id="userID" alt="enter the user name here" size="<?php echo $userIDSize; ?>" maxlength="100" value=<?php echo $userName?>>
   <button type="submit" name="userIDbutton">Set User Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button><br>
-  <input type="text" name="userPassword" id="userPassword" alt="enter the user password here" size="105" maxlength="100" value=<?php echo $password?>>
+  <input type="text" name="userPassword" id="userPassword" alt="enter the user password here" size="<?php echo $userPasswordSize; ?>" maxlength="100" value=<?php echo $password?>>
   <button type="submit" name="userPasswordButton">Set User Password&nbsp;</button><br>
-  <input type="text" name="dbName" id="dbName" alt="enter the database name here" size="105" maxlength="100" value=<?php echo $database?>>
+  <input type="text" name="dbName" id="dbName" alt="enter the database name here" size="<?php echo $dbNameSize; ?>" maxlength="100" value=<?php echo $database?>>
   <button type="submit" name="dbNameButton">Set DB Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button><br>
-  <input type="text" name="sslName" id="sslName" alt="enter the SSL certificate name here" size="105" maxlength="100" value=<?php echo $sslCert?>>
+  <input type="text" name="sslName" id="sslName" alt="enter the SSL certificate name here" size="<?php echo $sslNameSize; ?>" maxlength="100" value=<?php echo $sslCert?>>
   <button type="submit" name="sslCertButton">Set SSL Certificate&nbsp;&nbsp;</button>
 </form>
 
