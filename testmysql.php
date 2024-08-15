@@ -380,6 +380,7 @@ if (isset($_COOKIE['screen_height'])) {
                                
          		if($isFirefox) {
             			//  echo ' <script> alert("Firefox using screen width = 1133" + "<br>"); </script>';
+				$containerIntroRows = "100vh";
          		} 
                                
          		if($isNewEdge) {
