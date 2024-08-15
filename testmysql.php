@@ -381,6 +381,13 @@ if (isset($_COOKIE['screen_height'])) {
          		if($isFirefox) {
             			//  echo ' <script> alert("Firefox using screen width = 1133" + "<br>"); </script>';
 				$containerIntroRows = "120vh";
+
+				// inputs with the default value of 105 are too long
+				$hostNameSize = "75";
+				$userIDSize = "75";
+				$userPasswordSize = "75";
+				$dbNameSize = "75";
+				$sslNameSize = "75";
          		} 
                                
          		if($isNewEdge) {
