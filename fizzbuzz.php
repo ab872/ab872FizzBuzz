@@ -372,7 +372,7 @@ switch($screenWidth) {
             		$containerIntroRows = "110vh";
 	    		$containerCodePHPRows = "80vh";
             		$containerV3LicenseRows = "240vh";
-            		$containerReferenceRows = "1430vh";
+            		$containerReferenceRows = "1460vh";
          	} 
                         
          	if($isFirefox) {
