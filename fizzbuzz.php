@@ -345,8 +345,9 @@ switch($screenWidth) {
          	if($isFirefox) {
             		//  echo ' <script> alert("Firefox using screen width = 1133" + "<br>"); </script>';
             		$containerIntroRows = "130vh";
+	    		$containerCodePHPRows = "80vh";
             		$containerV3LicenseRows = "220vh";
-            		$containerReferenceRows = "1620vh";
+            		$containerReferenceRows = "1630vh";
          	} 
                             
          	if($isNewEdge) {
