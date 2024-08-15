@@ -397,6 +397,7 @@ if (isset($_COOKIE['screen_height'])) {
                          
          		if($isChrome) {
             			//  echo ' <script> alert("Chrome using screen width = 1143" + "<br>"); </script>';
+				$containerIntroRows = "100vh";
          		} 
                               
          		if($isFirefox) {
