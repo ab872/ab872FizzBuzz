@@ -386,8 +386,9 @@ switch($screenWidth) {
          	if($isAndroidEdge) {
             		//  echo ' <script> alert("Microsoft Edge (Android) using screen width = 1143" + "<br>"); </script>';
             		$containerIntroRows = "110vh";
+	    		$containerCodePHPRows = "80vh";
             		$containerV3LicenseRows = "=240vh";
-            		$containerReferenceRows = "1430vh";
+            		$containerReferenceRows = "1450vh";
          	} 
                            
          	if($isNewEdge) {
