@@ -414,6 +414,7 @@ if (isset($_COOKIE['screen_height'])) {
                             
          		if($isAndroidEdge) {
             			//  echo ' <script> alert("Microsoft Edge (Android) using screen width = 1143" + "<br>"); </script>';
+				$containerIntroRows = "100vh";
          		} 
                            
          		if($isNewEdge) {
