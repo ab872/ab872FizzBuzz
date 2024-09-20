@@ -216,57 +216,76 @@ if (isset($_COOKIE['screen_height'])) {
 
         //  values for the default screen width
 
-	$pageTitleSize = "48px";
-	$textSystemInfoSize = "22px";
+	$pageTitleSize = "3em";
+	$textSystemInfoSize = "1.375em";
 
 	$containerRows = "40vh";
 	$containerIntroRows = "50vh";
 	$containerReferenceRows = "1040vh";
 
-	$aboutTitleSize = "38px";
-	$textIntroduction1Size = "23px";
-	$textIntroductionEmphasized1Size = "25px";
-	$textIntroductionEmphasized2Size = "25px";
-	$textIntroductionEmphasized3Size = "25px";
+	$aboutTitleSize = "2.375em";
+	$textIntroduction1Size = "1.4375em";
+	$textIntroductionEmphasized1Size = "1em";
+	$textIntroductionEmphasized2Size = "1em";
+	$textIntroductionEmphasized3Size = "1em";
 
+        //  size in characters of the input fields
 	$hostNameSize = "105";
 	$userIDSize = "105";
 	$userPasswordSize = "105";
 	$dbNameSize = "105";
 	$sslNameSize = "105";
 
-	$attemptingToConnectMsgSize = "28px";
-	$nothingAppearsMsgSize = "18px";
-	$nothingAppearsMsg2Size = "18px";
-	$checkCredentialsMsgSize = "28px";
-	$connectionSuccessfulMsgSize = "28px";
-	$serverInfoTitleMsgSize = "28px";
-	$serverInfoMsgSize = "28px";
-	$closeConnectionMsgSize = "28px";
-	$endOfPageMsgSize = "48px";
+	$attemptingToConnectMsgSize = "1.75em";
+	$nothingAppearsMsgSize = "1.125em";
+	$nothingAppearsMsg2Size = "1.125em";
+	$checkCredentialsMsgSize = "1.125em";
+	$connectionSuccessfulMsgSize = "1.125em";
+	$serverInfoTitleMsgSize = "1.125em";
+	$serverInfoMsgSize = "1.125em";
+	$closeConnectionMsgSize = "1.125em";
+	$endOfPageMsgSize = "3em";
+	$exceptionOccurredMsgSize = "1.125em";
 
 
 	switch($screenWidth) {
       		case 360:      //  Android 
 	         //	echo ' <script> alert("using screen width = 360" + "<br>"); </script>';
 	
-			// screen is too small for the size of the inputs to be the default value of 105
-			$hostNameSize = "55";
-			$userIDSize = "55";
-			$userPasswordSize = "55";
-			$dbNameSize = "55";
-			$sslNameSize = "55";
-
 		        if($isChrome) {
+				// screen is too small for the size of the inputs to be the default value of 105
+				$hostNameSize = "95";
+				$userIDSize = "95";
+				$userPasswordSize = "95";
+				$dbNameSize = "95";
+				$sslNameSize = "95";
 
+				$containerIntroRows = "130vh";
+				$containerReferenceRows = "1040vh";
 			}
 
 		        if($isFirefox) {
+				// screen is too small for the size of the inputs to be the default value of 105
+				$hostNameSize = "35";
+				$userIDSize = "35";
+				$userPasswordSize = "35";
+				$dbNameSize = "35";
+				$sslNameSize = "35";
 
+				$containerIntroRows = "80vh";
+				$containerReferenceRows = "1040vh";
 			}
 
 		        if($isAndroidEdge) {
+				// screen is too small for the size of the inputs to be the default value of 105
+				$hostNameSize = "95";
+				$userIDSize = "95";
+				$userPasswordSize = "95";
+				$dbNameSize = "95";
+				$sslNameSize = "95";
 
+				$containerIntroRows = "130vh";
+				$containerReferenceRows = "1040vh";
 			}
 
 	        break;
@@ -304,8 +323,16 @@ if (isset($_COOKIE['screen_height'])) {
 
 			switch($screenHeight) {
 				case 929:      
-         			//	echo ' <script> alert("using screen height = 929" + "<br>"); </script>';
-                                        
+         				//	echo ' <script> alert("using screen height = 929" + "<br>"); </script>';
+					// screen is too small for the size of the inputs to be the default value of 105
+					$hostNameSize = "35";
+					$userIDSize = "35";
+					$userPasswordSize = "35";
+					$dbNameSize = "35";
+					$sslNameSize = "35";
+
+					$containerIntroRows = "60vh";
+					$containerReferenceRows = "1040vh";  
 	         		break;
       				default:
    
@@ -329,8 +356,16 @@ if (isset($_COOKIE['screen_height'])) {
 
 	         		break;
       				case 938:      
-         			//	echo ' <script> alert("using screen height = 390" + "<br>"); </script>';
+         				//	echo ' <script> alert("using screen height = 390" + "<br>"); </script>';
+					// screen is too small for the size of the inputs to be the default value of 105
+					$hostNameSize = "95";
+					$userIDSize = "95";
+					$userPasswordSize = "95";
+					$dbNameSize = "95";
+					$sslNameSize = "95";
 
+					$containerIntroRows = "100vh";
+					$containerReferenceRows = "1040vh";
 	         		break;
       				default:
    
@@ -380,14 +415,16 @@ if (isset($_COOKIE['screen_height'])) {
                                
          		if($isFirefox) {
             			//  echo ' <script> alert("Firefox using screen width = 1133" + "<br>"); </script>';
-				$containerIntroRows = "120vh";
 
-				// inputs with the default value of 105 are too long
-				$hostNameSize = "75";
-				$userIDSize = "75";
-				$userPasswordSize = "75";
-				$dbNameSize = "75";
-				$sslNameSize = "75";
+				// screen might be too small for the size of the inputs to be the default value of 105
+				$hostNameSize = "55";
+				$userIDSize = "55";
+				$userPasswordSize = "55";
+				$dbNameSize = "55";
+				$sslNameSize = "55";
+
+				$containerIntroRows = "100vh";
+				$containerReferenceRows = "1040vh";
          		} 
                                
          		if($isNewEdge) {
@@ -406,6 +443,7 @@ if (isset($_COOKIE['screen_height'])) {
          		if($isChrome) {
             			//  echo ' <script> alert("Chrome using screen width = 1143" + "<br>"); </script>';
 				$containerIntroRows = "100vh";
+				$containerReferenceRows = "1040vh";
          		} 
                               
          		if($isFirefox) {
@@ -415,6 +453,7 @@ if (isset($_COOKIE['screen_height'])) {
          		if($isAndroidEdge) {
             			//  echo ' <script> alert("Microsoft Edge (Android) using screen width = 1143" + "<br>"); </script>';
 				$containerIntroRows = "100vh";
+				$containerReferenceRows = "1040vh";
          		} 
                            
          		if($isNewEdge) {
@@ -431,13 +470,10 @@ if (isset($_COOKIE['screen_height'])) {
                             
          		if($isChrome) {
             			//  echo ' <script> alert("Chrome using screen width = 1280" + "<br>"); </script>';
-				$containerIntroRows = "80vh";
          		} 
                         
          		if($isFirefox) {
             			//  echo ' <script> alert("Firefox using screen width = 1280" + "<br>"); </script>';
-				$containerIntroRows = "80vh";
-
          		} 
                            
          		if($isNewEdge) {
@@ -911,6 +947,11 @@ echo "<br>";
 
 } catch (Exception $e) {
      echo 'An exception occurred: ', $e->getMessage(), "\n";
+
+     echo '<span id="exceptionOccurredMsg" style="color:Maroon;font-size:<?php echo $exceptionOccurredMsgSize; ?>;"><b>
+An exception occurred: ';
+     echo $e->getMessage(), "\n";
+     echo '</b></span>';
 }
 
 

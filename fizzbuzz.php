@@ -222,37 +222,37 @@ if (isset($_COOKIE['screen_height'])) {
 
         //  values for the default screen width
 
-	$pageTitleSize = "58px";
-	$textSysInfoSize = "53px";
-	$aboutTitleSize = "38px";
-	$textIntroduction2Size = "23px";
-	$textIntroductionEmphasized1Size = "25px";
-	$textIntroductionEmphasized2Size = "25px";
-	$textIntroductionEmphasized3Size = "25px";
+	$pageTitleSize = "3.625em";
+	$textSysInfoSize = "3.3125em";
+	$aboutTitleSize = "2.375em";
+	$textIntroduction2Size = "1.4375em";
+	$textIntroductionEmphasized1Size = "1em";
+	$textIntroductionEmphasized2Size = "1em";
+	$textIntroductionEmphasized3Size = "1em";
 
-	$textDemoSize = "28px";
-	$textTestMySQLSize = "28px";
+	$textDemoSize = "1.75em";
+	$textTestMySQLSize = "1.75em";
 
         $containerIntroRows = "70vh";
 	$containerCodePHPRows = "40vh";
 	$containerReferenceRows = "1060vh";
         $containerV3LicenseRows = "120vh";
 
-        $copyRightMsgSize = "36px";
-        $chromeBestMsgSize = "28px";
-        $bootstrapIconWidth = "96";
-        $bootstrapIconHeight = "96";
-        $iconsProvidedMsgSize = "28px";
-        $mitLicenseMsgSize = "28px";
-        $iconsModifiedMsgSize = "28px";
+        $copyRightMsgSize = "2.25em";
+        $chromeBestMsgSize = "1.75em";
+        $bootstrapIconWidth = "6em";
+        $bootstrapIconHeight = "6em";
+        $iconsProvidedMsgSize = "1.75em";
+        $mitLicenseMsgSize = "1.75em";
+        $iconsModifiedMsgSize = "1.75em";
 
-        $containsPHPMsgSize = "18px";
-        $phpLicenseMsgSize = "18px";
-        $phpLogoMsgSize = "18px";
-        $phpLogoModifiedMsgSize = "18px";
-        $phpLogoTermsMsgSize = "18px";
-        $phpTermsLocationMsgSize = "18px";
-        $phpV3LicenseMsgSize = "16px";
+        $containsPHPMsgSize = "1.125em";
+        $phpLicenseMsgSize = "1.125em";
+        $phpLogoMsgSize = "1.125em";
+        $phpLogoModifiedMsgSize = "1.125em";
+        $phpLogoTermsMsgSize = "1.125em";
+        $phpTermsLocationMsgSize = "1.125em";
+        $phpV3LicenseMsgSize = "1em";
 
 
 switch($screenWidth) {
@@ -263,7 +263,7 @@ switch($screenWidth) {
             $containerIntroRows = "120vh";
             $containerV3LicenseRows = "420vh";
 	    $containerCodePHPRows = "110vh";
-	    $containerReferenceRows = "1360vh";
+	    $containerReferenceRows = "1300vh";
 	 }
 
          if($isFirefox) {
@@ -276,7 +276,7 @@ switch($screenWidth) {
             $containerIntroRows = "120vh";
             $containerV3LicenseRows = "410vh";
 	    $containerCodePHPRows = "110vh";
-	    $containerReferenceRows = "1330vh";
+	    $containerReferenceRows = "1300vh";
          }
 
          break;
@@ -293,8 +293,11 @@ switch($screenWidth) {
 
 			switch($screenHeight) {
 				case 929:      
-         			//	echo ' <script> alert("using screen height = 929" + "<br>"); </script>';
-                                        
+         				//	echo ' <script> alert("using screen height = 929" + "<br>"); </script>';
+            				$containerIntroRows = "60vh";
+	    				$containerCodePHPRows = "30vh";
+            				$containerV3LicenseRows = "160vh";
+	    				$containerReferenceRows = "680vh";   
 	         		break;
       				default:
    
@@ -311,8 +314,11 @@ switch($screenWidth) {
                                  
 	         		break;
       				case 938:      
-         			//	echo ' <script> alert("using screen height = 390" + "<br>"); </script>';
-                                   
+         				//	echo ' <script> alert("using screen height = 390" + "<br>"); </script>';
+            				$containerIntroRows = "100vh";
+	    				$containerCodePHPRows = "80vh";
+            				$containerV3LicenseRows = "290vh";
+	    				$containerReferenceRows = "1000vh";
 	         		break;
       				default:
                                       
@@ -345,9 +351,9 @@ switch($screenWidth) {
          	if($isFirefox) {
             		//  echo ' <script> alert("Firefox using screen width = 1133" + "<br>"); </script>';
             		$containerIntroRows = "130vh";
-	    		$containerCodePHPRows = "100vh";
+			$containerCodePHPRows = "110vh";
             		$containerV3LicenseRows = "220vh";
-            		$containerReferenceRows = "1630vh";
+            		$containerReferenceRows = "1650vh";
          	} 
                             
          	if($isNewEdge) {
@@ -371,7 +377,7 @@ switch($screenWidth) {
          	if($isChrome) {
             		//  echo ' <script> alert("Chrome using screen width = 1143" + "<br>"); </script>';
             		$containerIntroRows = "110vh";
-	    		$containerCodePHPRows = "80vh";
+			$containerCodePHPRows = "60vh";
             		$containerV3LicenseRows = "240vh";
             		$containerReferenceRows = "1460vh";
          	} 
@@ -386,7 +392,7 @@ switch($screenWidth) {
          	if($isAndroidEdge) {
             		//  echo ' <script> alert("Microsoft Edge (Android) using screen width = 1143" + "<br>"); </script>';
             		$containerIntroRows = "110vh";
-	    		$containerCodePHPRows = "80vh";
+			$containerCodePHPRows = "60vh";
             		$containerV3LicenseRows = "=240vh";
             		$containerReferenceRows = "1460vh";
          	} 
@@ -411,17 +417,10 @@ switch($screenWidth) {
                             
          		if($isChrome) {
             			//  echo ' <script> alert("Chrome using screen width = 1280" + "<br>"); </script>';
-				$containerIntroRows = "100vh";
-				$containerCodePHPRows = "80vh";
-        			$containerV3LicenseRows = "160vh";
-				$containerReferenceRows = "1250vh";
          		} 
                         
          		if($isFirefox) {
             			//  echo ' <script> alert("Firefox using screen width = 1280" + "<br>"); </script>';
-				$containerIntroRows = "80vh";
-        			$containerV3LicenseRows = "140vh";
-				$containerReferenceRows = "1190vh";
          		} 
                            
          		if($isNewEdge) {
@@ -472,14 +471,15 @@ switch($screenWidth) {
             		//  echo ' <script> alert("Chrome using screen width = 1536" + "<br>"); </script>';
             		$containerIntroRows = "80vh";
             		$containerV3LicenseRows = "140vh";
-            		$containerReferenceRows = "1130vh";
-            		$copyRightMsgSize = "38px";
-            		$chromeBestMsgSize = "28px";
-            		$bootstrapIconWidth = "96";
-            		$bootstrapIconHeight = "96";
-            		$iconsProvidedMsgSize = "28px";
-            		$mitLicenseMsgSize = "28px";
-            		$iconsModifiedMsgSize = "28px";
+            		$containerReferenceRows = "1080vh";
+
+            		//  $copyRightMsgSize = "38px";
+            		//  $chromeBestMsgSize = "28px";
+            		//  $bootstrapIconWidth = "96";
+            		//  $bootstrapIconHeight = "96";
+            		//  $iconsProvidedMsgSize = "28px";
+            		//  $mitLicenseMsgSize = "28px";
+            		//  $iconsModifiedMsgSize = "28px";
          	} 
                        
          	if($isFirefox) {
@@ -491,38 +491,39 @@ switch($screenWidth) {
             		//  echo ' <script> alert("Microsoft Edge (new) using screen width = 1536" + "<br>"); </script>';
                    
             		// not working under New Edge browser
-	    		$textSysInfoSize = "53px";
+	    		//  $textSysInfoSize = "53px";
                    
             		$containerIntroRows = "110vh";
             		$containerV3LicenseRows = "180vh";
 	    		$containerCodePHPRows = "80vh";
             		$containerReferenceRows = "1450vh";
                         
-            		$copyRightMsgSize = "38px";
-            		$chromeBestMsgSize = "28px";
-            		$bootstrapIconWidth = "96";
-            		$bootstrapIconHeight = "96";
-            		$iconsProvidedMsgSize = "28px";
-            		$mitLicenseMsgSize = "28px";
-            		$iconsModifiedMsgSize = "28px";  
+            		//  $copyRightMsgSize = "38px";
+            		//  $chromeBestMsgSize = "28px";
+            		//  $bootstrapIconWidth = "96";
+            		//  $bootstrapIconHeight = "96";
+            		//  $iconsProvidedMsgSize = "28px";
+            		//  $mitLicenseMsgSize = "28px";
+            		//  $iconsModifiedMsgSize = "28px";  
          	} 
                          
          	if($isEdge) {
             		//  echo ' <script> alert("Microsoft Edge (old) using screen width = 1536" + "<br>"); </script>';
                      
 	   		// not working under Edge browser
-	   		$textSysInfoSize = "53px";
+	   		//  $textSysInfoSize = "53px";
                   
             		$containerIntroRows = "110vh";
             		$containerV3LicenseRows = "180vh";
             		$containerReferenceRows = "1450vh";
-            		$copyRightMsgSize = "38px";
-            		$chromeBestMsgSize = "28px";
-            		$bootstrapIconWidth = "96";
-            		$bootstrapIconHeight = "96";
-            		$iconsProvidedMsgSize = "28px";
-            		$mitLicenseMsgSize = "28px";
-            		$iconsModifiedMsgSize = "28px";
+
+            		//  $copyRightMsgSize = "38px";
+            		//  $chromeBestMsgSize = "28px";
+            		//  $bootstrapIconWidth = "96";
+            		//  $bootstrapIconHeight = "96";
+            		//  $iconsProvidedMsgSize = "28px";
+            		//  $mitLicenseMsgSize = "28px";
+            		//  $iconsModifiedMsgSize = "28px";
          	} 
                        
          break;
@@ -822,8 +823,7 @@ This is a
 <b>demo</b>
 </span> of the game 
 <span id="textIntroductionEmphasized2" style="color:Navy;font-size:<?php echo $textIntroductionEmphasized2Size; ?>;">
-<b>FizzBuzz</b>
-</span>. 
+<b>FizzBuzz</b></span>. 
 It illustrates 
 <span id="textIntroductionEmphasized3" style="color:Navy;font-size:<?php echo $textIntroductionEmphasized3Size; ?>;">
 <b>basic iteration and conditional statements</b></span>. 

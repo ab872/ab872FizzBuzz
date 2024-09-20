@@ -215,33 +215,34 @@ if (isset($_COOKIE['screen_height'])) {
 
         //  values for the default screen width
 
-	$pageTitleSize = "58px";
-	$textSystemInfoSize = "22px";
-	$aboutTitleSize = "38px";
-	$textIntroduction2Size = "23px";
-	$textIntroductionEmphasized1Size = "25px";
-	$textIntroductionEmphasized2Size = "25px";
-	$textDemoSize = "28px";
-	$textTestMySQLSize = "28px";
+	$pageTitleSize = "3.625em";
+	$textSystemInfoSize = "3em";
+	$aboutTitleSize = "2.375em";
+	$textIntroduction2Size = "1.75em";
+	$textIntroductionEmphasized1Size = "1em";
+	$textIntroductionEmphasized2Size = "1em";
+	$textDemoSize = "1.75em";
+	$textTestMySQLSize = "1.75em";
 
         $containerIntroRows = "80vh";
         $containerV3LicenseRows = "120vh";
         $containerReferenceRows = "1040vh";
-        $copyRightMsgSize = "36px";
-        $chromeBestMsgSize = "28px";
-        $bootstrapIconWidth = "96";
-        $bootstrapIconHeight = "96";
-        $iconsProvidedMsgSize = "28px";
-        $mitLicenseMsgSize = "28px";
-        $iconsModifiedMsgSize = "28px";
 
-        $containsPHPMsgSize = "18px";
-        $phpLicenseMsgSize = "18px";
-        $phpLogoMsgSize = "18px";
-        $phpLogoModifiedMsgSize = "18px";
-        $phpLogoTermsMsgSize = "18px";
-        $phpTermsLocationMsgSize = "18px";
-        $phpV3LicenseMsgSize = "16px";
+        $copyRightMsgSize = "2.25em";
+        $chromeBestMsgSize = "1.75em";
+        $bootstrapIconWidth = "6em";
+        $bootstrapIconHeight = "6em";
+        $iconsProvidedMsgSize = "1.75em";
+        $mitLicenseMsgSize = "1.75em";
+        $iconsModifiedMsgSize = "1.75em";
+
+        $containsPHPMsgSize = "1.125em";
+        $phpLicenseMsgSize = "1.125em";
+        $phpLogoMsgSize = "1.125em";
+        $phpLogoModifiedMsgSize = "1.125em";
+        $phpLogoTermsMsgSize = "1.125em";
+        $phpTermsLocationMsgSize = "1.125em";
+        $phpV3LicenseMsgSize = "1em";
 
 
 
@@ -280,8 +281,9 @@ switch($screenWidth) {
 
 			switch($screenHeight) {
 				case 929:      
-         			//	echo ' <script> alert("using screen height = 929" + "<br>"); </script>';
-                                        
+         				//	echo ' <script> alert("using screen height = 929" + "<br>"); </script>';
+                                	$containerIntroRows = "50vh";
+            				$containerV3LicenseRows = "160vh";        
 	         		break;
       				default:
    
@@ -298,8 +300,9 @@ switch($screenWidth) {
                     
 	         	break;
       	    		case 938:      
-         		//	echo ' <script> alert("using screen height = 390" + "<br>"); </script>';
-                      
+         			//	echo ' <script> alert("using screen height = 390" + "<br>"); </script>';
+                                $containerIntroRows = "80vh";
+            			$containerV3LicenseRows = "300vh";
 	         	break;
       	     		default:
                           
@@ -396,14 +399,10 @@ switch($screenWidth) {
                             
          		if($isChrome) {
             			//  echo ' <script> alert("Chrome using screen width = 1280" + "<br>"); </script>';
-				$containerV3LicenseRows = "150vh";
-
          		} 
                         
          		if($isFirefox) {
             			//  echo ' <script> alert("Firefox using screen width = 1280" + "<br>"); </script>';
-				$containerV3LicenseRows = "130vh";
-
          		} 
                            
          		if($isNewEdge) {
@@ -733,11 +732,9 @@ This is a
 </span>
  and runs as an 
 <span id="textIntroductionEmphasized2" style="color:Navy;font-size:<?php echo $textIntroductionEmphasized2Size; ?>;">
-<b>Azure App Service</b>
-</span>.
-<br>
-
+<b>Azure App Service</b></span>.
 </span>
+<br>
 <br>
 
 
