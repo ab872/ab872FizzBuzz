@@ -756,12 +756,13 @@ This is a
 
 <br><br>
 
+<!--
 <a href="travelers.php" target="_blank">
 	<span id="textTravelersSQLite" style="font-size:<?php echo $textTravelersSQLiteSize; ?>;">
                  <b>Access the Travelers database under SQLite.</b></span></a>
 
 <br><br>
-
+-->
 
 
 <a href="viewCrudP4.html" target="_blank">
