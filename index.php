@@ -750,6 +750,18 @@ This is a
 	<span id="textTestMySQL" style="font-size:<?php echo $textTestMySQLSize; ?>;">
                  <b>Test if MySQL is available.</b></span></a>
 
+<br><br>
+
+
+<a href="privacyPage.php" target="_blank"><span id="linkPrivacyPolicy" style="color:Navy;font-size:1.875em;">
+<b>View the privacy policy for this website.</b></span></a>
+
+<br><br>
+
+
+
+
+
 </center>
 
 
