@@ -223,6 +223,8 @@ if (isset($_COOKIE['screen_height'])) {
 	$textIntroductionEmphasized2Size = "1em";
 	$textDemoSize = "1.75em";
 	$textTestMySQLSize = "1.75em";
+        $textTravelersSQLiteSize = "1.75em";
+
 
         $containerIntroRows = "80vh";
         $containerV3LicenseRows = "120vh";
