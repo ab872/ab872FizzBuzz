@@ -761,6 +761,9 @@ This is a
 
 <br><br>
 
+
+
+
 <a href="privacyPage.php" target="_blank"><span id="linkPrivacyPolicy" style="color:Navy;font-size:1.875em;">
 <b>View the privacy policy for this website.</b></span></a>
 
