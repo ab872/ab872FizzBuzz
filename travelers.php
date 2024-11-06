@@ -68,6 +68,7 @@ function setLongCookie( longToSet ) {
 	$currentLattitude = "&nbsp;&nbsp900.000&nbsp;&nbsp";
 
 //  
+//  
 //	$currentLong = 445.000;
 	$currentLatt = 900.000;
 
