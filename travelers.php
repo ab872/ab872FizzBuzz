@@ -25,6 +25,15 @@ function setLongCookie( longToSet ) {
    //  end   function setLongCookie
 }
 
+function setLongCookieNoReload( longToSet ) {
+   
+         document.cookie = "Longtitude=" + longToSet;
+
+         //  reload the page after saving the cookie
+         //  window.location.reload();
+
+   //  end   function setLongCookieNoReload
+}
 
 </script>
 
@@ -67,8 +76,6 @@ function setLongCookie( longToSet ) {
 	$currentLongtitude = "&nbsp;&nbsp445.000&nbsp;&nbsp";
 	$currentLattitude = "&nbsp;&nbsp900.000&nbsp;&nbsp";
 
-//  
-//  
 //	$currentLong = 445.000;
 	$currentLatt = 900.000;
 
@@ -971,6 +978,15 @@ The database stores the following information:<br>
 
         setcookie("Longtitude", $currentLong);
 
+        // everything is working on the local machine.
+        // but when its uploaded to the website, the 
+        // button only works the first time you click it.
+        // this was previously corrected on the local machine 
+        // by calling the PHP setcookie function instead of the
+        // JavaScript setLongCookie function
+ 
+        echo "<script> setLongCookieNoReload($currentLong); </script>";
+ // setLongCookie makes the browser keep reloading the page
 
 
 //       if (isset($_COOKIE['Longtitude'])) {
