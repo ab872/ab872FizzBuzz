@@ -223,6 +223,7 @@ if (isset($_COOKIE['screen_height'])) {
 	$textIntroductionEmphasized2Size = "1em";
 	$textDemoSize = "1.75em";
 	$textTestMySQLSize = "1.75em";
+        $textNorthwindSQLiteSize = "1.75em";
         $textTravelersSQLiteSize = "1.75em";
 
 
@@ -255,17 +256,17 @@ switch($screenWidth) {
       //   echo ' <script> alert("using screen width = 360" + "<br>"); </script>';
 
          if($isChrome) {
-            $containerIntroRows = "100vh";
+            $containerIntroRows = "130vh";
             $containerV3LicenseRows = "420vh";
 	 }
 
          if($isFirefox) {
-            $containerIntroRows = "70vh";
+            $containerIntroRows = "90vh";
             $containerV3LicenseRows = "230vh";
 	 }
 
          if($isAndroidEdge) {
-            $containerIntroRows = "100vh";
+            $containerIntroRows = "130vh";
             $containerV3LicenseRows = "410vh";
          }
 
@@ -336,7 +337,7 @@ switch($screenWidth) {
 
          if($isFirefox) {
             //  echo ' <script> alert("Firefox using screen width = 1133" + "<br>"); </script>';
-            $containerIntroRows = "100vh";
+            $containerIntroRows = "120vh";
             $containerV3LicenseRows = "220vh";
             $containerReferenceRows = "1040vh";
          } 
@@ -362,7 +363,7 @@ switch($screenWidth) {
 
          if($isChrome) {
             //  echo ' <script> alert("Chrome using screen width = 1143" + "<br>"); </script>';
-            $containerIntroRows = "100vh";
+            $containerIntroRows = "120vh";
             $containerV3LicenseRows = "240vh";
             $containerReferenceRows = "1250vh";
          } 
@@ -376,7 +377,7 @@ switch($screenWidth) {
 
          if($isAndroidEdge) {
             //  echo ' <script> alert("Microsoft Edge (Android) using screen width = 1143" + "<br>"); </script>';
-            $containerIntroRows = "100vh";
+            $containerIntroRows = "120vh";
             $containerV3LicenseRows = "=240vh";
             $containerReferenceRows = "1040vh";
          } 
@@ -461,14 +462,14 @@ switch($screenWidth) {
                           
          	if($isFirefox) {
             		//  echo ' <script> alert("Firefox using screen width = 1536" + "<br>"); </script>';
-            		$containerIntroRows = "80vh";
+            		$containerIntroRows = "120vh";
             		$containerV3LicenseRows = "120vh";
             		$containerReferenceRows = "1040vh";
          	} 
                         
          	if($isNewEdge) {
             		//  echo ' <script> alert("Microsoft Edge (new) using screen width = 1536" + "<br>"); </script>';
-            		$containerIntroRows = "100vh";
+            		$containerIntroRows = "120vh";
             		$containerV3LicenseRows = "180vh";
             		$containerReferenceRows = "1040vh";
          	} 
@@ -755,9 +756,25 @@ This is a
 <br><br>
 
 
+
+<a href="accessNorthwind.php" target="_blank">
+	<span id="textAccessNorthwindDB" style="font-size:<?php echo $textNorthwindSQLiteSize; ?>;">
+               <b>
+               Access the <span style="color:Maroon;">Northwind Traders</span> database under SQLite.
+               </b>
+         </span></a>
+
+<br><br>
+
+
+
+
 <a href="travelers.php" target="_blank">
 	<span id="textTravelersSQLite" style="font-size:<?php echo $textTravelersSQLiteSize; ?>;">
-                 <b>Access the Travelers database under SQLite.</b></span></a>
+                 <b>
+                 Access the <span style="color:Maroon;">Travelers</span> database under SQLite.
+                 </b>
+        </span></a>
 
 <br><br>
 
@@ -1078,7 +1095,7 @@ the references section overlaps the introduction.
 
 <center> 
 <span id="copyRightMsg" style="color:Navy;font-size:<?php echo $copyRightMsgSize; ?>;">
-	<b>&nbsp;&nbsp;&nbsp;Copyright &#169; 2023-2024. All rights reserved.</b>
+	<b>&nbsp;&nbsp;&nbsp;Copyright &#169; 2023-2025. All rights reserved.</b>
 </span>
 </center> 
 <br>
