@@ -1481,7 +1481,7 @@ echo '<br>';
 
 
 
-   function showAllProducts() {
+   function showAllProducts($displayMode) {
 
      try {
 
@@ -1518,10 +1518,28 @@ echo '<br>';
      try {
 
           echo "<br><br>"; 
-          echo '<span style="color:Navy;font-size:1.75em;">Entries in <b><u>Products</u></b>:</span>';
+          if($displayMode == 1) {
+                echo '<span style="color:Navy;font-size:1.75em;">Entries in <b><u>Products</u></b> 
+                      <span style="color:Maroon;">using FOREIGN KEYS</span>
+                      :
+                      </span>';
+          }
+          else {
+                echo '<span style="color:Navy;font-size:1.75em;">Entries in <b><u>Products</u></b>:</span>';
+          }
 
           //  query the table
-          $sql = "SELECT rowid, * FROM Products";
+          if($displayMode == 1) {
+            //   $sql = "SELECT rowid, * FROM Products";
+               $sql = "SELECT a.ProductID, a.ProductName, c.SupplierName, d.CategoryName, a.Unit, a.Price FROM Products a
+                       JOIN Suppliers c
+                       ON a.SupplierID = c.SupplierID
+                       JOIN Categories d
+                       ON a.CategoryID = d.CategoryID";
+          }
+          else {
+               $sql = "SELECT rowid, * FROM Products";
+          }
           $query = $db->query($sql);
           if(!$db){
                //  an error was encountered
@@ -1635,23 +1653,57 @@ echo '                <tr>
                                  </span>                                 
                             </center>           
                        </td>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:aliceblue;color:black" >';
+
+          if($displayMode == 1) {
+             echo '
+                            <center>
+                                 <span style="color:Navy;font-size:1.0em;">
+                                 &nbsp;&nbsp;
+                                  <b>'. $row['SupplierName']. '</b>
+                                 &nbsp;&nbsp;
+                                 </span>                                 
+                            </center>';
+          }
+          else {
+             echo '
                             <center>
                                  <span style="color:Navy;font-size:1.0em;">
                                  &nbsp;&nbsp;
                                   <b>'. $row['SupplierID']. '</b>
                                  &nbsp;&nbsp;
                                  </span>                                 
-                            </center>           
+                            </center>';
+          }
+
+          
+                       echo '
                        </td>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:aliceblue;color:black" >';                         
+
+
+          if($displayMode == 1) {
+             echo '
+                            <center>
+                                 <span style="color:Navy;font-size:1.0em;">
+                                 &nbsp;&nbsp;
+                                  <b>'. $row['CategoryName']. '</b>
+                                 &nbsp;&nbsp;
+                                 </span>                                 
+                            </center>';
+          }
+          else {
+                        echo '
                             <center>
                                  <span style="color:Navy;font-size:1.0em;">
                                  &nbsp;&nbsp;
                                   <b>'. $row['CategoryID']. '</b>
                                  &nbsp;&nbsp;
                                  </span>                                 
-                            </center>           
+                            </center>';
+          }
+
+                       echo '           
                        </td>
                        <td style="background-color:aliceblue;color:black" >                         
                             <center>
@@ -1712,7 +1764,7 @@ echo '<br>';
 
 
 
-   function showAllOrders() {
+   function showAllOrders($displayMode) {
 
      try {
 
@@ -1749,10 +1801,42 @@ echo '<br>';
      try {
 
           echo "<br><br>"; 
-          echo '<span style="color:Navy;font-size:1.75em;">Entries in <b><u>Orders</u></b>:</span>';
+
+          if($displayMode == 1) {
+                echo '<span style="color:Navy;font-size:1.75em;">Entries in <b><u>Orders</u></b> 
+                      <span style="color:Maroon;">using FOREIGN KEYS</span>
+                      :
+                      </span>';
+          }
+          else {
+                echo '<span style="color:Navy;font-size:1.75em;">Entries in <b><u>Orders</u></b>:</span>';
+          }
+
+
+      //    echo '<span style="color:Navy;font-size:1.75em;">Entries in <b><u>Orders</u></b>:</span>';
+
+
+                //  Orders (OrderID INTEGER PRIMARY KEY AUTOINCREMENT,
+                //          CustomerID INTEGER, EmployeeID INTEGER, OrderDate DATETIME,
+                //          ShipperID INTEGER,
+                //          FOREIGN KEY (EmployeeID) REFERENCES Employees (EmployeeID),
+                //          FOREIGN KEY (CustomerID) REFERENCES Customers (CustomerID),
+                //          FOREIGN KEY (ShipperID) REFERENCES Shippers (ShipperID))";
 
           //  query the table
-          $sql = "SELECT rowid, * FROM Orders";
+          if($displayMode == 1) {
+               $sql = "SELECT a.OrderID, c.CustomerName, d.lastName, a.OrderDate, e.ShipperName FROM Orders a
+                       JOIN Customers c
+                       ON a.CustomerID = c.CustomerID
+                       JOIN Employees d
+                       ON a.EmployeeID = d.EmployeeID
+                       JOIN Shippers e
+                       ON a.ShipperID = e.ShipperID";
+          }
+          else {
+               $sql = "SELECT rowid, * FROM Orders";
+          }
+
           $query = $db->query($sql);
           if(!$db){
                //  an error was encountered
@@ -1790,7 +1874,7 @@ echo '     <center>
                             <center>
                                  <span style="color:Navy;font-size:1.0em;">
                                  &nbsp;
-                                 <b>Customer ID</b>
+                                 <b>Customer Name</b>
                                  &nbsp;
                                  </span>                                 
                             </center>           
@@ -1799,7 +1883,7 @@ echo '     <center>
                             <center>
                                  <span style="color:Navy;font-size:1.0em;">
                                  &nbsp;&nbsp;
-                                 <b>Employee ID</b>
+                                 <b>Employee Last Name</b>
                                  &nbsp;&nbsp;
                                  </span>                                 
                             </center>           
@@ -1817,7 +1901,7 @@ echo '     <center>
                             <center>
                                  <span style="color:Navy;font-size:1.0em;">
                                  &nbsp;&nbsp;
-                                 <b>Shipper ID</b></span>
+                                 <b>Shipper Name</b></span>
                                  &nbsp;&nbsp;                                 
                             </center>           
                        </td>
@@ -1845,23 +1929,59 @@ echo '                <tr>
                                  </span>                                 
                             </center>           
                        </td>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:aliceblue;color:black" >';
+
+          if($displayMode == 1) {
+             echo '
+                            <center>
+                                 <span style="color:Navy;font-size:1.0em;">
+                                 &nbsp;&nbsp;
+                                  <b>'. $row['CustomerName']. '</b>
+                                 &nbsp;&nbsp;
+                                 </span>                                 
+                            </center>';
+          }
+          else {
+
+                     echo '
                             <center>
                                  <span style="color:Navy;font-size:1.0em;">
                                  &nbsp;&nbsp;
                                   <b>'. $row['CustomerID']. '</b>
                                  &nbsp;&nbsp;
                                  </span>                                 
-                            </center>           
+                            </center>';
+          }
+
+
+                    echo '           
                        </td>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:aliceblue;color:black" >';
+
+
+          if($displayMode == 1) {
+                      echo '                         
+                            <center>
+                                 <span style="color:Navy;font-size:1.0em;">
+                                 &nbsp;&nbsp;
+                                  <b>'. $row['LastName']. '</b>
+                                 &nbsp;&nbsp;
+                                 </span>                                 
+                            </center>';
+          }
+          else {
+                      echo '                         
                             <center>
                                  <span style="color:Navy;font-size:1.0em;">
                                  &nbsp;&nbsp;
                                   <b>'. $row['EmployeeID']. '</b>
                                  &nbsp;&nbsp;
                                  </span>                                 
-                            </center>           
+                            </center>';
+          }
+
+
+                    echo '           
                        </td>
                        <td style="background-color:aliceblue;color:black" >                         
                             <center>
@@ -1872,14 +1992,32 @@ echo '                <tr>
                                  </span>                                 
                             </center>           
                        </td>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:aliceblue;color:black" >';
+
+
+          if($displayMode == 1) {
+                  echo '                         
+                            <center>
+                                 <span style="color:Navy;font-size:1.0em;">
+                                 &nbsp;&nbsp;
+                                  <b>'. $row['ShipperName']. '</b>
+                                 &nbsp;&nbsp;
+                                 </span>                                 
+                            </center>';
+          }
+          else {
+                  echo '                         
                             <center>
                                  <span style="color:Navy;font-size:1.0em;">
                                  &nbsp;&nbsp;
                                   <b>'. $row['ShipperID']. '</b>
                                  &nbsp;&nbsp;
                                  </span>                                 
-                            </center>           
+                            </center>';
+          }
+
+
+                  echo '           
                        </td>
 
                 </tr>';
@@ -1924,7 +2062,7 @@ echo '<br>';
 
 
 
-   function showAllOrderDetails() {
+   function showAllOrderDetails($displayMode) {
 
      try {
 
@@ -1961,10 +2099,38 @@ echo '<br>';
      try {
 
           echo "<br><br>"; 
-          echo '<span style="color:Navy;font-size:1.75em;">Entries in <b><u>OrderDetails</u></b>:</span>';
+          if($displayMode == 1) {
+                echo '<span style="color:Navy;font-size:1.75em;">Entries in <b><u>OrderDetails</u></b> 
+                      <span style="color:Maroon;">using FOREIGN KEYS</span>
+                      :
+                      </span>';
+          }
+          else {
+                echo '<span style="color:Navy;font-size:1.75em;">Entries in <b><u>OrderDetails</u></b>:</span>';
+          }
+
+
+
+      //    echo '<span style="color:Navy;font-size:1.75em;">Entries in <b><u>OrderDetails</u></b>:</span>';
+
+                //  OrderDetails (OrderDetailID INTEGER PRIMARY KEY AUTOINCREMENT,
+                //                OrderID INTEGER, ProductID INTEGER, Quantity INTEGER,
+	        //                FOREIGN KEY (OrderID) REFERENCES Orders (OrderID),
+	        //                FOREIGN KEY (ProductID) REFERENCES Products (ProductID))";
+
 
           //  query the table
-          $sql = "SELECT rowid, * FROM OrderDetails";
+          if($displayMode == 1) {
+               $sql = "SELECT a.OrderDetailID, c.OrderID, d.ProductName, a.Quantity FROM OrderDetails a
+                       JOIN Orders c
+                       ON a.OrderID = c.OrderID
+                       JOIN Products d
+                       ON a.ProductID = d.ProductID";
+          }
+          else {
+               $sql = "SELECT rowid, * FROM OrderDetails";
+          }
+
           $query = $db->query($sql);
           if(!$db){
                //  an error was encountered
@@ -2011,7 +2177,7 @@ echo '     <center>
                             <center>
                                  <span style="color:Navy;font-size:1.0em;">
                                  &nbsp;&nbsp;
-                                 <b>Product ID</b>
+                                 <b>Product Name</b>
                                  &nbsp;&nbsp;
                                  </span>                                 
                             </center>           
@@ -2054,14 +2220,33 @@ echo '                <tr>
                                  </span>                                 
                             </center>           
                        </td>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:aliceblue;color:black" >';
+
+
+            if($displayMode == 1) {
+                    echo '
+                            <center>
+                                 <span style="color:Navy;font-size:1.0em;">
+                                 &nbsp;&nbsp;
+                                  <b>'. $row['ProductName']. '</b>
+                                 &nbsp;&nbsp;
+                                 </span>                                 
+                            </center>';
+          }
+          else {
+                    echo '
                             <center>
                                  <span style="color:Navy;font-size:1.0em;">
                                  &nbsp;&nbsp;
                                   <b>'. $row['ProductID']. '</b>
                                  &nbsp;&nbsp;
                                  </span>                                 
-                            </center>           
+                            </center>';
+          }
+                       
+
+
+                     echo '           
                        </td>
                        <td style="background-color:aliceblue;color:black" >                         
                             <center>
@@ -2597,7 +2782,15 @@ Access the Northwind Traders database.
 
   <br>
   <center> 
-     <label id="rptMethod-label" for="rptMethod"><b>Type of Data to Browse</b></label>
+     <label id="rptMethod-label" for="rptMethod">
+         <b>
+         Type of 
+         <span style="color:Maroon;">
+            RAW
+         </span>
+         Data to Browse
+         </b>
+     </label>
      <br>
      <input type="radio" id="rCategories" name="rptMethod" value="useCategories"<?php if($rptMethod == 'useCategories') echo 'CHECKED';?> > Categories
 
@@ -2614,6 +2807,24 @@ Access the Northwind Traders database.
      <input type="radio" id="rOrders" name="rptMethod" value="useOrders"<?php if($rptMethod == 'useOrders') echo 'CHECKED';?> > Orders
 
      <input type="radio" id="rOrderDetails" name="rptMethod" value="useOrderDetails"<?php if($rptMethod == 'useOrderDetails') echo 'CHECKED';?> > Order Details
+
+     <br><br>
+     <label id="rptFmtMethod-label">
+         <b>
+         Type of 
+         Data to Browse
+         <span style="color:Maroon;">
+            using FOREIGN KEYS
+         </span>
+         </b>
+     </label>
+     <br>
+
+     <input type="radio" id="rProductsFmt" name="rptMethod" value="useProductsFmt"<?php if($rptMethod == 'useProductsFmt') echo 'CHECKED';?> > Products
+
+     <input type="radio" id="rOrdersFmt" name="rptMethod" value="useOrdersFmt"<?php if($rptMethod == 'useOrdersFmt') echo 'CHECKED';?> > Orders
+
+     <input type="radio" id="rOrderDetailsFmt" name="rptMethod" value="useOrderDetailsFmt"<?php if($rptMethod == 'useOrderDetailsFmt') echo 'CHECKED';?> > Order Details
 
   </center>
   <br>
@@ -3044,10 +3255,19 @@ Access the Northwind Traders database.
     else if($rptMethod == 'useProducts'){
        $rptValue = 'Products';
     }
+    else if($rptMethod == 'useProductsFmt'){
+       $rptValue = 'Products';
+    }
     else if($rptMethod == 'useOrders'){
        $rptValue = 'Orders';
     }
+    else if($rptMethod == 'useOrdersFmt'){
+       $rptValue = 'Orders';
+    }
     else if($rptMethod == 'useOrderDetails'){
+       $rptValue = 'Order Details';
+    }
+    else if($rptMethod == 'useOrderDetailsFmt'){
        $rptValue = 'Order Details';
     }
     else {
@@ -3089,19 +3309,28 @@ Access the Northwind Traders database.
     }
     else if($rptMethod == 'useProducts'){
        getRecordCount('Products');
-       showAllProducts();
+       showAllProducts(0);
+    }
+    else if($rptMethod == 'useProductsFmt'){
+       getRecordCount('Products');
+       showAllProducts(1);
     }
     else if($rptMethod == 'useOrders'){
        getRecordCount('Orders');
-       showAllOrders();
+       showAllOrders(0);
+    }
+    else if($rptMethod == 'useOrdersFmt'){
+       getRecordCount('Orders');
+       showAllOrders(1);
     }
     else if($rptMethod == 'useOrderDetails'){
        getRecordCount('OrderDetails');
-       showAllOrderDetails();
+       showAllOrderDetails(0);
     }
-
-
-
+    else if($rptMethod == 'useOrderDetailsFmt'){
+       getRecordCount('OrderDetails');
+       showAllOrderDetails(1);
+    }
 
 
 
