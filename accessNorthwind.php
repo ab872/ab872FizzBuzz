@@ -1825,7 +1825,7 @@ echo '<br>';
 
           //  query the table
           if($displayMode == 1) {
-               $sql = "SELECT a.OrderID, c.CustomerName, d.lastName, a.OrderDate, e.ShipperName FROM Orders a
+               $sql = "SELECT a.OrderID, c.CustomerName, d.lastName, d.firstName, a.OrderDate, e.ShipperName FROM Orders a
                        JOIN Customers c
                        ON a.CustomerID = c.CustomerID
                        JOIN Employees d
@@ -1883,7 +1883,7 @@ echo '     <center>
                             <center>
                                  <span style="color:Navy;font-size:1.0em;">
                                  &nbsp;&nbsp;
-                                 <b>Employee Last Name</b>
+                                 <b>Employee Name</b>
                                  &nbsp;&nbsp;
                                  </span>                                 
                             </center>           
@@ -1964,7 +1964,7 @@ echo '                <tr>
                             <center>
                                  <span style="color:Navy;font-size:1.0em;">
                                  &nbsp;&nbsp;
-                                  <b>'. $row['LastName']. '</b>
+                                 <b>'. $row['FirstName']. '</b>&nbsp;<b>'. $row['LastName']. '</b>
                                  &nbsp;&nbsp;
                                  </span>                                 
                             </center>';
@@ -2411,12 +2411,20 @@ Access the Northwind Traders database.
      Northwind Traders is a fictitious importer and exporter of foods from around the world.
      <br><br>
      The data was obtained at
-&nbsp;&nbsp;&nbsp;
-     <a href="https://en.m.wikiversity.org/wiki/Database_Examples/Northwind/SQLite
-" target="_blank">
+     &nbsp;&nbsp;&nbsp;
+     <a href="https://en.m.wikiversity.org/wiki/Database_Examples/Northwind/SQLite" target="_blank">
 	<span id="wikiversityURL" style="font-size:1em;">
                   <b>https://en.m.wikiversity.org/wiki/Database_Examples/Northwind/SQLite</b>
-        </span></a>. 
+        </span>
+     </a>. 
+     <br><br>
+     <center>
+        <a href="https://ab872.github.io/viewCrudP4.html" target="_blank">
+	   <span id="introSQLiteURL" style="font-size:1em;">
+                     <b>Click here for an introduction to SQLite</b>
+           </span>
+        </a>. 
+     </center>
      <br><br>
      You must login to access the database. The GUEST account (USER ID = <span style="color:Maroon;">guest</span>, 
      PASSWORD = <span style="color:Maroon;">visitor</span>) may be used in order to demonstrate the use of the database. Enter your 

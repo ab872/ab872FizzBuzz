@@ -285,7 +285,7 @@ switch($screenWidth) {
 			switch($screenHeight) {
 				case 929:      
          				//	echo ' <script> alert("using screen height = 929" + "<br>"); </script>';
-                                	$containerIntroRows = "50vh";
+                                	$containerIntroRows = "70vh";
             				$containerV3LicenseRows = "160vh";        
 	         		break;
       				default:
@@ -304,7 +304,7 @@ switch($screenWidth) {
 	         	break;
       	    		case 938:      
          			//	echo ' <script> alert("using screen height = 390" + "<br>"); </script>';
-                                $containerIntroRows = "80vh";
+                                $containerIntroRows = "100vh";
             			$containerV3LicenseRows = "300vh";
 	         	break;
       	     		default:

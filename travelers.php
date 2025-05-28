@@ -184,13 +184,22 @@ function setLongCookieNoReload( longToSet ) {
 <body>
 
 
-<center>
-<br>
-<span id="pageTitle1" style="color:Navy;font-size:3em;">
-Travelers database under SQLite.
-</b>
-</span>
-</center><br>
+   <center>
+      <br>
+      <span id="pageTitle1" style="color:Navy;font-size:3em;">
+         <b>
+          Travelers database under SQLite.
+         </b>
+      </span>
+    </center><br>
+
+     <center>
+        <a href="https://ab872.github.io/viewCrudP4.html" target="_blank">
+	   <span id="introSQLiteURL" style="font-size:2em;">
+                     <b>Click here for an introduction to SQLite</b>.
+           </span>
+        </a> 
+     </center>
 
 
 <?php
