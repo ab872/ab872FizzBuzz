@@ -474,27 +474,27 @@ function checkIfLoggedIn ($userID, $password, $errorCount) {
 echo '     <center>
           <table border="5" rules="all">
                 <tr>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.25em;">
+                                 <span style="color:Maroon;font-size:1.25em;">
                                   &nbsp;&nbsp;
                                   <b>ID</b>
                                   &nbsp;&nbsp;
                                  </span>                                 
                             </center>           
                        </td>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.25em;">
+                                 <span style="color:Maroon;font-size:1.25em;">
                                  &nbsp;&nbsp;
                                  <b>Name</b>
                                  &nbsp;&nbsp;
                                  </span>                                 
                             </center>           
                        </td>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.25em;">
+                                 <span style="color:Maroon;font-size:1.25em;">
                                  &nbsp;&nbsp;
                                  <b>Description</b>
                                  &nbsp;&nbsp;
@@ -651,62 +651,62 @@ echo '<br>';
 echo '     <center>
           <table border="5" rules="all">
                 <tr>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.25em;">
+                                 <span style="color:Maroon;font-size:1.25em;">
                                   &nbsp;&nbsp;
                                   <b>ID</b>
                                   &nbsp;&nbsp;
                                  </span>                                 
                             </center>           
                        </td>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.25em;">
+                                 <span style="color:Maroon;font-size:1.25em;">
                                  &nbsp;&nbsp;
                                  <b>Name</b>
                                  &nbsp;&nbsp;
                                  </span>                                 
                             </center>           
                        </td>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.25em;">
+                                 <span style="color:Maroon;font-size:1.25em;">
                                  &nbsp;&nbsp;
                                  <b>Contact</b>
                                  &nbsp;&nbsp;
                                  </span>                                 
                             </center>           
                        </td>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.25em;">
+                                 <span style="color:Maroon;font-size:1.25em;">
                                  &nbsp;&nbsp;
                                  <b>Address</b>
                                  &nbsp;&nbsp;
                                  </span>                                 
                             </center>           
                        </td>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.25em;">
+                                 <span style="color:Maroon;font-size:1.25em;">
                                  &nbsp;&nbsp;
                                  <b>City</b></span>
                                  &nbsp;&nbsp;                                 
                             </center>           
                        </td>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.25em;">
+                                 <span style="color:Maroon;font-size:1.25em;">
                                  &nbsp;&nbsp;
                                  <b>Postal Code</b>
                                  &nbsp;&nbsp;
                                  </span>                                 
                             </center>           
                        </td>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.25em;">
+                                 <span style="color:Maroon;font-size:1.25em;">
                                  &nbsp;&nbsp;
                                  <b>Country</b>
                                  &nbsp;&nbsp;
@@ -898,53 +898,53 @@ echo '<br>';
 echo '     <center>
           <table border="5" rules="all">
                 <tr>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.0em;">
+                                 <span style="color:Maroon;font-size:1.0em;">
                                   &nbsp;
                                   <b>ID</b>
                                   &nbsp;
                                  </span>                                 
                             </center>           
                        </td>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.0em;">
+                                 <span style="color:Maroon;font-size:1.0em;">
                                  &nbsp;
                                  <b>Last Name</b>
                                  &nbsp;
                                  </span>                                 
                             </center>           
                        </td>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.0em;">
+                                 <span style="color:Maroon;font-size:1.0em;">
                                  &nbsp;&nbsp;
                                  <b>First Name</b>
                                  &nbsp;&nbsp;
                                  </span>                                 
                             </center>           
                        </td>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.0em;">
+                                 <span style="color:Maroon;font-size:1.0em;">
                                  &nbsp;&nbsp;
                                  <b>Birth Date</b>
                                  &nbsp;&nbsp;
                                  </span>                                 
                             </center>           
                        </td>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.0em;">
+                                 <span style="color:Maroon;font-size:1.0em;">
                                  &nbsp;&nbsp;
                                  <b>Photo</b></span>
                                  &nbsp;&nbsp;                                 
                             </center>           
                        </td>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.0em;">
+                                 <span style="color:Maroon;font-size:1.0em;">
                                  &nbsp;&nbsp;
                                  <b>Notes</b>
                                  &nbsp;&nbsp;
@@ -1117,27 +1117,27 @@ echo '<br>';
 echo '     <center>
           <table border="5" rules="all">
                 <tr>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.0em;">
+                                 <span style="color:Maroon;font-size:1.0em;">
                                   &nbsp;
                                   <b>ID</b>
                                   &nbsp;
                                  </span>                                 
                             </center>           
                        </td>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.0em;">
+                                 <span style="color:Maroon;font-size:1.0em;">
                                  &nbsp;
                                  <b>Name</b>
                                  &nbsp;
                                  </span>                                 
                             </center>           
                        </td>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.0em;">
+                                 <span style="color:Maroon;font-size:1.0em;">
                                  &nbsp;&nbsp;
                                  <b>Phone</b>
                                  &nbsp;&nbsp;
@@ -1291,71 +1291,71 @@ echo '<br>';
 echo '     <center>
           <table border="5" rules="all">
                 <tr>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.0em;">
+                                 <span style="color:Maroon;font-size:1.0em;">
                                   &nbsp;
                                   <b>ID</b>
                                   &nbsp;
                                  </span>                                 
                             </center>           
                        </td>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.0em;">
+                                 <span style="color:Maroon;font-size:1.0em;">
                                  &nbsp;
                                  <b>Supplier Name</b>
                                  &nbsp;
                                  </span>                                 
                             </center>           
                        </td>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.0em;">
+                                 <span style="color:Maroon;font-size:1.0em;">
                                  &nbsp;&nbsp;
                                  <b>Contact Name</b>
                                  &nbsp;&nbsp;
                                  </span>                                 
                             </center>           
                        </td>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.0em;">
+                                 <span style="color:Maroon;font-size:1.0em;">
                                  &nbsp;&nbsp;
                                  <b>Address</b>
                                  &nbsp;&nbsp;
                                  </span>                                 
                             </center>           
                        </td>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.0em;">
+                                 <span style="color:Maroon;font-size:1.0em;">
                                  &nbsp;&nbsp;
                                  <b>City</b></span>
                                  &nbsp;&nbsp;                                 
                             </center>           
                        </td>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.0em;">
+                                 <span style="color:Maroon;font-size:1.0em;">
                                  &nbsp;&nbsp;
                                  <b>Postal Code</b>
                                  &nbsp;&nbsp;
                                  </span>                                 
                             </center>           
                        </td>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.0em;">
+                                 <span style="color:Maroon;font-size:1.0em;">
                                  &nbsp;&nbsp;
                                  <b>Country</b>
                                  &nbsp;&nbsp;
                                  </span>                                 
                             </center>           
                        </td>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.0em;">
+                                 <span style="color:Maroon;font-size:1.0em;">
                                  &nbsp;&nbsp;
                                  <b>Phone</b>
                                  &nbsp;&nbsp;
@@ -1570,53 +1570,53 @@ echo '<br>';
 echo '     <center>
           <table border="5" rules="all">
                 <tr>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.0em;">
+                                 <span style="color:Maroon;font-size:1.0em;">
                                   &nbsp;
                                   <b>ID</b>
                                   &nbsp;
                                  </span>                                 
                             </center>           
                        </td>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.0em;">
+                                 <span style="color:Maroon;font-size:1.0em;">
                                  &nbsp;
                                  <b>Product Name</b>
                                  &nbsp;
                                  </span>                                 
                             </center>           
                        </td>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.0em;">
+                                 <span style="color:Maroon;font-size:1.0em;">
                                  &nbsp;&nbsp;
                                  <b>Supplier</b>
                                  &nbsp;&nbsp;
                                  </span>                                 
                             </center>           
                        </td>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.0em;">
+                                 <span style="color:Maroon;font-size:1.0em;">
                                  &nbsp;&nbsp;
                                  <b>Category</b>
                                  &nbsp;&nbsp;
                                  </span>                                 
                             </center>           
                        </td>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.0em;">
+                                 <span style="color:Maroon;font-size:1.0em;">
                                  &nbsp;&nbsp;
                                  <b>Unit</b></span>
                                  &nbsp;&nbsp;                                 
                             </center>           
                        </td>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.0em;">
+                                 <span style="color:Maroon;font-size:1.0em;">
                                  &nbsp;&nbsp;
                                  <b>Price</b>
                                  &nbsp;&nbsp;
@@ -1861,45 +1861,45 @@ echo '<br>';
 echo '     <center>
           <table border="5" rules="all">
                 <tr>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.0em;">
+                                 <span style="color:Maroon;font-size:1.0em;">
                                   &nbsp;
                                   <b>ID</b>
                                   &nbsp;
                                  </span>                                 
                             </center>           
                        </td>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.0em;">
+                                 <span style="color:Maroon;font-size:1.0em;">
                                  &nbsp;
                                  <b>Customer Name</b>
                                  &nbsp;
                                  </span>                                 
                             </center>           
                        </td>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.0em;">
+                                 <span style="color:Maroon;font-size:1.0em;">
                                  &nbsp;&nbsp;
                                  <b>Employee Name</b>
                                  &nbsp;&nbsp;
                                  </span>                                 
                             </center>           
                        </td>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.0em;">
+                                 <span style="color:Maroon;font-size:1.0em;">
                                  &nbsp;&nbsp;
                                  <b>Order Date</b>
                                  &nbsp;&nbsp;
                                  </span>                                 
                             </center>           
                        </td>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.0em;">
+                                 <span style="color:Maroon;font-size:1.0em;">
                                  &nbsp;&nbsp;
                                  <b>Shipper Name</b></span>
                                  &nbsp;&nbsp;                                 
@@ -2155,36 +2155,36 @@ echo '<br>';
 echo '     <center>
           <table border="5" rules="all">
                 <tr>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.0em;">
+                                 <span style="color:Maroon;font-size:1.0em;">
                                   &nbsp;
                                   <b>ID</b>
                                   &nbsp;
                                  </span>                                 
                             </center>           
                        </td>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.0em;">
+                                 <span style="color:Maroon;font-size:1.0em;">
                                  &nbsp;
                                  <b>Order ID</b>
                                  &nbsp;
                                  </span>                                 
                             </center>           
                        </td>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.0em;">
+                                 <span style="color:Maroon;font-size:1.0em;">
                                  &nbsp;&nbsp;
                                  <b>Product Name</b>
                                  &nbsp;&nbsp;
                                  </span>                                 
                             </center>           
                        </td>
-                       <td style="background-color:aliceblue;color:black" >                         
+                       <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.0em;">
+                                 <span style="color:Maroon;font-size:1.0em;">
                                  &nbsp;&nbsp;
                                  <b>Quantity</b>
                                  &nbsp;&nbsp;
