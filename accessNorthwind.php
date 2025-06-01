@@ -1001,6 +1001,21 @@ echo '                <tr>
                        </td>
                        <td style="background-color:aliceblue;color:black" >                         
                             <center>
+                                 <img src="employees/photos/';
+
+                                 $photoName = $row['Photo'];
+                                 $photoName = substr($photoName, 0, strlen($photoName) -4);
+
+                                 echo $photoName;
+
+                                 echo '.png" width=75em height=75em >
+                                 <br>
+                                 <a href="https://www.craiyon.com" target="_blank">
+	                              <span id="imageCraiyonURL" style="color:Maroon;font-size:0.6em;">
+                                           <b>Image created by Craiyon</b>
+                                      </span>
+                                 </a>
+                                 <br>
                                  <span style="color:Navy;font-size:1.0em;">
                                  &nbsp;&nbsp;
                                   <b>'. $row['Photo']. '</b>
@@ -2416,14 +2431,14 @@ Access the Northwind Traders database.
 	<span id="wikiversityURL" style="font-size:1em;">
                   <b>https://en.m.wikiversity.org/wiki/Database_Examples/Northwind/SQLite</b>
         </span>
-     </a>. 
+     </a> 
      <br><br>
      <center>
         <a href="https://ab872.github.io/viewCrudP4.html" target="_blank">
 	   <span id="introSQLiteURL" style="font-size:1em;">
                      <b>Click here for an introduction to SQLite</b>
            </span>
-        </a>. 
+        </a> 
      </center>
      <br><br>
      You must login to access the database. The GUEST account (USER ID = <span style="color:Maroon;">guest</span>, 
