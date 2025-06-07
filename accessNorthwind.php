@@ -8,6 +8,191 @@
 
 
 <?php
+
+   //   identify the browser
+
+   $userAgent = $_SERVER['HTTP_USER_AGENT'];
+
+   if (strpos($userAgent, 'Firefox') !== false) {
+      $isFirefox = true;
+   } else {
+      $isFirefox = false;
+   }
+
+   if (strpos($userAgent, 'Chrome') !== false) {
+      $isChrome = true;
+   } else {
+      $isChrome = false;
+   }
+
+   if (strpos($userAgent, 'Safari') !== false) {
+      $isSafari = true;
+   } else {
+      $isSafari = false;
+   }
+
+   //    //  Safari with LINE extensions???
+   if (strpos($userAgent, 'Safari Line') !== false) {
+      $isSafariLine = true;
+   } else {
+      $isSafariLine = false;
+   }
+
+   if (strpos($userAgent, 'iPad') !== false) {
+      $isiPad = true;
+   } else {
+      $isiPad = false;
+   }
+
+   if (strpos($userAgent, 'iPhone') !== false) {
+      $isiPhone = true;
+   } else {
+      $isiPhone = false;
+   }
+
+   if (strpos($userAgent, 'Macintosh') !== false) {
+      $isMac = true;
+   } else {
+      $isMac = false;
+   }
+
+   //  old Edge on Win10
+   if (strpos($userAgent, 'Edge') !== false) {
+      $isEdge = true;
+   } else {
+      $isEdge = false;
+   }
+
+   //  new Edge on Win10
+   if (strpos($userAgent, 'Edg/') !== false) {
+      $isNewEdge = true;
+   } else {
+      $isNewEdge = false;
+   }
+
+   //  Edge on Android
+   if (strpos($userAgent, 'EdgA/') !== false) {
+      $isAndroidEdge = true;
+   } else {
+      $isAndroidEdge = false;
+   }
+
+   if (strpos($userAgent, 'Windows NT 10.0') !== false) {
+      $isWin10 = true;
+   } else {
+      $isWin10 = false;
+   }
+
+   if (strpos($userAgent, 'Android') !== false) {
+      $isAndroid = true;
+   } else {
+      $isAndroid = false;
+   }
+
+   if (strpos($userAgent, 'Android 4') !== false) {
+      $isAndroid4 = true;
+   } else {
+      $isAndroid4 = false;
+   }
+
+   if (strpos($userAgent, 'Android 5') !== false) {
+      $isAndroid5 = true;
+   } else {
+      $isAndroid5 = false;
+   }
+
+   if (strpos($userAgent, 'Android 6') !== false) {
+      $isAndroid6 = true;
+   } else {
+      $isAndroid6 = false;
+   }
+
+   if (strpos($userAgent, 'Android 8') !== false) {
+      $isAndroid8 = true;
+   } else {
+      $isAndroid8 = false;
+   }
+
+   if (strpos($userAgent, 'Android 9') !== false) {
+      $isAndroid9 = true;
+   } else {
+      $isAndroid9 = false;
+   }
+
+   if (strpos($userAgent, 'Android 10') !== false) {
+      $isAndroid10 = true;
+   } else {
+      $isAndroid10 = false;
+   }
+
+   if (strpos($userAgent, 'Android 11') !== false) {
+      $isAndroid11 = true;
+   } else {
+      $isAndroid11 = false;
+   }
+
+   if (strpos($userAgent, 'Android 12') !== false) {
+      $isAndroid12 = true;
+   } else {
+      $isAndroid12 = false;
+   }
+
+
+   //  there are some cases where there are duplicate matches
+   //  these overrides correct the situation
+
+    if ($isChrome) { 
+           $isSafari = false;
+    }
+
+
+    if ($isEdge) { 
+           $isChrome = false; 
+    } 
+
+    if ($isNewEdge) { 
+           $isChrome = false; 
+    } 
+
+    if ($isAndroidEdge) { 
+           $isChrome = false; 
+    } 
+
+    if ($isSafariLine) { 
+           $isSafari = false; 
+    } 
+    
+
+
+
+if (isset($_COOKIE['screen_width'])) {
+   //  echo "try to get the screen width<br>";
+   $screenWidth = $_COOKIE['screen_width'];
+   //  echo "get the screen width was successful<br>";
+   //  echo "screen width = $screenWidth<br>";
+
+} else {
+   //  echo ' <script> alert("An error was encountered getting the screen width.\nReload the page manually if it does not reload automatically."); </script>';
+   echo "<script> setCookies(); </script>";
+}
+
+if (isset($_COOKIE['screen_height'])) {
+   //  echo "try to get the screen height<br>";
+   $screenHeight = $_COOKIE['screen_height'];
+   //  echo "get the screen height was successful<br>";
+   //  echo "screen height = $screenHeight<br>";
+
+} else {
+   //  echo ' <script> alert("An error was encountered getting the screen height.\nReload the page manually if it does not reload automatically."); </script>';
+   echo "<script> setCookies(); </script>";
+}
+
+
+?>
+
+
+
+<?php
 global $userID;
 $userID = "???";
 global $password;
@@ -50,6 +235,14 @@ $sslCert = "?";
 
         $copyRightMsgSize = "2.25em";
 	$exceptionOccurredMsgSize = "1.125em";
+
+        $textDbAccessSize = "1.75em";
+        $textCustRptSize = "1.75em";
+        $textCustRptErrSize = "1.75em";
+        $textCustCatSize = "1.10em";
+        $textCustDataSize = "1.1em";
+        $textCraiyonCaptionSize = "0.7em";
+
 
 
 ?>
@@ -828,7 +1021,19 @@ echo '<br>';
 
 
 
+
+
+
+
    function showAllEmployees() {
+
+    global $textDbAccessSize;
+    global $textCustRptSize;
+    global $textCustRptErrSize;
+    global $textCustCatSize;
+    global $textCustDataSize;
+    global $textCraiyonCaptionSize;
+
 
      try {
 
@@ -836,16 +1041,24 @@ echo '<br>';
           $db = new SQLite3('northwind.db');
           if(!$db){
                //  an error was encountered
-               echo '<span style="color:Navy;font-size:1.75em;">Error Code:    ';
+               echo '<span style="color:Navy;font-size:';
+               echo $textDbAccessSize;
+               echo ';">Error Code:    ';
                echo  $db->lastErrorCode();
                echo  "'<br>'</span>";
-               echo '<span style="color:Navy;font-size:1.75em;">Error Message: ';
+               echo '<span style="color:Navy;font-size:';
+               echo $textDbAccessSize;
+               echo ';">Error Message: ';
                echo  $db->lastErrorMsg();
                echo  "'<br>'</span>";
-               echo '<span style="color:Navy;font-size:1.75em;">
+               echo '<span style="color:Navy;font-size:';
+               echo $textDbAccessSize;
+               echo ';">
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Database access was not successful.\n</span>';
           } else {
-            //   echo '<span style="color:Navy;font-size:1.75em;">
+            //   echo '<span style="color:Navy;font-size:';
+            //   echo $textDbAccessSize;
+            //   echo ';">
                //      <br>
                 //     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*** Database access was successful.</span>';  
           }
@@ -865,22 +1078,32 @@ echo '<br>';
      try {
 
           echo "<br><br>"; 
-          echo '<span style="color:Navy;font-size:1.75em;">Entries in <b><u>Employees</u></b>:</span>';
+          echo '<span style="color:Navy;font-size:';
+          echo $textCustRptSize;
+          echo ';">Entries in <b><u>Employees</u></b>:</span>';
 
           //  query the table
           $sql = "SELECT rowid, * FROM Employees";
           $query = $db->query($sql);
           if(!$db){
                //  an error was encountered
-               echo '<span style="color:Navy;font-size:1.75em;">Error Code:    ';
+               echo '<span style="color:Navy;font-size:';
+               echo $textCustomerRptErrSize;
+               echo ';">Error Code:    ';
                echo  $db->lastErrorCode();
                echo  "'<br>'</span>";
-               echo '<span style="color:Navy;font-size:1.75em;">Error Message: ';
+               echo '<span style="color:Navy;font-size:';
+               echo $textCustomerRptErrSize;
+               echo ';">Error Message: ';
                echo  $db->lastErrorMsg();
                echo  "'<br>'</span>";
-               echo '<span style="color:Navy;font-size:1.75em;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Query was not successful.\n</span>';
+               echo '<span style="color:Navy;font-size:';
+               echo $textCustomerRptErrSize;
+               echo ';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Query was not successful.\n</span>';
           } else {
-            //   echo '<span style="color:Navy;font-size:1.75em;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Query was successful.</span>';
+            //   echo '<span style="color:Navy;font-size:';
+            //   echo $textCustomerRptErrSize;
+            //   echo ';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Query was successful.</span>';
           }
 
           echo "<br>"; 
@@ -900,7 +1123,9 @@ echo '     <center>
                 <tr>
                        <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Maroon;font-size:1.0em;">
+                                 <span style="color:Maroon;font-size:';
+                                 echo $textCustCatSize;
+                                 echo ';">
                                   &nbsp;
                                   <b>ID</b>
                                   &nbsp;
@@ -909,7 +1134,9 @@ echo '     <center>
                        </td>
                        <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Maroon;font-size:1.0em;">
+                                 <span style="color:Maroon;font-size:';
+                                 echo $textCustCatSize;
+                                 echo ';">
                                  &nbsp;
                                  <b>Last Name</b>
                                  &nbsp;
@@ -918,25 +1145,31 @@ echo '     <center>
                        </td>
                        <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Maroon;font-size:1.0em;">
-                                 &nbsp;&nbsp;
+                                 <span style="color:Maroon;font-size:';
+                                 echo $textCustCatSize;
+                                 echo ';">
+                                 &nbsp;
                                  <b>First Name</b>
-                                 &nbsp;&nbsp;
+                                 &nbsp;
                                  </span>                                 
                             </center>           
                        </td>
                        <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Maroon;font-size:1.0em;">
-                                 &nbsp;&nbsp;
+                                 <span style="color:Maroon;font-size:';
+                                 echo $textCustCatSize;
+                                 echo ';">
+                                 &nbsp;
                                  <b>Birth Date</b>
-                                 &nbsp;&nbsp;
+                                 &nbsp;
                                  </span>                                 
                             </center>           
                        </td>
                        <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Maroon;font-size:1.0em;">
+                                 <span style="color:Maroon;font-size:';
+                                 echo $textCustCatSize;
+                                 echo ';">
                                  &nbsp;&nbsp;
                                  <b>Photo</b></span>
                                  &nbsp;&nbsp;                                 
@@ -944,7 +1177,9 @@ echo '     <center>
                        </td>
                        <td style="background-color:lightGrey;color:black" >                         
                             <center>
-                                 <span style="color:Maroon;font-size:1.0em;">
+                                 <span style="color:Maroon;font-size:';
+                                 echo $textCustCatSize;
+                                 echo ';">
                                  &nbsp;&nbsp;
                                  <b>Notes</b>
                                  &nbsp;&nbsp;
@@ -965,7 +1200,9 @@ echo '     <center>
 echo '                <tr>
                        <td style="background-color:aliceblue;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.0em;">
+                                 <span style="color:Navy;font-size:';
+                                 echo $textCustDataSize;
+                                 echo ';">
                                  &nbsp;&nbsp;
                                   <b>'. $row['EmployeeID']. '</b>
                                  &nbsp;&nbsp;
@@ -974,7 +1211,9 @@ echo '                <tr>
                        </td>
                        <td style="background-color:aliceblue;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.0em;">
+                                 <span style="color:Navy;font-size:';
+                                 echo $textCustDataSize;
+                                 echo ';">
                                  &nbsp;&nbsp;
                                   <b>'. $row['LastName']. '</b>
                                  &nbsp;&nbsp;
@@ -983,7 +1222,9 @@ echo '                <tr>
                        </td>
                        <td style="background-color:aliceblue;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.0em;">
+                                 <span style="color:Navy;font-size:';
+                                 echo $textCustDataSize;
+                                 echo ';">
                                  &nbsp;&nbsp;
                                   <b>'. $row['FirstName']. '</b>
                                  &nbsp;&nbsp;
@@ -992,7 +1233,9 @@ echo '                <tr>
                        </td>
                        <td style="background-color:aliceblue;color:black" >                         
                             <center>
-                                 <span style="color:Navy;font-size:1.0em;">
+                                 <span style="color:Navy;font-size:';
+                                 echo $textCustDataSize;
+                                 echo ';">
                                  &nbsp;&nbsp;
                                   <b>'. $row['BirthDate']. '</b>
                                  &nbsp;&nbsp;
@@ -1011,12 +1254,16 @@ echo '                <tr>
                                  echo '.png" width=75em height=75em >
                                  <br>
                                  <a href="https://www.craiyon.com" target="_blank">
-	                              <span id="imageCraiyonURL" style="color:Maroon;font-size:0.6em;">
+	                              <span id="imageCraiyonURL" style="color:Maroon;font-size:';
+                                      echo $textCraiyonCaptionSize;
+                                      echo ';">
                                            <b>Image created by Craiyon</b>
                                       </span>
                                  </a>
                                  <br>
-                                 <span style="color:Navy;font-size:1.0em;">
+                                 <span style="color:Navy;font-size:';
+                                 echo $textCustDataSize;
+                                 echo ';">
                                  &nbsp;&nbsp;
                                   <b>'. $row['Photo']. '</b>
                                  &nbsp;&nbsp;
@@ -1024,7 +1271,9 @@ echo '                <tr>
                             </center>           
                        </td>
                        <td style="background-color:aliceblue;color:black" >                         
-                                 <span style="color:Navy;font-size:1.0em;">
+                                 <span style="color:Navy;font-size:';
+                                 echo $textCustDataSize;
+                                 echo ';">
                                   <b>'. $row['Notes']. '</b>
                                  </span>                                 
                        </td>
@@ -1048,7 +1297,9 @@ echo '<br>';
 
 
           //  echo "<br>"; 
-       //   echo '<span style="color:Navy;font-size:1.75em;">Query finished.</span>';
+       //   echo '<span style="color:Navy;font-size:';
+       //  echo $textCustomerRptSize;
+       //  echo ';">Query finished.</span>';
           echo "<br>"; 
 
      } catch (Exception $e) {
@@ -2322,6 +2573,262 @@ echo '<br>';
 
         $copyRightMsgSize = "2.25em";
 	$exceptionOccurredMsgSize = "1.125em";
+
+
+
+
+
+
+
+switch($screenWidth) {
+      case 360:      //  Android 
+      //   echo ' <script> alert("using screen width = 360" + "<br>"); </script>';
+
+         if($isChrome) {
+	 }
+
+         if($isFirefox) {
+	 }
+
+         if($isAndroidEdge) {
+         }
+
+         break;
+      case 375:      //  iPad, iPhone
+      //   echo ' <script> alert("using screen width = 375" + "<br>"); </script>';
+
+         break;
+      case 390:      //  iPad, iPhone
+      //   echo ' <script> alert("using screen width = 390" + "<br>"); </script>';
+
+         break;
+     case 408:      //  Android
+     //	echo ' <script> alert("using screen width = 408" + "<br>"); </script>';
+
+			switch($screenHeight) {
+				case 929:      
+         				//	echo ' <script> alert("using screen height = 929" + "<br>"); </script>';
+	         		break;
+      				default:
+   
+				//  end switch
+			}
+                           
+       	 break;
+     case 412:      //  Android
+     //	echo ' <script> alert("using screen width = 412" + "<br>"); </script>';
+                        
+	    	switch($screenHeight) {
+	    		case 922:      
+         		//	echo ' <script> alert("using screen height = 922" + "<br>"); </script>';
+                    
+	         	break;
+      	    		case 938:      
+         			//	echo ' <script> alert("using screen height = 390" + "<br>"); </script>';
+	         	break;
+      	     		default:
+                          
+	       		//  end switch
+	 	}
+                    
+         break;
+      case 414:      //  iPad, iPhone
+      //   echo ' <script> alert("using screen width = 414" + "<br>"); </script>';
+
+        break;
+      case 768:      //  iPad
+      //   echo ' <script> alert("using screen width = 768" + "<br>"); </script>';
+
+         break;
+      case 820:      //  iPad
+      //   echo ' <script> alert("using screen width = 820" + "<br>"); </script>';
+
+         break;
+      case 1133:     //  Android
+      //   echo ' <script> alert("using screen width = 1133" + "<br>"); </script>';
+
+         if($isChrome) {
+            //  echo ' <script> alert("Chrome using screen width = 1133" + "<br>"); </script>';
+         } 
+
+         if($isFirefox) {
+            //  echo ' <script> alert("Firefox using screen width = 1133" + "<br>"); </script>';
+
+                       $textDbAccessSize = "1.75em";
+                       $textCustRptSize = "1.75em";
+                       $textCustRptErrSize = "1.75em";
+                       $textCustCatSize = "0.8em";
+                       $textCustDataSize = "0.8em";
+                       $textCraiyonCaptionSize = "0.7em";
+
+         } 
+
+         if($isNewEdge) {
+            //  echo ' <script> alert("Microsoft Edge (new) using screen width = 1133" + "<br>"); </script>';
+         } 
+
+         if($isEdge) {
+            //  echo ' <script> alert("Microsoft Edge (old) using screen width = 1133" + "<br>"); </script>';
+         } 
+
+
+         break;
+      case 1143:     //  Android
+      //   echo ' <script> alert("using screen width = 1143" + "<br>"); </script>';
+
+         if($isChrome) {
+            //  echo ' <script> alert("Chrome using screen width = 1143" + "<br>"); </script>';
+
+                       $textDbAccessSize = "1.75em";
+                       $textCustRptSize = "1.75em";
+                       $textCustRptErrSize = "1.75em";
+                       $textCustCatSize = "0.8em";
+                       $textCustDataSize = "0.6em";
+                       $textCraiyonCaptionSize = "0.7em";
+
+         } 
+
+         if($isFirefox) {
+            //  echo ' <script> alert("Firefox using screen width = 1143" + "<br>"); </script>';
+         } 
+
+         if($isAndroidEdge) {
+            //  echo ' <script> alert("Microsoft Edge (Android) using screen width = 1143" + "<br>"); </script>';
+
+                       $textDbAccessSize = "1.75em";
+                       $textCustRptSize = "1.75em";
+                       $textCustRptErrSize = "1.75em";
+                       $textCustCatSize = "0.7em";
+                       $textCustDataSize = "0.7em";
+                       $textCraiyonCaptionSize = "0.7em";
+
+         } 
+
+         if($isNewEdge) {
+            //  echo ' <script> alert("Microsoft Edge (new) using screen width = 1143" + "<br>"); </script>';
+         } 
+
+         if($isEdge) {
+            //  echo ' <script> alert("Microsoft Edge (old) using screen width = 1143" + "<br>"); </script>';
+         } 
+
+         break;
+       	 case 1280:     //  Win10
+         	//	echo ' <script> alert("using screen width = 1280" + "<br>"); </script>';
+                            
+         		if($isChrome) {
+            			//  echo ' <script> alert("Chrome using screen width = 1280" + "<br>"); </script>';
+         		} 
+                        
+         		if($isFirefox) {
+            			//  echo ' <script> alert("Firefox using screen width = 1280" + "<br>"); </script>';
+         		} 
+                           
+         		if($isNewEdge) {
+            			//  echo ' <script> alert("Microsoft Edge (new) using screen width = 1280" + "<br>"); </script>';
+         		} 
+                     
+         		if($isEdge) {
+            			//  echo ' <script> alert("Microsoft Edge (old) using screen width = 1280" + "<br>"); </script>';
+         		} 
+                   
+         break;
+      	 case 1366:     //  Win10
+       	 	//   echo ' <script> alert("using screen width = 1366" + "<br>"); </script>';
+                  
+	 	if($isChrome) {
+            		//  echo ' <script> alert("Chrome using screen width = 1366" + "<br>"); </script>';
+         	} 
+                        
+         	if($isFirefox) {
+            		//  echo ' <script> alert("Firefox using screen width = 1366" + "<br>"); </script>';
+         	} 
+                      
+         	if($isNewEdge) {
+            		//  echo ' <script> alert("Microsoft Edge (new) using screen width = 1366" + "<br>"); </script>';
+         	} 
+                         
+         	if($isEdge) {
+            		//  echo ' <script> alert("Microsoft Edge (old) using screen width = 1366" + "<br>"); </script>';
+         	} 
+                      
+                    
+         break;
+      	 case 1536:     //  Win10
+      	 	//   echo ' <script> alert("using screen width = 1536" + "<br>"); </script>';
+                           
+         	if($isChrome) {
+            		//  echo ' <script> alert("Chrome using screen width = 1536" + "<br>"); </script>';
+
+                       $textDbAccessSize = "1.75em";
+                       $textCustRptSize = "1.75em";
+                       $textCustRptErrSize = "1.75em";
+                       $textCustCatSize = "1.1em";
+                       $textCustDataSize = "1.1em";
+                       $textCraiyonCaptionSize = "0.7em";
+
+         	} 
+                          
+         	if($isFirefox) {
+            		//  echo ' <script> alert("Firefox using screen width = 1536" + "<br>"); </script>';
+
+                       $textDbAccessSize = "1.75em";
+                       $textCustRptSize = "1.75em";
+                       $textCustRptErrSize = "1.75em";
+                       $textCustCatSize = "1.0em";
+                       $textCustDataSize = "1.0em";
+                       $textCraiyonCaptionSize = "0.7em";
+
+         	} 
+                        
+         	if($isNewEdge) {
+            		//  echo ' <script> alert("Microsoft Edge (new) using screen width = 1536" + "<br>"); </script>';
+
+                        $textDbAccessSize = "1.75em";
+                        $textCustRptSize = "1.75em";
+                        $textCustRptErrSize = "1.75em";
+                        $textCustCatSize = "0.9em";
+                        $textCustDataSize = "0.9em";
+                        $textCraiyonCaptionSize = "0.7em";
+
+         	} 
+                      
+         	if($isEdge) {
+            		//  echo ' <script> alert("Microsoft Edge (old) using screen width = 1536" + "<br>"); </script>';
+         	} 
+                   
+                    
+         break;
+      	 case 1707:     //  Win10
+      	 	//   echo ' <script> alert("using screen width = 1707" + "<br>"); </script>';
+                        
+         	if($isChrome) {
+            		//  echo ' <script> alert("Chrome using screen width = 1707" + "<br>"); </script>';
+         	} 
+                          
+         	if($isFirefox) {
+            		//  echo ' <script> alert("Firefox using screen width = 1707" + "<br>"); </script>';
+         	} 
+                               
+         	if($isNewEdge) {
+            		//  echo ' <script> alert("Microsoft Edge (new) using screen width = 1707" + "<br>"); </script>';
+         	} 
+                           
+         	if($isEdge) {
+            		//  echo ' <script> alert("Microsoft Edge (old) using screen width = 1707" + "<br>"); </script>';
+         	} 
+                      
+                      
+         break;
+      	 default:
+   
+   //  end switch
+}
+   //  echo "containerIntroRows = $containerIntroRows";
+
+
+
+
 ?>
 
 
