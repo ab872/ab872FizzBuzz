@@ -1080,7 +1080,7 @@ echo '<br>';
           echo "<br><br>"; 
           echo '<span style="color:Navy;font-size:';
           echo $textCustRptSize;
-          echo ';">Entries in <b><u>Employees</u></b>:</span>';
+          echo ';">*** Entries in <b><u>Employees</u></b>:</span>';
 
           //  query the table
           $sql = "SELECT rowid, * FROM Employees";
@@ -2584,13 +2584,43 @@ switch($screenWidth) {
       case 360:      //  Android 
       //   echo ' <script> alert("using screen width = 360" + "<br>"); </script>';
 
-         if($isChrome) {
-	 }
+          if($isChrome) {
+              //   echo ' <script> alert("Chrome width 360"); </script>';
+
+               $textDbAccessSize = "1.75em";
+               $textCustRptSize = "1.75em";
+               $textCustRptErrSize = "1.75em";
+               $textCustCatSize = "0.7em";
+               $textCustDataSize = "0.5em";
+               $textCraiyonCaptionSize = "0.7em";
+
+          } 
+
 
          if($isFirefox) {
+              //   echo ' <script> alert("Firefox width 360"); </script>';
+
+	       $userIDSize = "35";
+	       $userPasswordSize = "35";
+               $textDbAccessSize = "1.75em";
+               $textCustRptSize = "1.75em";
+               $textCustRptErrSize = "1.75em";
+               $textCustCatSize = "0.8em";
+               $textCustDataSize = "1.0em";
+               $textCraiyonCaptionSize = "0.6em";
+
 	 }
 
          if($isAndroidEdge) {
+             //    echo ' <script> alert("Edge (Android) width 360"); </script>';
+
+               $textDbAccessSize = "1.75em";
+               $textCustRptSize = "1.75em";
+               $textCustRptErrSize = "1.75em";
+               $textCustCatSize = "0.6em";
+               $textCustDataSize = "0.6em";
+               $textCraiyonCaptionSize = "0.6em";
+
          }
 
          break;
@@ -2607,7 +2637,15 @@ switch($screenWidth) {
 
 			switch($screenHeight) {
 				case 929:      
-         				//	echo ' <script> alert("using screen height = 929" + "<br>"); </script>';
+         			     //  echo ' <script> alert("using screen height = 929" + "<br>"); </script>';
+
+                                       $textDbAccessSize = "1.75em";
+                                       $textCustRptSize = "1.75em";
+                                       $textCustRptErrSize = "1.75em";
+                                       $textCustCatSize = "0.6em";
+                                       $textCustDataSize = "0.9em";
+                                       $textCraiyonCaptionSize = "0.6em";
+
 	         		break;
       				default:
    
@@ -2620,11 +2658,35 @@ switch($screenWidth) {
                         
 	    	switch($screenHeight) {
 	    		case 922:      
-         		//	echo ' <script> alert("using screen height = 922" + "<br>"); </script>';
+         			//  echo ' <script> alert("using screen height = 922" + "<br>"); </script>';
                     
 	         	break;
       	    		case 938:      
-         			//	echo ' <script> alert("using screen height = 390" + "<br>"); </script>';
+
+                              if($isChrome) {
+                                   //  echo ' <script> alert("Chrome width 412 and height 938"); </script>';
+
+                                   $textDbAccessSize = "1.75em";
+                                   $textCustRptSize = "1.75em";
+                                   $textCustRptErrSize = "1.75em";
+                                   $textCustCatSize = "0.7em";
+                                   $textCustDataSize = "0.5em";
+                                   $textCraiyonCaptionSize = "0.7em";
+
+                              } 
+
+                              if($isAndroidEdge) {
+                                   //  echo ' <script> alert("Edge (Android) width 412 and height 938"); </script>';
+
+                                   $textDbAccessSize = "1.75em";
+                                   $textCustRptSize = "1.75em";
+                                   $textCustRptErrSize = "1.75em";
+                                   $textCustCatSize = "0.7em";
+                                   $textCustDataSize = "0.5em";
+                                   $textCraiyonCaptionSize = "0.7em";
+                             } 
+
+
 	         	break;
       	     		default:
                           
@@ -2934,9 +2996,14 @@ Access the Northwind Traders database.
      <br><br>
      The data was obtained at
      &nbsp;&nbsp;&nbsp;
+     <br>
      <a href="https://en.m.wikiversity.org/wiki/Database_Examples/Northwind/SQLite" target="_blank">
 	<span id="wikiversityURL" style="font-size:1em;">
-                  <b>https://en.m.wikiversity.org/wiki/Database_Examples/Northwind/SQLite</b>
+                  <b>
+                       https://en.m.wikiversity.org/wiki/<br>
+                           Database_Examples/Northwind/<br>
+                           SQLite
+                  </b>
         </span>
      </a> 
      <br><br>
@@ -3410,13 +3477,15 @@ Access the Northwind Traders database.
          style="background-color:lightblue;color:black;
          margin-left:1px;margin-right:2px;margin-top:1px;margin-bottom:1px;
          border:2px solid lightgrey;border-radius:8px;
-         width:12em;height:3.2em;-webkit-appearance:none" >    
+         width:14em;height:3.2em;-webkit-appearance:none" >    
          <span style="font-size:1.25em;"> 
+         &nbsp;&nbsp;      
          <b>
          Add data
          </b>
          &nbsp;&nbsp;
          </span>
+         &nbsp;&nbsp;&nbsp;&nbsp;
          <svg  transform="translate(-4,0)" id="addEntryIcon" name="addEntryIcon" 
          xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" class="bi bi-plus" 
          viewBox="0 0 16 16" role="graphics-document" aria-labelledby="addEntryIconTitle" aria-describedby="addEntryIconDesc">
