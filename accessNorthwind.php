@@ -1080,7 +1080,7 @@ echo '<br>';
           echo "<br><br>"; 
           echo '<span style="color:Navy;font-size:';
           echo $textCustRptSize;
-          echo ';">*** Entries in <b><u>Employees</u></b>:</span>';
+          echo ';">Entries in <b><u>Employees</u></b>:</span>';
 
           //  query the table
           $sql = "SELECT rowid, * FROM Employees";
@@ -2562,6 +2562,258 @@ echo '<br>';
    }
 
 
+
+
+
+   function showAllSalesTax() {
+
+     try {
+
+          //  access database
+          $db = new SQLite3('northwind.db');
+          if(!$db){
+               //  an error was encountered
+               echo '<span style="color:Navy;font-size:1.75em;">Error Code:    ';
+               echo  $db->lastErrorCode();
+               echo  "'<br>'</span>";
+               echo '<span style="color:Navy;font-size:1.75em;">Error Message: ';
+               echo  $db->lastErrorMsg();
+               echo  "'<br>'</span>";
+               echo '<span style="color:Navy;font-size:1.75em;">
+                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Database access was not successful.\n</span>';
+          } else {
+            //   echo '<span style="color:Navy;font-size:1.75em;">
+               //      <br>
+                //     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*** Database access was successful.</span>';  
+          }
+
+        //  echo "<br><br>"; 
+
+     } catch (Exception $e) {
+          echo 'An exception occurred: ', $e->getMessage(), "\n";
+
+          echo '<span id="exceptionOccurredMsg" style="color:Maroon;font-size:<?php echo $exceptionOccurredMsgSize; ?>;"><b>
+              An exception occurred: ';
+          echo $e->getMessage(), "\n";
+          echo '</b></span>';
+     }
+
+
+     try {
+
+          echo "<br><br>"; 
+                echo '<span style="color:Navy;font-size:1.75em;">Entries in <b><u>SalesTax</u></b>:</span>';
+
+
+      //    echo '<span style="color:Navy;font-size:1.75em;">Entries in <b><u>OrderDetails</u></b>:</span>';
+
+                //  SalesTax (SalesTaxID INTEGER PRIMARY KEY AUTOINCREMENT,
+                //                  SalesTaxCountry TEXT, 
+                //                  SalesTaxRegion TEXT,
+                //                  SalesTaxLocality TEXT,
+                //                  SalesTaxCode TEXT UNIQUE,
+                //                  SalesTaxValue FLOAT)";
+
+
+
+
+
+          //  query the table
+               $sql = "SELECT rowid, * FROM SalesTax";
+
+          $query = $db->query($sql);
+          if(!$db){
+               //  an error was encountered
+               echo '<span style="color:Navy;font-size:1.75em;">Error Code:    ';
+               echo  $db->lastErrorCode();
+               echo  "'<br>'</span>";
+               echo '<span style="color:Navy;font-size:1.75em;">Error Message: ';
+               echo  $db->lastErrorMsg();
+               echo  "'<br>'</span>";
+               echo '<span style="color:Navy;font-size:1.75em;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Query was not successful.\n</span>';
+          } else {
+            //   echo '<span style="color:Navy;font-size:1.75em;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Query was successful.</span>';
+          }
+
+          echo "<br>"; 
+
+
+//  ********
+
+
+//  echo 'xxx<br>';
+
+echo '     <center>
+          <table border="5" rules="all">
+                <tr>
+                       <td style="background-color:greenYellow;color:black" >                         
+                            <center>
+                                 <span style="color:Navy;font-size:1.0em;">
+                                  &nbsp;
+                                  <b>ID</b>
+                                  &nbsp;
+                                 </span>                                 
+                            </center>           
+                       </td>
+                       <td style="background-color:greenYellow;color:black" >                         
+                            <center>
+                                 <span style="color:Navy;font-size:1.0em;">
+                                 &nbsp;
+                                 <b>Country</b>
+                                 &nbsp;
+                                 </span>                                 
+                            </center>           
+                       </td>
+                       <td style="background-color:greenYellow;color:black" >                         
+                            <center>
+                                 <span style="color:Navy;font-size:1.0em;">
+                                 &nbsp;
+                                 <b>Region</b>
+                                 &nbsp;
+                                 </span>                                 
+                            </center>           
+                       </td>
+                       <td style="background-color:greenYellow;color:black" >                         
+                            <center>
+                                 <span style="color:Navy;font-size:1.0em;">
+                                 &nbsp;
+                                 <b>Locality</b>
+                                 &nbsp;
+                                 </span>                                 
+                            </center>           
+                       </td>
+                       <td style="background-color:greenYellow;color:black" >                         
+                            <center>
+                                 <span style="color:Navy;font-size:1.0em;">
+                                 &nbsp;
+                                 <b>Code</b>
+                                 &nbsp;
+                                 </span>                                 
+                            </center>           
+                       </td>
+                       <td style="background-color:greenYellow;color:black" >                         
+                            <center>
+                                 <span style="color:Navy;font-size:1.0em;">
+                                 &nbsp;
+                                 <b>Sales Tax</b>
+                                 &nbsp;
+                                 </span>                                 
+                            </center>           
+                       </td>
+
+                </tr>';
+
+                //  SalesTax (SalesTaxID INTEGER PRIMARY KEY AUTOINCREMENT,
+                //                  SalesTaxCountry TEXT, 
+                //                  SalesTaxRegion TEXT,
+                //                  SalesTaxLocality TEXT,
+                //                  SalesTaxCode TEXT UNIQUE,
+                //                  SalesTaxValue FLOAT)";
+ 
+
+
+
+          while ($row = $query->fetchArray()){
+
+echo '                <tr>
+                       <td style="background-color:aliceblue;color:black" >                         
+                            <center>
+                                 <span style="color:Navy;font-size:1.0em;">
+                                 &nbsp;&nbsp;
+                                  <b>'. $row['SalesTaxID']. '</b>
+                                 &nbsp;&nbsp;
+                                 </span>                                 
+                            </center>           
+                       </td>
+                       <td style="background-color:aliceblue;color:black" >                         
+                            <center>
+                                 <span style="color:Navy;font-size:1.0em;">
+                                 &nbsp;&nbsp;
+                                  <b>'. $row['SalesTaxCountry']. '</b>
+                                 &nbsp;&nbsp;
+                                 </span>                                 
+                            </center>           
+                       </td>
+                       <td style="background-color:aliceblue;color:black" >                         
+                            <center>
+                                 <span style="color:Navy;font-size:1.0em;">
+                                 &nbsp;&nbsp;
+                                  <b>'. $row['SalesTaxRegion']. '</b>
+                                 &nbsp;&nbsp;
+                                 </span>                                 
+                            </center>           
+                       </td>
+                       <td style="background-color:aliceblue;color:black" >                         
+                            <center>
+                                 <span style="color:Navy;font-size:1.0em;">
+                                 &nbsp;&nbsp;
+                                  <b>'. $row['SalesTaxLocality']. '</b>
+                                 &nbsp;&nbsp;
+                                 </span>                                 
+                            </center>           
+                       </td>
+                       <td style="background-color:aliceblue;color:black" >                         
+                            <center>
+                                 <span style="color:Navy;font-size:1.0em;">
+                                 &nbsp;&nbsp;
+                                  <b>'. $row['SalesTaxCode']. '</b>
+                                 &nbsp;&nbsp;
+                                 </span>                                 
+                            </center>           
+                       </td>
+                       <td style="background-color:aliceblue;color:black" >                         
+                            <center>
+                                 <span style="color:Navy;font-size:1.0em;">
+                                 &nbsp;
+                                  <b>'. sprintf("%.3f", $row['SalesTaxValue']). '</b>
+                                 &nbsp;
+                                 </span>                                 
+                            </center>           
+                       </td>
+
+                </tr>';
+
+
+             //   end     while
+          }
+
+
+
+echo '          </table>
+     </center>';
+echo '<br>';
+
+//  echo 'xxx<br><br>';
+
+
+
+
+
+
+//  *********
+
+
+
+          //  echo "<br>"; 
+       //   echo '<span style="color:Navy;font-size:1.75em;">Query finished.</span>';
+          echo "<br>"; 
+
+     } catch (Exception $e) {
+          echo 'An exception occurred: ', $e->getMessage(), "\n";
+
+          echo '<span id="exceptionOccurredMsg" style="color:Maroon;font-size:<?php echo $exceptionOccurredMsgSize; ?>;"><b>
+              An exception occurred: ';
+          echo $e->getMessage(), "\n";
+          echo '</b></span>';
+     }
+
+
+      //  end    function showAllSalesTax
+   }
+
+
+
+
 ?>
 
 
@@ -2584,43 +2836,13 @@ switch($screenWidth) {
       case 360:      //  Android 
       //   echo ' <script> alert("using screen width = 360" + "<br>"); </script>';
 
-          if($isChrome) {
-              //   echo ' <script> alert("Chrome width 360"); </script>';
-
-               $textDbAccessSize = "1.75em";
-               $textCustRptSize = "1.75em";
-               $textCustRptErrSize = "1.75em";
-               $textCustCatSize = "0.7em";
-               $textCustDataSize = "0.5em";
-               $textCraiyonCaptionSize = "0.7em";
-
-          } 
-
+         if($isChrome) {
+	 }
 
          if($isFirefox) {
-              //   echo ' <script> alert("Firefox width 360"); </script>';
-
-	       $userIDSize = "35";
-	       $userPasswordSize = "35";
-               $textDbAccessSize = "1.75em";
-               $textCustRptSize = "1.75em";
-               $textCustRptErrSize = "1.75em";
-               $textCustCatSize = "0.8em";
-               $textCustDataSize = "1.0em";
-               $textCraiyonCaptionSize = "0.6em";
-
 	 }
 
          if($isAndroidEdge) {
-             //    echo ' <script> alert("Edge (Android) width 360"); </script>';
-
-               $textDbAccessSize = "1.75em";
-               $textCustRptSize = "1.75em";
-               $textCustRptErrSize = "1.75em";
-               $textCustCatSize = "0.6em";
-               $textCustDataSize = "0.6em";
-               $textCraiyonCaptionSize = "0.6em";
-
          }
 
          break;
@@ -2637,15 +2859,7 @@ switch($screenWidth) {
 
 			switch($screenHeight) {
 				case 929:      
-         			     //  echo ' <script> alert("using screen height = 929" + "<br>"); </script>';
-
-                                       $textDbAccessSize = "1.75em";
-                                       $textCustRptSize = "1.75em";
-                                       $textCustRptErrSize = "1.75em";
-                                       $textCustCatSize = "0.6em";
-                                       $textCustDataSize = "0.9em";
-                                       $textCraiyonCaptionSize = "0.6em";
-
+         				//	echo ' <script> alert("using screen height = 929" + "<br>"); </script>';
 	         		break;
       				default:
    
@@ -2658,35 +2872,11 @@ switch($screenWidth) {
                         
 	    	switch($screenHeight) {
 	    		case 922:      
-         			//  echo ' <script> alert("using screen height = 922" + "<br>"); </script>';
+         		//	echo ' <script> alert("using screen height = 922" + "<br>"); </script>';
                     
 	         	break;
       	    		case 938:      
-
-                              if($isChrome) {
-                                   //  echo ' <script> alert("Chrome width 412 and height 938"); </script>';
-
-                                   $textDbAccessSize = "1.75em";
-                                   $textCustRptSize = "1.75em";
-                                   $textCustRptErrSize = "1.75em";
-                                   $textCustCatSize = "0.7em";
-                                   $textCustDataSize = "0.5em";
-                                   $textCraiyonCaptionSize = "0.7em";
-
-                              } 
-
-                              if($isAndroidEdge) {
-                                   //  echo ' <script> alert("Edge (Android) width 412 and height 938"); </script>';
-
-                                   $textDbAccessSize = "1.75em";
-                                   $textCustRptSize = "1.75em";
-                                   $textCustRptErrSize = "1.75em";
-                                   $textCustCatSize = "0.7em";
-                                   $textCustDataSize = "0.5em";
-                                   $textCraiyonCaptionSize = "0.7em";
-                             } 
-
-
+         			//	echo ' <script> alert("using screen height = 390" + "<br>"); </script>';
 	         	break;
       	     		default:
                           
@@ -2716,12 +2906,12 @@ switch($screenWidth) {
          if($isFirefox) {
             //  echo ' <script> alert("Firefox using screen width = 1133" + "<br>"); </script>';
 
-                       $textDbAccessSize = "1.75em";
-                       $textCustRptSize = "1.75em";
-                       $textCustRptErrSize = "1.75em";
-                       $textCustCatSize = "0.8em";
-                       $textCustDataSize = "0.8em";
-                       $textCraiyonCaptionSize = "0.7em";
+                       $textDbAccessSize = "1.5em";
+                       $textCustRptSize = "1.5em";
+                       $textCustRptErrSize = "1.5em";
+                       $textCustCatSize = "0.6em";
+                       $textCustDataSize = "0.6em";
+                       $textCraiyonCaptionSize = "0.6em";
 
          } 
 
@@ -2741,12 +2931,12 @@ switch($screenWidth) {
          if($isChrome) {
             //  echo ' <script> alert("Chrome using screen width = 1143" + "<br>"); </script>';
 
-                       $textDbAccessSize = "1.75em";
-                       $textCustRptSize = "1.75em";
-                       $textCustRptErrSize = "1.75em";
-                       $textCustCatSize = "0.8em";
+                       $textDbAccessSize = "1.5em";
+                       $textCustRptSize = "1.5em";
+                       $textCustRptErrSize = "1.5em";
+                       $textCustCatSize = "0.6em";
                        $textCustDataSize = "0.6em";
-                       $textCraiyonCaptionSize = "0.7em";
+                       $textCraiyonCaptionSize = "0.6em";
 
          } 
 
@@ -2757,12 +2947,12 @@ switch($screenWidth) {
          if($isAndroidEdge) {
             //  echo ' <script> alert("Microsoft Edge (Android) using screen width = 1143" + "<br>"); </script>';
 
-                       $textDbAccessSize = "1.75em";
-                       $textCustRptSize = "1.75em";
-                       $textCustRptErrSize = "1.75em";
-                       $textCustCatSize = "0.7em";
-                       $textCustDataSize = "0.7em";
-                       $textCraiyonCaptionSize = "0.7em";
+                       $textDbAccessSize = "1.5em";
+                       $textCustRptSize = "1.5em";
+                       $textCustRptErrSize = "1.5em";
+                       $textCustCatSize = "0.6em";
+                       $textCustDataSize = "0.6em";
+                       $textCraiyonCaptionSize = "0.6em";
 
          } 
 
@@ -2996,14 +3186,9 @@ Access the Northwind Traders database.
      <br><br>
      The data was obtained at
      &nbsp;&nbsp;&nbsp;
-     <br>
      <a href="https://en.m.wikiversity.org/wiki/Database_Examples/Northwind/SQLite" target="_blank">
 	<span id="wikiversityURL" style="font-size:1em;">
-                  <b>
-                       https://en.m.wikiversity.org/wiki/<br>
-                           Database_Examples/Northwind/<br>
-                           SQLite
-                  </b>
+                  <b>https://en.m.wikiversity.org/wiki/Database_Examples/Northwind/SQLite</b>
         </span>
      </a> 
      <br><br>
@@ -3405,6 +3590,12 @@ Access the Northwind Traders database.
 
      <input type="radio" id="rOrderDetails" name="rptMethod" value="useOrderDetails"<?php if($rptMethod == 'useOrderDetails') echo 'CHECKED';?> > Order Details
 
+     <br>
+
+     <input type="radio" id="rSalesTax" name="rptMethod" value="useSalesTax"<?php if($rptMethod == 'useSalesTax') echo 'CHECKED';?> > <span style="color:Green;">Sales Tax</span>
+
+
+
      <br><br>
      <label id="rptFmtMethod-label">
          <b>
@@ -3422,6 +3613,7 @@ Access the Northwind Traders database.
      <input type="radio" id="rOrdersFmt" name="rptMethod" value="useOrdersFmt"<?php if($rptMethod == 'useOrdersFmt') echo 'CHECKED';?> > Orders
 
      <input type="radio" id="rOrderDetailsFmt" name="rptMethod" value="useOrderDetailsFmt"<?php if($rptMethod == 'useOrderDetailsFmt') echo 'CHECKED';?> > Order Details
+
 
   </center>
   <br>
@@ -3479,13 +3671,11 @@ Access the Northwind Traders database.
          border:2px solid lightgrey;border-radius:8px;
          width:14em;height:3.2em;-webkit-appearance:none" >    
          <span style="font-size:1.25em;"> 
-         &nbsp;&nbsp;      
          <b>
          Add data
          </b>
          &nbsp;&nbsp;
          </span>
-         &nbsp;&nbsp;&nbsp;&nbsp;
          <svg  transform="translate(-4,0)" id="addEntryIcon" name="addEntryIcon" 
          xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="currentColor" class="bi bi-plus" 
          viewBox="0 0 16 16" role="graphics-document" aria-labelledby="addEntryIconTitle" aria-describedby="addEntryIconDesc">
@@ -3869,6 +4059,9 @@ Access the Northwind Traders database.
     else if($rptMethod == 'useOrderDetailsFmt'){
        $rptValue = 'Order Details';
     }
+    else if($rptMethod == 'useSalesTax'){
+       $rptValue = 'Sales Tax';
+    }
     else {
        $rptValue = '*NOT DEFINED*';
     }
@@ -3930,6 +4123,11 @@ Access the Northwind Traders database.
        getRecordCount('OrderDetails');
        showAllOrderDetails(1);
     }
+    else if($rptMethod == 'useSalesTax'){
+       getRecordCount('SalesTax');
+       showAllSalesTax();
+    }
+
 
 
 
