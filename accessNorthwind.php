@@ -1080,7 +1080,7 @@ echo '<br>';
           echo "<br><br>"; 
           echo '<span style="color:Navy;font-size:';
           echo $textCustRptSize;
-          echo ';">Entries in <b><u>Employees</u></b>:</span>';
+          echo ';">*** Entries in <b><u>Employees</u></b>:</span>';
 
           //  query the table
           $sql = "SELECT rowid, * FROM Employees";
@@ -2695,7 +2695,7 @@ echo '     <center>
                             <center>
                                  <span style="color:Navy;font-size:1.0em;">
                                  &nbsp;
-                                 <b>Sales Tax</b>
+                                 <b>Tax Rate</b>
                                  &nbsp;
                                  </span>                                 
                             </center>           
@@ -2931,9 +2931,9 @@ switch($screenWidth) {
          if($isChrome) {
             //  echo ' <script> alert("Chrome using screen width = 1143" + "<br>"); </script>';
 
-                       $textDbAccessSize = "1.5em";
-                       $textCustRptSize = "1.5em";
-                       $textCustRptErrSize = "1.5em";
+                       $textDbAccessSize = "1.0em";
+                       $textCustRptSize = "1.0em";
+                       $textCustRptErrSize = "1.0em";
                        $textCustCatSize = "0.6em";
                        $textCustDataSize = "0.6em";
                        $textCraiyonCaptionSize = "0.6em";
