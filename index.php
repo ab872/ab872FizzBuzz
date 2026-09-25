@@ -1076,26 +1076,682 @@ the references section overlaps the introduction.
 <!-- end of correction--> 
 
 
+<!-- 
+
+  -->
+
+
+<?php
+     try {
+
+          echo "<br>"; 
+//          echo '<span style="color:Navy;font-size:1.75em;">Check if SQLite is available ...</span>';
+
+          if(class_exists('SQLite3')) {
+//               echo '<span style="color:Navy;font-size:1.75em;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SQLite 3 is available.</span>';
+          } else {
+               die('<span style="color:Navy;font-size:1.75em;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SQLite 3 is not available.<br></span>');
+          }
+
+          //  echo "<br>"; 
+    //      echo '<span style="color:Navy;font-size:1.75em;">
+    //           <br>
+    //           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*** Finished checking if SQLite is available.<br></span>';
+
+     } catch (Exception $e) {
+          echo 'An exception occurred: ', $e->getMessage(), "\n";
+
+          echo '<span id="exceptionOccurredMsg" style="color:Maroon;font-size:<?php echo $exceptionOccurredMsgSize; ?>;"><b>
+              An exception occurred: ';
+          echo $e->getMessage(), "\n";
+          echo '</b></span>';
+     }
 
 
 
-<br><br>
+
+     try {
+
+          //  create database
+//          echo "<br>"; 
+//          echo '<span style="color:Navy;font-size:1.75em;">Create database <b><u>pageCount</u></b>  ...</span>';
+
+          $db = new SQLite3('pageCount.db');
+
+          if(!$db){
+               //  an error was encountered
+               echo '<span style="color:Navy;font-size:1.75em;">Error Code:    ';
+               echo  $db->lastErrorCode();
+               echo  "'<br>'</span>";
+               echo '<span style="color:Navy;font-size:1.75em;">Error Message: ';
+               echo  $db->lastErrorMsg();
+               echo  "'<br>'</span>";
+               echo '<span style="color:Navy;font-size:1.75em;">
+                     Database access for page counter was not successful.\n</span>';
+          } else {
+//               echo '<span style="color:Navy;font-size:1.75em;">
+//                     <br>
+//                     Database access for page counter was successful.</span>';  
+          }
+
+        //  echo "<br><br>"; 
+
+     } catch (Exception $e) {
+          echo 'An exception occurred: ', $e->getMessage(), "\n";
+
+          echo '<span id="exceptionOccurredMsg" style="color:Maroon;font-size:<?php echo $exceptionOccurredMsgSize; ?>;"><b>
+              An exception occurred: ';
+          echo $e->getMessage(), "\n";
+          echo '</b></span>';
+     }
 
 
 
-<br><br>
+     try {
+
+//          echo "<br><br>"; 
+//          echo '<span style="color:Navy;font-size:1.75em;">Query the SQLite version  ...</span>';
+
+          //  query the table
+          $sql = "SELECT SQLITE_VERSION()";
+          $query = $db->query($sql);
+
+          if(!$db){
+               //  an error was encountered
+               echo '<span style="color:Navy;font-size:1.75em;">Error Code:    ';
+               echo  $db->lastErrorCode();
+               echo  "'<br>'</span>";
+               echo '<span style="color:Navy;font-size:1.75em;">Error Message: ';
+               echo  $db->lastErrorMsg();
+               echo  "'<br>'</span>";
+               echo '<span style="color:Navy;font-size:1.75em;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Query was not successful.\n</span>';
+          } else {
+     //          echo '<span style="color:Navy;font-size:1.75em;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Query was successful.</span>';
+          }
+
+          echo "<br>"; 
+
+
+          while ($row = $query->fetchArray()){
+
+	       if(empty($row)) {
+                   echo '<span style="color:Navy;font-size:1.75em;">*** There was no response. ***<br></span>';
+	       } else {
+       //            echo '<span style="color:Navy;font-size:1.75em;">*** There was a response. ***<br></span>';
+               }
+
+//                    echo '<span style="color:Navy;font-size:1.75em;">The SQLite version number is </span>';
+//                    echo '<span style="color:Navy;font-size:1.75em;">';
+//                    echo $row[0];
+//                    echo '</span>';
+//                    echo '<span style="color:Navy;font-size:1.75em;"> </span>';
+//                    echo '<span style="color:Navy;font-size:1.75em;"><br></span>';
+                   
+          }
+
+          //  echo "<br>"; 
+     //     echo '<span style="color:Navy;font-size:1.75em;">Query finished.</span>';
+     //     echo "<br>"; 
+
+     } catch (Exception $e) {
+          echo 'An exception occurred: ', $e->getMessage(), "\n";
+
+          echo '<span id="exceptionOccurredMsg" style="color:Maroon;font-size:<?php echo $exceptionOccurredMsgSize; ?>;"><b>
+              An exception occurred: ';
+          echo $e->getMessage(), "\n";
+          echo '</b></span>';
+     }
+
+
+
+
+     try {
+
+     //     echo "<br><br>"; 
+     //     echo '<span style="color:Navy;font-size:1.75em;">Check if foreign keys are enabled  ...</span>';
+
+          //  query the table
+          $sql = "PRAGMA foreign_keys";
+          $query = $db->query($sql);
+
+          if(!$db){
+               //  an error was encountered
+               echo '<span style="color:Navy;font-size:1.75em;">Error Code:    ';
+               echo  $db->lastErrorCode();
+               echo  "'<br>'</span>";
+               echo '<span style="color:Navy;font-size:1.75em;">Error Message: ';
+               echo  $db->lastErrorMsg();
+               echo  "'<br>'</span>";
+               echo '<span style="color:Navy;font-size:1.75em;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Query was not successful.</span>';
+          } else {
+     //          echo '<span style="color:Navy;font-size:1.75em;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Query was successful.</span>';
+          }
+
+ //         echo "<br>"; 
+
+//          echo '<span style="color:Navy;font-size:1.75em;">&nbsp;&nbsp;&nbsp;Data returned:</span>';
+//     	  echo "<br>"; 
+
+          while ($row = $query->fetchArray()){
+
+	       if(empty($row)) {
+                   echo '<span style="color:Navy;font-size:1.75em;">*** There was no response. ***<br></span>';
+	       } else {
+       //            echo '<span style="color:Navy;font-size:1.75em;">*** There was a response. ***<br></span>';
+               }
+
+               if($row[0] == 0) {
+//                    echo '<span style="color:Navy;font-size:1.75em;">
+//                           *** Foreign keys are not enabled. ***<br></span>';
+     	       } else {
+//                    echo '<span style="color:Navy;font-size:1.75em;">
+//                            *** Foreign keys are enabled. ***<br></span>';
+               }
+
+            //   while                      
+          }
+
+          //  echo "<br>"; 
+     //     echo '<span style="color:Navy;font-size:1.75em;">Query finished.</span>';
+     //     echo "<br>"; 
+
+     } catch (Exception $e) {
+          echo 'An exception occurred: ', $e->getMessage(), "\n";
+
+          echo '<span id="exceptionOccurredMsg" style="color:Maroon;font-size:<?php echo $exceptionOccurredMsgSize; ?>;"><b>
+              An exception occurred: ';
+          echo $e->getMessage(), "\n";
+          echo '</b></span>';
+     }
+
+
+
+
+     try {
+
+   //  //       echo "<br>"; 
+   //       echo '<span style="color:Navy;font-size:1.75em;">*** Enable foreign keys. ***</span>';
+
+          //  query the table
+          $sql = "PRAGMA foreign_keys=1";
+          $query = $db->query($sql);
+          if(!$db){
+               //  an error was encountered
+               echo '<span style="color:Navy;font-size:1.75em;">Error Code:    ';
+               echo  $db->lastErrorCode();
+               echo  "'<br>'</span>";
+               echo '<span style="color:Navy;font-size:1.75em;">Error Message: ';
+               echo  $db->lastErrorMsg();
+               echo  "'<br>'</span>";
+               echo '<span style="color:Navy;font-size:1.75em;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Query was not successful.\n</span>';
+          } else {
+    //           echo '<span style="color:Navy;font-size:1.75em;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Query was successful.</span>';
+          }
+
+   //       echo "<br>"; 
+
+   //       echo '<span style="color:Navy;font-size:1.75em;">&nbsp;&nbsp;&nbsp;Data returned:</span>';
+   //  	  echo "<br>"; 
+
+
+          while ($row = $query->fetchArray()){
+
+	       if(empty($row)) {
+                   echo '<span style="color:Navy;font-size:1.75em;">*** There was no response. ***<br></span>';
+	       } else {
+        //           echo '<span style="color:Navy;font-size:1.75em;">*** There was a response. ***<br></span>';
+               }
+
+             //   end     while ...        
+          }
+
+          //  echo "<br>"; 
+  //        echo '<span style="color:Navy;font-size:1.75em;">Query finished.</span>';
+  //        echo "<br>"; 
+
+     } catch (Exception $e) {
+          echo 'An exception occurred: ', $e->getMessage(), "\n";
+
+          echo '<span id="exceptionOccurredMsg" style="color:Maroon;font-size:<?php echo $exceptionOccurredMsgSize; ?>;"><b>
+              An exception occurred: ';
+          echo $e->getMessage(), "\n";
+          echo '</b></span>';
+     }
+
+
+
+
+     try {
+
+//          echo "<br><br>"; 
+//          echo '<span style="color:Navy;font-size:1.75em;">Check if foreign keys are enabled  ...</span>';
+
+          //  query the table
+          $sql = "PRAGMA foreign_keys";
+          $query = $db->query($sql);
+          if(!$db){
+               //  an error was encountered
+               echo '<span style="color:Navy;font-size:1.75em;">Error Code:    ';
+               echo  $db->lastErrorCode();
+               echo  "'<br>'</span>";
+               echo '<span style="color:Navy;font-size:1.75em;">Error Message: ';
+               echo  $db->lastErrorMsg();
+               echo  "'<br>'</span>";
+               echo '<span style="color:Navy;font-size:1.75em;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Query was not successful.</span>';
+          } else {
+     //          echo '<span style="color:Navy;font-size:1.75em;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Query was successful.</span>';
+          }
+
+          echo "<br>"; 
+
+    //      echo '<span style="color:Navy;font-size:1.75em;">&nbsp;&nbsp;&nbsp;Data returned:</span>';
+    // 	  echo "<br>"; 
+
+          while ($row = $query->fetchArray()){
+
+	       if(empty($row)) {
+                   echo '<span style="color:Navy;font-size:1.75em;">*** There was no response. ***<br></span>';
+	       } else {
+       //            echo '<span style="color:Navy;font-size:1.75em;">*** There was a response. ***<br></span>';
+               }
+                
+               if($row[0] == 0) {
+//                    echo '<span style="color:Navy;font-size:1.75em;">
+//                           *** Foreign keys are not enabled. ***<br></span>';
+     	       } else {
+//                    echo '<span style="color:Navy;font-size:1.75em;">
+//                            *** Foreign keys are enabled. ***<br></span>';
+
+               }
+                   
+          }
+
+          //  echo "<br>"; 
+    //      echo '<span style="color:Navy;font-size:1.75em;">Query finished.</span>';
+          echo "<br>"; 
+
+     } catch (Exception $e) {
+          echo 'An exception occurred: ', $e->getMessage(), "\n";
+
+          echo '<span id="exceptionOccurredMsg" style="color:Maroon;font-size:<?php echo $exceptionOccurredMsgSize; ?>;"><b>
+              An exception occurred: ';
+          echo $e->getMessage(), "\n";
+          echo '</b></span>';
+     }
+
+
+?>
+
+
+
+
+
+<?php
+     try {
+
+//          echo "<br>"; 
+//          echo '<span style="color:Navy;font-size:1.75em;">Create table <b><u>idxCOUNTER</u></b>  ...</span>';
+
+          //  create table
+
+          $query = 
+"CREATE TABLE IF NOT EXISTS idxCOUNTER ( Id INTEGER, Count INTEGER NOT NULL);";
+
+          $db->exec($query);
+          if(!$db){
+               //  an error was encountered
+               echo '<span style="color:Navy;font-size:1.75em;">Error Code:    ';
+               echo  $db->lastErrorCode();
+               echo  "'<br>'</span>";
+               echo '<span style="color:Navy;font-size:1.75em;">Error Message: ';
+               echo  $db->lastErrorMsg();
+               echo  "'<br>'</span>";
+               echo '<span style="color:Navy;font-size:1.75em;">
+                       <br>
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*** Table creation was not successful.\n</span>';
+          } else {
+//               echo '<span style="color:Navy;font-size:1.75em;">
+//                       <br>
+//                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*** Table was successfully created.</span>';
+          }
+
+
+     } catch (Exception $e) {
+          echo 'An exception occurred: ', $e->getMessage(), "\n";
+
+          echo '<span id="exceptionOccurredMsg" style="color:Maroon;font-size:<?php echo $exceptionOccurredMsgSize; ?>;"><b>
+              An exception occurred: ';
+          echo $e->getMessage(), "\n";
+          echo '</b></span>';
+     }
+?>
+
+
+
+
+
+
+
+<?php
+?>
+
+
+
+
+
+<?php
+
+//   "INSERT INTO idxCounter (Id, Count) VALUES (1, 1)";
+
+     try {
+
+//          echo "<br><br>"; 
+//          echo '<span style="color:Navy;font-size:1.75em;">Query the table <b><u>idxCounter</u></b>  ...</span>';
+
+          //  query the table
+          $sql = "SELECT rowid, * FROM idxCounter";
+          $query = $db->query($sql);
+          if(!$db){
+               //  an error was encountered
+               echo '<span style="color:Navy;font-size:1.75em;">Error Code:    ';
+               echo  $db->lastErrorCode();
+               echo  "'<br>'</span>";
+               echo '<span style="color:Navy;font-size:1.75em;">Error Message: ';
+               echo  $db->lastErrorMsg();
+               echo  "'<br>'</span>";
+               echo '<span style="color:Navy;font-size:1.75em;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Query was not successful.\n</span>';
+          } else {
+//               echo '<span style="color:Navy;font-size:1.75em;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Query was successful.</span>';
+          }
+
+          echo "<br>"; 
+
+//  echo 'xxx<br>';
+
+//    echo '     <center>
+//              <table border="5" rules="all">
+//                    <tr>
+//                           <td style="background-color:azure;color:black" >                         
+//                                <center>
+//                                     <span style="color:Navy;font-size:1.25em;">
+//                                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+//                                      <b>Id</b>
+//                                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+//                                     </span>                                 
+//                                </center>           
+//                           </td>
+//                           <td style="background-color:azure;color:black" >                         
+//                                <center>
+//                                     <span style="color:Navy;font-size:1.25em;">
+//                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+//                                     <b>Count</b>
+//                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+//                                     </span>                                 
+//                                </center>           
+//                           </td>
+//                    </tr>';
+
+
+
+
+          while ($row = $query->fetchArray()){
+
+              $theCounter = $row['Count'];
+
+//    echo '                <tr>
+//                           <td style="background-color:azure;color:black" >                         
+//                                <center>
+//                                     <span style="color:Navy;font-size:1.25em;">
+//                                      <b>'. $row['Id']. '</b>
+//                                     </span>                                 
+//                                </center>           
+//                           </td>
+//                           <td style="background-color:azure;color:black" >                         
+//                                <center>
+//                                     <span style="color:Navy;font-size:1.25em;">
+//                                      <b>'. $row['Count']. '</b>
+//                                     </span>                                 
+//                                </center>           
+//                           </td>
+//                    </tr>';
+//    
+  
+             //   end     while
+          }
+
+
+
+
+//    echo '          </table>
+//         </center>';
+//    echo '<br>';
+
+	       if(empty($row)) {
+//                   echo '<span style="color:Navy;font-size:1.75em;">*** There was no response. ***<br></span>';
+	       } else {
+//                   echo '<span style="color:Navy;font-size:1.75em;">*** There was a response. ***<br></span>';
+               }
+
+
+//            echo "The counter = ";
+//            echo $theCounter;
+//            echo "<br>";
+
+
+          //  echo "<br>"; 
+//            echo '<span style="color:Navy;font-size:1.75em;">Query finished.</span>';
+//            echo "<br>"; 
+
+     } catch (Exception $e) {
+          echo 'An exception occurred: ', $e->getMessage(), "\n";
+
+          echo '<span id="exceptionOccurredMsg" style="color:Maroon;font-size:<?php echo $exceptionOccurredMsgSize; ?>;"><b>
+              An exception occurred: ';
+          echo $e->getMessage(), "\n";
+          echo '</b></span>';
+     }
+
+
+?>
+
+
+
+<?php
+     try {
+
+//          echo "<br>"; 
+//          echo '<span style="color:Navy;font-size:1.75em;">Update the counter  ...</span>';
+   
+
+          $theCounter = $theCounter + 1;
+
+//          echo "The counter = ";
+//          echo $theCounter;
+//          echo "<br>";
+
+          $sql = "UPDATE idxCounter SET Count = $theCounter WHERE Id = 1;";
+
+
+//  "INSERT INTO idxCounter (Id, Count) VALUES (1, 1) ON CONFLICT(ID) DO UPDATE SET Count = Count + 1 RETURNING Count;";
+
+
+          $db->exec($sql);
+          if(!$db){
+               //  an error was encountered
+               echo '<span style="color:Navy;font-size:1.75em;">Error Code:    ';
+               echo  $db->lastErrorCode();
+               echo  "'<br>'</span>";
+               echo '<span style="color:Navy;font-size:1.75em;">Error Message: ';
+               echo  $db->lastErrorMsg();
+               echo  "'<br>'</span>";
+               echo '<span style="color:Navy;font-size:1.75em;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Insert was not successful.\n</span>';
+          } else {
+//               echo '<span style="color:Navy;font-size:1.75em;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Insert was successful.</span>';
+          }
+
+
+     } catch (Exception $e) {
+          echo 'An exception occurred: ', $e->getMessage(), "\n";
+
+          echo '<span id="exceptionOccurredMsg" style="color:Maroon;font-size:<?php echo $exceptionOccurredMsgSize; ?>;"><b>
+              An exception occurred: ';
+          echo $e->getMessage(), "\n";
+          echo '</b></span>';
+     }
+
+?>
+
+
+
+
+
+
+<?php
+
+     try {
+
+//          echo "<br><br>"; 
+//          echo '<span style="color:Navy;font-size:1.75em;">Query the table <b><u>idxCounter</u></b>  ...</span>';
+
+          //  query the table
+          $sql = "SELECT rowid, * FROM idxCounter";
+          $query = $db->query($sql);
+          if(!$db){
+               //  an error was encountered
+               echo '<span style="color:Navy;font-size:1.75em;">Error Code:    ';
+               echo  $db->lastErrorCode();
+               echo  "'<br>'</span>";
+               echo '<span style="color:Navy;font-size:1.75em;">Error Message: ';
+               echo  $db->lastErrorMsg();
+               echo  "'<br>'</span>";
+               echo '<span style="color:Navy;font-size:1.75em;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Query was not successful.\n</span>';
+          } else {
+//               echo '<span style="color:Navy;font-size:1.75em;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Query was successful.</span>';
+          }
+
+          echo "<br>"; 
+
+//  echo 'xxx<br>';
+
+//    echo '     <center>
+//              <table border="5" rules="all">
+//                    <tr>
+//                           <td style="background-color:azure;color:black" >                         
+//                                <center>
+//                                     <span style="color:Navy;font-size:1.25em;">
+//                                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+//                                      <b>Id</b>
+//                                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+//                                     </span>                                 
+//                                </center>           
+//                           </td>
+//                           <td style="background-color:azure;color:black" >                         
+//                                <center>
+//                                     <span style="color:Navy;font-size:1.25em;">
+//                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+//                                     <b>Count</b>
+//                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+//                                     </span>                                 
+//                                </center>           
+//                           </td>
+//                    </tr>';
+
+
+
+
+          while ($row = $query->fetchArray()){
+
+              $theCounter = $row['Count'];
+
+
+//    echo '                <tr>
+//                           <td style="background-color:azure;color:black" >                         
+//                                <center>
+//                                     <span style="color:Navy;font-size:1.25em;">
+//                                      <b>'. $row['Id']. '</b>
+//                                     </span>                                 
+//                                </center>           
+//                           </td>
+//                           <td style="background-color:azure;color:black" >                         
+//                                <center>
+//                                     <span style="color:Navy;font-size:1.25em;">
+//                                      <b>'. $row['Count']. '</b>
+//                                     </span>                                 
+//                                </center>           
+//                           </td>
+//                    </tr>';
+
+
+             //   end     while
+          }
+
+
+
+//    echo '          </table>
+//         </center>';
+//    echo '<br>';
+
+	       if(empty($row)) {
+//                     echo '<span style="color:Navy;font-size:1.75em;">*** There was no response. ***<br></span>';
+	       } else {
+//                     echo '<span style="color:Navy;font-size:1.75em;">*** There was a response. ***<br></span>';
+               }
+
+
+          //  echo "<br>"; 
+ //         echo '<span style="color:Navy;font-size:1.75em;">Query finished.</span>';
+ //         echo "<br>"; 
+
+     } catch (Exception $e) {
+          echo 'An exception occurred: ', $e->getMessage(), "\n";
+
+          echo '<span id="exceptionOccurredMsg" style="color:Maroon;font-size:<?php echo $exceptionOccurredMsgSize; ?>;"><b>
+              An exception occurred: ';
+          echo $e->getMessage(), "\n";
+          echo '</b></span>';
+     }
+
+
+?>
+
+
+<?php
+
+          //  echo "<br>"; 
+          echo '<center>';
+          echo '<span style="font-size:2.0em;color:Black;">';
+          echo '<b>';
+          echo 'Visitors: ';
+          echo '<span style="color:Maroon;">';
+          echo $theCounter;
+          echo '</span>';
+          echo '</b>';
+          echo '</span>';
+          echo '</center>';
+          echo "<br>"; 
+
+
+
+          //  <br><br>
+
+?>
+
 
 
 <!-- 
 
   -->
 
+<!-- <br><br>  -->
 
-<br><br>
+
+
+
+
 
 <center> 
 <span id="copyRightMsg" style="color:Navy;font-size:<?php echo $copyRightMsgSize; ?>;">
-	<b>&nbsp;&nbsp;&nbsp;Copyright &#169; 2023-2025. All rights reserved.</b>
+	<b>&nbsp;&nbsp;&nbsp;Copyright &#169; 2023-2026. All rights reserved.</b>
 </span>
 </center> 
 <br>
