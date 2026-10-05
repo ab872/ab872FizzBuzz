@@ -325,6 +325,30 @@ switch($screenWidth) {
       //   echo ' <script> alert("using screen width = 820" + "<br>"); </script>';
 
          break;
+      case 1120:     //  Android
+      //   echo ' <script> alert("using screen width = 1120" + "<br>"); </script>';
+
+         if($isChrome) {
+            //  echo ' <script> alert("Chrome using screen width = 1120" + "<br>"); </script>';
+         } 
+
+         if($isFirefox) {
+             // echo ' <script> alert("Firefox using screen width = 1120" + "<br>"); </script>';
+            $containerIntroRows = "120vh";
+            $containerV3LicenseRows = "200vh";
+            $containerReferenceRows = "1040vh";
+         } 
+
+         if($isNewEdge) {
+            //  echo ' <script> alert("Microsoft Edge (new) using screen width = 1120" + "<br>"); </script>';
+         } 
+
+         if($isEdge) {
+            //  echo ' <script> alert("Microsoft Edge (old) using screen width = 1120" + "<br>"); </script>';
+         } 
+
+
+         break;
       case 1133:     //  Android
       //   echo ' <script> alert("using screen width = 1133" + "<br>"); </script>';
 
@@ -397,19 +421,25 @@ switch($screenWidth) {
          } 
 
          break;
-       	 case 1280:     //  Win10
+       	 case 1280:     //  Android
          	//	echo ' <script> alert("using screen width = 1280" + "<br>"); </script>';
                             
          		if($isChrome) {
-            			//  echo ' <script> alert("Chrome using screen width = 1280" + "<br>"); </script>';
+            	             //  echo ' <script> alert("Chrome using screen width = 1280" + "<br>"); </script>';
+                                  $containerIntroRows = "190vh";
+                                  $containerV3LicenseRows = "260vh";
+                                  $containerReferenceRows = "1250vh";
          		} 
                         
          		if($isFirefox) {
-            			//  echo ' <script> alert("Firefox using screen width = 1280" + "<br>"); </script>';
+            		     // echo ' <script> alert("Firefox using screen width = 1280" + "<br>"); </script>';
          		} 
                            
          		if($isNewEdge) {
-            			//  echo ' <script> alert("Microsoft Edge (new) using screen width = 1280" + "<br>"); </script>';
+            		     // echo ' <script> alert("Microsoft Edge (new) using screen width = 1280" + "<br>"); </script>';
+                                  $containerIntroRows = "120vh";
+                                  $containerV3LicenseRows = "180vh";
+                                  $containerReferenceRows = "1250vh";
          		} 
                      
          		if($isEdge) {
